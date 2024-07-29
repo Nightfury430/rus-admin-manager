@@ -1,0 +1,211 @@
+#top_panel {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+#left_panel {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+#state_panel {
+    background: rgb(246, 246, 246);
+    color: rgb(47, 64, 80);
+}
+
+.accordion_heading {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.accordion_block {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.left_subpanel .mask {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.left_subpanel .left_subpanel_subpanel {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.slide_button.slide_right .top_submenu {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+#materials_panel {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+#materials_panel_button {
+    background: rgb(246, 246, 246);
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.top_panel_group {
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.acc_block {
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.materials_panel_body > div {
+    border-color: rgb(119, 119, 119);
+    color: rgb(47, 64, 80);
+}
+
+.submenu_button {
+    border-color: rgb(119, 119, 119);
+}
+
+#selected_kitchen {
+    color: rgb(47, 64, 80);
+}
+
+.submenu_button.clicked {
+    background: rgb(26, 179, 148);
+}
+
+#show_order_modal {
+    background: rgb(26, 179, 148);
+}
+
+p.exit_facades_system {
+    background: rgb(26, 179, 148);
+}
+
+.slide_button.slide_right.clicked {
+    border-color: rgb(26, 179, 148);
+}
+
+#show_order_modal:hover {
+    background: rgb(26, 179, 148);
+    color: rgb(255, 255, 255);
+}
+
+.left_subpanel .panel_close {
+    color: rgb(47, 64, 80);
+}
+
+.material_subcategory_heading {
+    color: rgb(47, 64, 80);
+}
+
+.k_sum {
+    color: rgb(47, 64, 80);
+}
+
+#camera_projection_top i {
+    background: rgb(47, 64, 80);
+}
+
+#camera_projection_front i {
+    border-color: rgb(47, 64, 80);
+}
+
+#camera_projection_back i {
+    border-color: rgb(47, 64, 80);
+}
+
+#camera_projection_left i {
+    border-color: rgb(47, 64, 80);
+}
+
+#camera_projection_right i {
+    border-color: rgb(47, 64, 80);
+}
+
+.mat_wrapper.selected {
+    border-color: rgb(255, 0, 0);
+}
+
+.facade_model.selected {
+    border-color: rgb(255, 0, 0);
+}
+
+#selected_kitchen {
+    background: rgb(246, 246, 246);
+}
+
+.btn-default {
+    background: rgb(255, 255, 255);
+    color: rgb(47, 64, 80);
+}
+
+.btn-default:hover {
+    background: rgb(47, 64, 80);
+    color: rgb(255, 255, 255);
+}
+
+.btn-default.active, .btn-default:active {
+    background: rgb(47, 64, 80);
+    color: rgb(255, 255, 255);
+}
+
+.btn-default:focus, .btn-default:hover {
+    background: rgb(47, 64, 80);
+    color: rgb(255, 255, 255);
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+    background: rgb(47, 64, 80);
+    color: rgb(255, 255, 255);
+}
+
+.theme_main_background_color {
+    background: rgb(246, 246, 246) !important;
+}
+
+.theme_main_text_color {
+    color: rgb(47, 64, 80) !important;
+}
+
+.theme_main_border_color {
+    border-color: !important;
+}
+
+.theme_main_acc_body_color {
+    background-color: !important;
+}
+
+#info_panel .nav-tabs > li.active > a, #info_panel .nav-tabs > li.active > a:focus, #info_panel .nav-tabs > li.active > a:hover {
+    background-color: !important;
+}
+
+#info_panel .nav > li > a:focus, #info_panel .nav > li > a:hover {
+    background-color: !important;
+}
+
+.theme_main_border_color {
+    border-color: rgb(119, 119, 119) !important;
+}
+
+.theme_main_acc_body_color {
+    background-color: rgb(246, 246, 246) !important;
+}
+
+#info_panel .nav-tabs > li.active > a, #info_panel .nav-tabs > li.active > a:focus, #info_panel .nav-tabs > li.active > a:hover {
+    background-color: rgb(246, 246, 246) !important;
+}
+
+#info_panel .nav > li > a:focus, #info_panel .nav > li > a:hover {
+    background-color: rgb(246, 246, 246) !important;
+}

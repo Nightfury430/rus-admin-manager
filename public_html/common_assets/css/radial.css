@@ -1,0 +1,81 @@
+.radial_menu{
+    position: absolute;
+    top: 110px;
+    left: 410px;
+    z-index: 2000;
+    /*opacity: 0;*/
+    /*transition: .5s;*/
+    display: none;
+    /*width: 2px;*/
+    /*height: 2px;*/
+    /*background: red;*/
+}
+
+.radial_menu.showed{
+    opacity: 1;
+    transition:             opacity 2s;
+    -moz-transition:    opacity 2s;
+    -ms-transition:     opacity 2s;
+    -o-transition:      opacity 2s;
+    -webkit-transition: opacity 2s;
+}
+
+.radial_menu_button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    background: #ffffff;
+    /*border: 1px solid #bdbdbd;*/
+    border-radius: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.radial_menu_button i{
+    font-size: 25px;
+    line-height: 25px;
+    transition: .3s;
+}
+
+.radial_menu_button_wrapper {
+    position: absolute;
+}
+
+.radial_menu_button:hover {
+    background: #4b8615;
+}
+
+.radial_menu_button.radial_menu_delete:hover {
+    background: #ff0000;
+}
+
+.radial_menu_button:hover i{
+    color: #ffffff;
+}
+
+.radial_menu_button.selected{
+    background: #4b8615;
+}
+
+.radial_menu_button.selected i{
+    color: #ffffff;
+}
+
+
+.radial_menu_button.disabled{
+    background: #8a8a8a;
+}
+
+.radial_menu_button.disabled:hover{
+    background: #8a8a8a;
+}
+
+.radial_menu_button.disabled:hover i{
+    color: #333;
+}

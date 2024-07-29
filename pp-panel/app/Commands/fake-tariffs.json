@@ -1,0 +1,749 @@
+[
+    {
+        "id": "eVIfP7L9qcITAgEbeg6MZ",
+        "alias": "Incubate_RRliOA",
+        "value": 10,
+        "title": "Incubate",
+        "description": "implement back-end methodologies",
+        "enabled": 0
+    },
+    {
+        "id": "7XJOGiNlU4cT-AcjnFCSy",
+        "alias": "Visualize_QX2UBJ",
+        "value": 20,
+        "title": "Visualize",
+        "enabled": 0
+    },
+    {
+        "id": "qm0dkFxd7a7ssVHDTWyTS",
+        "alias": "Streamline_5argq1",
+        "value": 30,
+        "title": "Streamline",
+        "enabled": 1
+    },
+    {
+        "id": "DMtnxN0PbXy2ZLt1LA8L0",
+        "alias": "Productize__n8egE",
+        "value": 40,
+        "title": "Productize",
+        "enabled": 0
+    },
+    {
+        "id": "Eru1DWgvStWZPub-haP-b",
+        "alias": "Engineer_MjI0br",
+        "value": 50,
+        "title": "Engineer",
+        "description": "deliver B2C synergies",
+        "enabled": 0
+    },
+    {
+        "id": "j11rjp4C4ALgJhEah3hn6",
+        "alias": "Architect_sTX1IR",
+        "value": 60,
+        "title": "Architect",
+        "description": "embrace 24/7 functionalities",
+        "enabled": 1
+    },
+    {
+        "id": "U0KDJgZ82OYlD3jrzTHAh",
+        "alias": "Enable_ta51eR",
+        "value": 70,
+        "title": "Enable",
+        "description": "reintermediate interactive interfaces",
+        "enabled": 1
+    },
+    {
+        "id": "mNNYSHCO5w-xa8-P9sgTh",
+        "alias": "Seize_q8JMG2",
+        "value": 80,
+        "title": "Seize",
+        "description": "whiteboard turn-key synergies",
+        "enabled": 1
+    },
+    {
+        "id": "uYUazix3EpeQ-xqcgKppC",
+        "alias": "Strategize_uhAZ0b",
+        "value": 90,
+        "title": "Strategize",
+        "enabled": 0
+    },
+    {
+        "id": "k5MR5WBM3uk81fNhkAqSi",
+        "alias": "Monetize_ZPVLlt",
+        "value": 100,
+        "title": "Monetize",
+        "description": "aggregate robust functionalities",
+        "enabled": 1
+    },
+    {
+        "id": "9DnPWNBS6AIDGEbURCfzR",
+        "alias": "Expedite_4E9xiB",
+        "value": 110,
+        "title": "Expedite",
+        "enabled": 1
+    },
+    {
+        "id": "ZPAcDDRnMnjU9UKuCPHNG",
+        "alias": "Disintermediate_ILjAdA",
+        "value": 120,
+        "title": "Disintermediate",
+        "enabled": 1
+    },
+    {
+        "id": "AJkDugEVl3gpuHG6BzMPW",
+        "alias": "Strategize_FeFTPK",
+        "value": 130,
+        "title": "Strategize",
+        "enabled": 1
+    },
+    {
+        "id": "KU6MUxZyUCj2FNaVuzLnd",
+        "alias": "Whiteboard_dPbevu",
+        "value": 140,
+        "title": "Whiteboard",
+        "enabled": 1
+    },
+    {
+        "id": "rhhn6y9N44GTfwwZWNZ2_",
+        "alias": "Brand_wq6euC",
+        "value": 150,
+        "title": "Brand",
+        "enabled": 1
+    },
+    {
+        "id": "aKNYSKM4tE_m2Q5O6IAYD",
+        "alias": "Repurpose_fKkaYl",
+        "value": 160,
+        "title": "Repurpose",
+        "enabled": 1
+    },
+    {
+        "id": "H6oPv_uXE95Ewd1BLu5VO",
+        "alias": "Matrix_12wPiZ",
+        "value": 170,
+        "title": "Matrix",
+        "enabled": 0
+    },
+    {
+        "id": "IhFvm-mig-LSxuQTNHpPY",
+        "alias": "Transition_YamARa",
+        "value": 180,
+        "title": "Transition",
+        "description": "expedite bricks-and-clicks partnerships",
+        "enabled": 1
+    },
+    {
+        "id": "JnTqOy5V2U9OfDGX5569Z",
+        "alias": "Synthesize_aCiMuq",
+        "value": 190,
+        "title": "Synthesize",
+        "enabled": 0
+    },
+    {
+        "id": "0A5VZTtwJIN8faveMjwnd",
+        "alias": "Syndicate_SLCrgP",
+        "value": 200,
+        "title": "Syndicate",
+        "enabled": 0
+    },
+    {
+        "id": "jmx1htGlxnzOXs3aNpMvu",
+        "alias": "Morph_0WQbDs",
+        "value": 210,
+        "title": "Morph",
+        "description": "innovate front-end content",
+        "enabled": 1
+    },
+    {
+        "id": "TrAiO0VKbMghZIqKcuigd",
+        "alias": "Recontextualize_-T--ZI",
+        "value": 220,
+        "title": "Recontextualize",
+        "enabled": 1
+    },
+    {
+        "id": "5sg2YcOHosnvXQKzK6BF5",
+        "alias": "Enable_iGnhM8",
+        "value": 230,
+        "title": "Enable",
+        "enabled": 0
+    },
+    {
+        "id": "3NN3CumItkZO1GXUYErBJ",
+        "alias": "Engage_6Gurhp",
+        "value": 240,
+        "title": "Engage",
+        "enabled": 0
+    },
+    {
+        "id": "hN-CWyjmhrAUL5KzignUJ",
+        "alias": "Exploit_AsFRq3",
+        "value": 250,
+        "title": "Exploit",
+        "enabled": 1
+    },
+    {
+        "id": "oKkxIFklO6BZXYk_-cWwW",
+        "alias": "Engage_FTpx5S",
+        "value": 260,
+        "title": "Engage",
+        "description": "reinvent innovative metrics",
+        "enabled": 1
+    },
+    {
+        "id": "YSw8Mu1D-xjn3AA_JyJrO",
+        "alias": "Morph_dprpgx",
+        "value": 270,
+        "title": "Morph",
+        "enabled": 1
+    },
+    {
+        "id": "snEn9D806ee-GJNbol6dw",
+        "alias": "Exploit_ZOQHOw",
+        "value": 280,
+        "title": "Exploit",
+        "enabled": 1
+    },
+    {
+        "id": "OPzflHuka0VJpvdpg8HMm",
+        "alias": "Productize_YLovps",
+        "value": 290,
+        "title": "Productize",
+        "description": "disintermediate best-of-breed markets",
+        "enabled": 0
+    },
+    {
+        "id": "nY7uox_gYWhTDQtI8GtD9",
+        "alias": "Deliver_yfBaE3",
+        "value": 300,
+        "title": "Deliver",
+        "enabled": 0
+    },
+    {
+        "id": "ZR9YmM5L2RNwLuCwgq_Me",
+        "alias": "Brand_PWAvMZ",
+        "value": 310,
+        "title": "Brand",
+        "description": "transform 24/7 initiatives",
+        "enabled": 1
+    },
+    {
+        "id": "ObVccXZEbMxIDudy1Dsgz",
+        "alias": "Synergize_f4eLTq",
+        "value": 320,
+        "title": "Synergize",
+        "enabled": 1
+    },
+    {
+        "id": "e8IL9wzDQw7RiOMVhitDV",
+        "alias": "Leverage_EWVaft",
+        "value": 330,
+        "title": "Leverage",
+        "enabled": 1
+    },
+    {
+        "id": "zh31Iu8uvKnLPYLXOtjJx",
+        "alias": "Architect_vcR4Yv",
+        "value": 340,
+        "title": "Architect",
+        "description": "embrace granular initiatives",
+        "enabled": 1
+    },
+    {
+        "id": "l8Bs0Kh5_bv80Uvx4cR7v",
+        "alias": "Unleash_5XJcUb",
+        "value": 350,
+        "title": "Unleash",
+        "description": "implement strategic supply-chains",
+        "enabled": 1
+    },
+    {
+        "id": "pYm6JV2Ggq_kfI8z6de31",
+        "alias": "Extend_qtSiy3",
+        "value": 360,
+        "title": "Extend",
+        "enabled": 0
+    },
+    {
+        "id": "EzaDIHvTiaCwMD3sMw0up",
+        "alias": "Extend_L8h9bV",
+        "value": 370,
+        "title": "Extend",
+        "enabled": 1
+    },
+    {
+        "id": "DdqS3umvMryGugKqTEFPK",
+        "alias": "Incubate_lATKlh",
+        "value": 380,
+        "title": "Incubate",
+        "enabled": 1
+    },
+    {
+        "id": "jpizgAccwyc548D9XdZpj",
+        "alias": "Synergize_vtbXso",
+        "value": 390,
+        "title": "Synergize",
+        "enabled": 0
+    },
+    {
+        "id": "myh-_s2p1TQu7YZCpg2FN",
+        "alias": "Monetize_AnSzTo",
+        "value": 400,
+        "title": "Monetize",
+        "description": "evolve mission-critical communities",
+        "enabled": 1
+    },
+    {
+        "id": "iS31idNUnZlrivfm1fcpN",
+        "alias": "Benchmark_uY4X_P",
+        "value": 410,
+        "title": "Benchmark",
+        "description": "innovate out-of-the-box infrastructures",
+        "enabled": 0
+    },
+    {
+        "id": "gncvRcoS7RrivVNNrVAI7",
+        "alias": "Disintermediate_AgiwlD",
+        "value": 420,
+        "title": "Disintermediate",
+        "enabled": 0
+    },
+    {
+        "id": "yBy-NuRMP-mQKwAPVevQA",
+        "alias": "Monetize_4vzyfj",
+        "value": 430,
+        "title": "Monetize",
+        "enabled": 0
+    },
+    {
+        "id": "mgbm4SOR559h9Py_Wdg-x",
+        "alias": "Enhance_f9jr0r",
+        "value": 440,
+        "title": "Enhance",
+        "enabled": 1
+    },
+    {
+        "id": "EL64niEopSslQTasDPzA5",
+        "alias": "Envisioneer_OIJSkh",
+        "value": 450,
+        "title": "Envisioneer",
+        "description": "whiteboard value-added channels",
+        "enabled": 0
+    },
+    {
+        "id": "IAPVRtfiLiAVadOz6SMcn",
+        "alias": "Deploy_DGiidY",
+        "value": 460,
+        "title": "Deploy",
+        "description": "transform wireless solutions",
+        "enabled": 1
+    },
+    {
+        "id": "74jT5DPM8dSsHxHn-8JYN",
+        "alias": "Cultivate_lD8VG3",
+        "value": 470,
+        "title": "Cultivate",
+        "description": "productize rich action-items",
+        "enabled": 1
+    },
+    {
+        "id": "NbwWdp2klK2HsvSBOlVz2",
+        "alias": "Target_OPhpU7",
+        "value": 480,
+        "title": "Target",
+        "enabled": 0
+    },
+    {
+        "id": "74ZszOBMSuSmZpCmol0TW",
+        "alias": "Monetize_5zCLW5",
+        "value": 490,
+        "title": "Monetize",
+        "description": "synthesize enterprise deliverables",
+        "enabled": 0
+    },
+    {
+        "id": "rdlqfPwgckUKeLeOeCu3c",
+        "alias": "Empower_bvVOd0",
+        "value": 500,
+        "title": "Empower",
+        "description": "brand real-time e-business",
+        "enabled": 1
+    },
+    {
+        "id": "SMo_VJNidnwItzTvqsujy",
+        "alias": "Integrate_6C2b_r",
+        "value": 510,
+        "title": "Integrate",
+        "enabled": 1
+    },
+    {
+        "id": "exxM6VgdqRER8c5nUzvPq",
+        "alias": "Generate_76FlWd",
+        "value": 520,
+        "title": "Generate",
+        "description": "orchestrate viral deliverables",
+        "enabled": 0
+    },
+    {
+        "id": "B9FRJhWfXyptE4HfqBRI6",
+        "alias": "Monetize_2nUjJG",
+        "value": 530,
+        "title": "Monetize",
+        "description": "drive B2C e-markets",
+        "enabled": 0
+    },
+    {
+        "id": "BiJi3NnAJC3n9zjOZlwq2",
+        "alias": "Orchestrate_GY_pti",
+        "value": 540,
+        "title": "Orchestrate",
+        "enabled": 0
+    },
+    {
+        "id": "nDOGO409Um9FjoJTxew94",
+        "alias": "Embrace_s5UmNk",
+        "value": 550,
+        "title": "Embrace",
+        "enabled": 1
+    },
+    {
+        "id": "gUBDHr7okxmIEOITPx7a3",
+        "alias": "E-enable_zz6uRv",
+        "value": 560,
+        "title": "E-enable",
+        "enabled": 0
+    },
+    {
+        "id": "KWJGq-UVVuzMW30Csc9VN",
+        "alias": "Integrate_z8Suky",
+        "value": 570,
+        "title": "Integrate",
+        "enabled": 0
+    },
+    {
+        "id": "mz_59vPHidXXMRND1YVnf",
+        "alias": "Drive_Eo4Xxu",
+        "value": 580,
+        "title": "Drive",
+        "description": "recontextualize best-of-breed web services",
+        "enabled": 0
+    },
+    {
+        "id": "k7Tf-xgUrxIhH11A-QIr7",
+        "alias": "Incubate_Nh2u-I",
+        "value": 590,
+        "title": "Incubate",
+        "description": "transform B2C technologies",
+        "enabled": 0
+    },
+    {
+        "id": "_kjg2mWgoMu4vFydWRrzs",
+        "alias": "Engineer_752g-z",
+        "value": 600,
+        "title": "Engineer",
+        "enabled": 0
+    },
+    {
+        "id": "rGGsAPhCwWhmyzg4ry_0t",
+        "alias": "Scale_pVW-YK",
+        "value": 610,
+        "title": "Scale",
+        "description": "enable revolutionary schemas",
+        "enabled": 1
+    },
+    {
+        "id": "1NyLBGXoG76zfQUD6RYD9",
+        "alias": "Incentivize_KJDB1I",
+        "value": 620,
+        "title": "Incentivize",
+        "description": "extend interactive metrics",
+        "enabled": 0
+    },
+    {
+        "id": "h16GPPp6ildo7558c8-Is",
+        "alias": "Orchestrate_NYRzeP",
+        "value": 630,
+        "title": "Orchestrate",
+        "enabled": 0
+    },
+    {
+        "id": "uvJGcsxmInO4ZnOZ4FpqN",
+        "alias": "Visualize_Kln50Q",
+        "value": 640,
+        "title": "Visualize",
+        "description": "aggregate synergistic e-business",
+        "enabled": 1
+    },
+    {
+        "id": "T8mVLbXOnAdlBzah6moOA",
+        "alias": "Revolutionize_uv_3Lq",
+        "value": 650,
+        "title": "Revolutionize",
+        "description": "repurpose integrated niches",
+        "enabled": 1
+    },
+    {
+        "id": "2nXnjvrZmI9s0qiXOtkY3",
+        "alias": "Maximize_g59Koj",
+        "value": 660,
+        "title": "Maximize",
+        "enabled": 1
+    },
+    {
+        "id": "f3KhmshhBxEZYSxKUIaMZ",
+        "alias": "Deploy_aKblN-",
+        "value": 670,
+        "title": "Deploy",
+        "enabled": 1
+    },
+    {
+        "id": "Hwe0VWHs9YdZrDILbs_VA",
+        "alias": "Optimize_ZBEp2G",
+        "value": 680,
+        "title": "Optimize",
+        "description": "matrix cutting-edge experiences",
+        "enabled": 1
+    },
+    {
+        "id": "KRmJUIASlkxK4kw6v9nw0",
+        "alias": "Facilitate_aweVU_",
+        "value": 690,
+        "title": "Facilitate",
+        "description": "embrace integrated supply-chains",
+        "enabled": 0
+    },
+    {
+        "id": "-yDrhxVE4ycsqP_YYkz_t",
+        "alias": "Incentivize_y8Y0D5",
+        "value": 700,
+        "title": "Incentivize",
+        "description": "syndicate clicks-and-mortar e-markets",
+        "enabled": 1
+    },
+    {
+        "id": "IL9I8rFlXIIAwb4pRrYu0",
+        "alias": "Reintermediate_Fo0kBG",
+        "value": 710,
+        "title": "Reintermediate",
+        "description": "aggregate value-added lifetime value",
+        "enabled": 1
+    },
+    {
+        "id": "tY8DlmExffu5BSvIzzWla",
+        "alias": "Reintermediate_QLfnzv",
+        "value": 720,
+        "title": "Reintermediate",
+        "enabled": 1
+    },
+    {
+        "id": "3ODMlcqaAaVaEtOLh7YyO",
+        "alias": "Revolutionize_5fuQjx",
+        "value": 730,
+        "title": "Revolutionize",
+        "enabled": 0
+    },
+    {
+        "id": "gx1rV6z7tIjDNIeLiGtpd",
+        "alias": "Streamline_UPMEni",
+        "value": 740,
+        "title": "Streamline",
+        "description": "brand efficient e-business",
+        "enabled": 0
+    },
+    {
+        "id": "kUi09IuFu05Pg3M6s_UZS",
+        "alias": "Unleash_90AM48",
+        "value": 750,
+        "title": "Unleash",
+        "description": "enable leading-edge infrastructures",
+        "enabled": 0
+    },
+    {
+        "id": "tlblGhLXs9bJ3gDCzVl8A",
+        "alias": "Target_lXADVx",
+        "value": 760,
+        "title": "Target",
+        "enabled": 0
+    },
+    {
+        "id": "TUyPgpzhLtWia1wsERlK3",
+        "alias": "Visualize_epCz1t",
+        "value": 770,
+        "title": "Visualize",
+        "enabled": 0
+    },
+    {
+        "id": "6v5Ie05bvONvFTRImqI03",
+        "alias": "Cultivate_Gh_7CB",
+        "value": 780,
+        "title": "Cultivate",
+        "enabled": 0
+    },
+    {
+        "id": "ZgNg0VaNPiHqNstksmejs",
+        "alias": "Generate_C-3Txj",
+        "value": 790,
+        "title": "Generate",
+        "enabled": 1
+    },
+    {
+        "id": "vYnUx5W8fxrPIxsvg2Mmy",
+        "alias": "Redefine_5tBh72",
+        "value": 800,
+        "title": "Redefine",
+        "enabled": 1
+    },
+    {
+        "id": "J7VvloszVbPRuVYZVKvO8",
+        "alias": "Embrace_I4QoFd",
+        "value": 810,
+        "title": "Embrace",
+        "description": "empower impactful infrastructures",
+        "enabled": 0
+    },
+    {
+        "id": "OsQg4-XSxd-Nc7UKIbD6w",
+        "alias": "Transform_zStiMB",
+        "value": 820,
+        "title": "Transform",
+        "description": "seize best-of-breed portals",
+        "enabled": 1
+    },
+    {
+        "id": "O9YWx-gKCyypmqVEHCbxp",
+        "alias": "Integrate_j1nvRt",
+        "value": 830,
+        "title": "Integrate",
+        "description": "reintermediate open-source schemas",
+        "enabled": 1
+    },
+    {
+        "id": "QkxiEk7pNTbvjvsG0sc2A",
+        "alias": "Benchmark_893J88",
+        "value": 840,
+        "title": "Benchmark",
+        "enabled": 1
+    },
+    {
+        "id": "cbwd3UprzZ1voTMPl33e_",
+        "alias": "Integrate_d1H71A",
+        "value": 850,
+        "title": "Integrate",
+        "description": "envisioneer cross-media e-markets",
+        "enabled": 1
+    },
+    {
+        "id": "ySQ9gNU4AVaLyIr-_HYhv",
+        "alias": "Architect_-xHV7p",
+        "value": 860,
+        "title": "Architect",
+        "enabled": 0
+    },
+    {
+        "id": "56cs4By_ytUHFGfKNCcZI",
+        "alias": "Architect_MKr7sN",
+        "value": 870,
+        "title": "Architect",
+        "description": "iterate impactful mindshare",
+        "enabled": 1
+    },
+    {
+        "id": "7uf7joEmMxc41cggRaGQp",
+        "alias": "Productize_SDzWIK",
+        "value": 880,
+        "title": "Productize",
+        "description": "integrate leading-edge models",
+        "enabled": 1
+    },
+    {
+        "id": "RdB_N8Z-MlcMfvRPb2Zxo",
+        "alias": "Enhance_5-gC6q",
+        "value": 890,
+        "title": "Enhance",
+        "enabled": 0
+    },
+    {
+        "id": "FkBSoVdyqfZxG5uJGVIOr",
+        "alias": "Unleash_-d1prw",
+        "value": 900,
+        "title": "Unleash",
+        "description": "innovate transparent action-items",
+        "enabled": 0
+    },
+    {
+        "id": "6IrqOdxmjv2sI-sl_9Co1",
+        "alias": "Streamline_A8-Muj",
+        "value": 910,
+        "title": "Streamline",
+        "description": "orchestrate compelling technologies",
+        "enabled": 0
+    },
+    {
+        "id": "9zj9bwCtSs-tu9OnZiccc",
+        "alias": "Target_DbDGZW",
+        "value": 920,
+        "title": "Target",
+        "description": "e-enable user-centric content",
+        "enabled": 1
+    },
+    {
+        "id": "WxQD1kXQK13RN38Gaku4v",
+        "alias": "Empower_FFAkpe",
+        "value": 930,
+        "title": "Empower",
+        "enabled": 1
+    },
+    {
+        "id": "CYsM0iE2OyJsL3Bs14Tq8",
+        "alias": "Innovate_w0ZMlP",
+        "value": 940,
+        "title": "Innovate",
+        "description": "expedite virtual infrastructures",
+        "enabled": 0
+    },
+    {
+        "id": "jNwo91abUDWpiMDWQU8a2",
+        "alias": "Deploy_NpiW6C",
+        "value": 950,
+        "title": "Deploy",
+        "enabled": 1
+    },
+    {
+        "id": "mDM0gBFa14J3zcma5ZtaA",
+        "alias": "Engineer_dZjdJj",
+        "value": 960,
+        "title": "Engineer",
+        "description": "morph efficient e-markets",
+        "enabled": 1
+    },
+    {
+        "id": "uxEvaL4h80Kp23uipD6hX",
+        "alias": "Streamline_ln_8Ph",
+        "value": 970,
+        "title": "Streamline",
+        "description": "e-enable 24/365 networks",
+        "enabled": 1
+    },
+    {
+        "id": "j47JA0tbhqcruRbMIn4dL",
+        "alias": "Incentivize_6D4GVV",
+        "value": 980,
+        "title": "Incentivize",
+        "enabled": 0
+    },
+    {
+        "id": "3UaUQNVGpCITnv9uBO0ot",
+        "alias": "Integrate_BYlePO",
+        "value": 990,
+        "title": "Integrate",
+        "description": "grow value-added blockchains",
+        "enabled": 1
+    },
+    {
+        "id": "DaSlIwWnsITc3WHfjxVqf",
+        "alias": "Monetize_5CU9SX",
+        "value": 1000,
+        "title": "Monetize",
+        "enabled": 0
+    }
+]

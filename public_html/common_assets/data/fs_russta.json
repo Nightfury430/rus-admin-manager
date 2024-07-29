@@ -1,0 +1,12 @@
+{
+  "items": {
+    "1": {
+      "id": 1,
+      "name": "Комо",
+      "icon": "/common_assets/models/decorative/nika/nika_icon.jpg",
+      "facades": {
+
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+.pp-tree,
+.pp-tree-helper {
+    --pp-tree-color: hsl(0, 0%, 10%);
+    --pp-tree-background: hsl(0, 0%, 90%);
+    --pp-tree-selected-color: var(--pp-tree-color);
+    --pp-tree-selected-background: hsl(0, 0%, 70%);
+    --pp-tree-hover-color: hsl(0, 0%, 10%);
+    --pp-tree-hover-background: hsl(0, 0%, 90%);
+    --pp-tree-drag-color: hsl(0, 0%, 10%);
+
+    --pp-tree-max-height: 500px;
+    --pp-tree-item-height: 30px;
+}
+
+.pp-tree.pp-tree-dark,
+.pp-tree-helper.pp-tree-dark {
+    --pp-tree-color: hsl(0, 0%, 90%);
+    --pp-tree-background: hsl(0, 0%, 10%);
+    --pp-tree-selected-color: var(--pp-tree-color);
+    --pp-tree-selected-background: hsl(0, 0%, 30%);
+    --pp-tree-hover-color: hsl(0, 0%, 90%);
+    --pp-tree-hover-background: hsl(0, 0%, 10%);
+    --pp-tree-drag-color: hsl(0, 0%, 90%);
+}
+
+.pp-tree {
+    width: 100%;
+    max-width: 100%;
+    color: var(--pp-tree-color);
+    background-color: var(--pp-tree-background);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.pp-tree>section:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.pp-tree-top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pp-tree-top>div {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.pp-tree-top>div:first-child {
+    text-align: left;
+}
+
+.pp-tree-top>div:last-child {
+    text-align: right;
+}
+
+.pp-tree-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-height: var(--pp-tree-max-height);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.pp-tree-slicklist {
+    width: max-content !important;
+    min-width: 100%;
+}
+
+.pp-tree-item {
+    display: flex;
+    position: relative;
+    min-width: 100%;
+    height: var(--pp-tree-item-height);
+    line-height: var(--pp-tree-item-height);
+    align-items: stretch;
+    white-space: nowrap;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pp-tree-item.pp-tree-selected {
+    color: var(--pp-tree-selected-color);
+    background-color: var(--pp-tree-selected-background);
+}
+
+.pp-tree-item.pp-tree-inactive>* {
+    opacity: 0.4;
+}
+
+.pp-tree-item:not(.pp-tree-helper) {
+    transform: none !important;
+}
+
+.pp-tree-helper {
+    /* display: block; */
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+    border: 1px dashed var(--pp-tree-hover-color);
+    color: var(--pp-tree-hover-color);
+    background-color: var(--pp-tree-hover-background);
+}
+
+.pp-tree-helper .pp-tree-buttons {
+    display: none;
+}
+
+.pp-tree-item>span,
+.pp-tree-item>button {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.pp-tree-item> :nth-child(2),
+.pp-tree-item> :nth-child(3) {
+    align-self: center;
+}
+
+.pp-tree-item>span:last-of-type {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 20px;
+    transform-origin: left center;
+}
+
+.pp-tree-item.pp-tree-t:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0;
+    left: 0;
+    right: 0;
+    top: -1px;
+    border-top: 2px dashed var(--pp-tree-drag-color);
+}
+
+.pp-tree-item.pp-tree-b:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    border-bottom: 2px dashed var(--pp-tree-drag-color);
+}
+
+.pp-tree-item.pp-tree-b~.pp-tree-item.pp-tree-t:after {
+    display: none;
+}
+
+.pp-tree-item>span:last-of-type {
+    transition: 0.3s ease transform;
+}
+
+.pp-tree-item.pp-tree-c:not(.pp-tree-inactive) {
+    box-shadow: 0 0 0 1px inset var(--pp-tree-drag-color);
+}
+
+.pp-tree-item.pp-tree-c:not(.pp-tree-inactive)>span:last-of-type {
+    /* display: inline-block; */
+    color: var(--pp-tree-hover-color);
+    font-weight: bold;
+    transform: scale(1.15);
+}
+
+.pp-tree-drag {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="460 50 100 800" width="200" height="1024"><path fill="black" d="M512 746.667c-35.094 0-64-28.907-64-64s28.906-64 64-64 64 28.907 64 64-28.906 64-64 64zM512 704c12.036 0 21.333-9.298 21.333-21.333s-9.298-21.333-21.333-21.333c-12.036 0-21.333 9.298-21.333 21.333S499.965 704 512 704zm0-192c-35.093 0-64-28.907-64-64s28.907-64 64-64 64 28.907 64 64-28.907 64-64 64zm0-42.667c12.036 0 21.333-9.297 21.333-21.333s-9.297-21.333-21.333-21.333c-12.036 0-21.333 9.297-21.333 21.333s9.297 21.333 21.333 21.333zm0-192c-35.093 0-64-28.907-64-64s28.907-64 64-64 64 28.907 64 64-28.907 64-64 64zm0-42.666c12.036 0 21.333-9.297 21.333-21.333s-9.297-21.333-21.333-21.333c-12.036 0-21.333 9.297-21.333 21.333s9.297 21.333 21.333 21.333z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.pp-tree-dark .pp-tree-drag {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="460 50 100 800" width="200" height="1024"><path fill="white" d="M512 746.667c-35.094 0-64-28.907-64-64s28.906-64 64-64 64 28.907 64 64-28.906 64-64 64zM512 704c12.036 0 21.333-9.298 21.333-21.333s-9.298-21.333-21.333-21.333c-12.036 0-21.333 9.298-21.333 21.333S499.965 704 512 704zm0-192c-35.093 0-64-28.907-64-64s28.907-64 64-64 64 28.907 64 64-28.907 64-64 64zm0-42.667c12.036 0 21.333-9.297 21.333-21.333s-9.297-21.333-21.333-21.333c-12.036 0-21.333 9.297-21.333 21.333s9.297 21.333 21.333 21.333zm0-192c-35.093 0-64-28.907-64-64s28.907-64 64-64 64 28.907 64 64-28.907 64-64 64zm0-42.666c12.036 0 21.333-9.297 21.333-21.333s-9.297-21.333-21.333-21.333c-12.036 0-21.333 9.297-21.333 21.333s9.297 21.333 21.333 21.333z"/></svg>');
+}
+
+.pp-tree-expand {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 40 800 800" width="800" height="800"><path fill="black" d="m512 576 15.087 15.085L512 606.17l-15.087-15.085L512 576zm271.087-240.913-256 255.998-30.174-30.17 256-256.002 30.174 30.174zM496.913 591.085 240.915 335.087l30.17-30.174 256.002 256.002-30.174 30.17z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.3s ease transform;
+}
+
+.pp-tree-dark .pp-tree-expand {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 40 800 800" width="800" height="800"><path fill="white" d="m512 576 15.087 15.085L512 606.17l-15.087-15.085L512 576zm271.087-240.913-256 255.998-30.174-30.17 256-256.002 30.174 30.174zM496.913 591.085 240.915 335.087l30.17-30.174 256.002 256.002-30.174 30.17z"/></svg>');
+}
+
+.pp-tree-expand.pp-tree-expanded {
+    transform: rotate(-90deg);
+}
+
+.pp-tree-buttons {
+    display: inline-block;
+    flex-grow: 100;
+    text-align: right;
+}

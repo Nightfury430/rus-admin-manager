@@ -1,0 +1,128 @@
+[v-cloak] {
+    display: none;
+}
+
+#main h3{
+    margin-top: 0;
+}
+
+.help_icon{
+    float: right;
+    color: #337ab7;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.help_block{
+    display: none;
+}
+
+label{
+    width: 100%;
+}
+
+.bp_modal_wrapper{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.bp_modal{
+    position: fixed;
+    max-width: 320px;
+    background: #ffffff;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 60px;
+    padding: 10px 20px;
+}
+
+.bp_modal h4{
+    margin: 0;
+}
+
+.bp_close{
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+}
+
+.bp_modal_heading{
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #353537;
+}
+
+.bp_modal_body {
+    margin-bottom: 60px;
+    overflow: auto;
+}
+
+.bp_modal_footer{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    text-align: center;
+    left: 20px;
+    right: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #353537;
+}
+
+.bp_button {
+    display: inline-block;
+    padding: 3px 10px;
+    border: 1px solid;
+    cursor: pointer;
+    background: #4c8613;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.bp_button:hover{
+    color: #ffffff;
+    background: #377300;
+}
+
+.bp_button.bp_button_red{
+    background: #c15d5d;
+}
+
+.bp_button.bp_button_red:hover{
+    background: #a54e4e;
+}
+
+.bp_warning{
+    border: 4px solid #c15d5d;
+}
+
+#wr_m_p{
+    display: none;
+}
+
+.common_loader{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+    background: #fff;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 220px;
+}
+
+.modal-xl{
+    max-width: 1350px;
+}

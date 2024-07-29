@@ -1,0 +1,35 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Цвета Ral Classic",
+      "price": 1000
+    }
+  ],
+  "items": [
+    {
+      "id": 0,
+      "category": 1,
+      "code": "RAL 1000",
+      "name": "Зелёно-бежевый",
+      "params": {
+        "color": "#ffffff"
+      }
+    },
+    {
+      "type": "Standart",
+      "params": {
+        "color": "#ffffff",
+        "roughness": "0",
+        "metalness": "0.05",
+        "transparent": true,
+        "opacity": "0.8"
+      },
+      "add_params": {},
+      "id": 1,
+      "name": "Бесцветное стекло",
+      "code": "",
+      "category": 0
+    }
+  ]
+}

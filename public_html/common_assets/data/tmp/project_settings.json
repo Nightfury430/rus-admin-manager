@@ -1,0 +1,94 @@
+{
+  "is_kitchen_model": false,
+  "door_offset": 2,
+  "shelve_offset": 10,
+  "cokol_height": 120,
+  "corpus_thickness": 16,
+  "tabletop_thickness": 40,
+  "bottom_modules_height": 720,
+  "bottom_as_top_facade_models": true,
+  "bottom_as_top_facade_materials": true,
+  "bottom_as_top_corpus_materials": true,
+  "cokol_as_corpus": true,
+  "models": {
+    "top": 2,
+    "bottom": 2
+  },
+  "materials": {
+    "top": {
+      "facades": [
+        0,
+        2999
+      ],
+      "corpus": [
+        101,
+        6000
+      ]
+    },
+    "bottom": {
+      "facades": [
+        0,
+        2999
+      ],
+      "corpus": [
+        101,
+        6000
+      ]
+    },
+    "cokol": [
+      101,
+      6000
+    ],
+    "cornice": "",
+    "tabletop": [
+      7000,
+      8000
+    ],
+    "walls": [
+      0
+    ],
+    "floor": [
+      5000
+    ],
+    "wall_panel": [
+      4000,
+      0,
+      7000,
+      8000
+    ]
+  },
+  "selected_materials": {
+    "top": {
+      "facades": 27,
+      "corpus": 6017
+    },
+    "bottom": {
+      "facades": 27,
+      "corpus": 6017
+    },
+    "cokol": 6017,
+    "tabletop": 7000,
+    "wall_panel": 7000,
+    "walls": 10,
+    "floor": 5013
+  },
+  "handle": {
+    "orientation": "vertical",
+    "lockers_position": "middle",
+    "selected_model": 0,
+    "preferable_size": 2
+  },
+  "hinges": {
+    "id": 0,
+    "category": 0,
+    "name": "С доводчиком",
+    "icon": "/common_assets/images/with_dovod.jpg",
+    "door_hinges_price": 1000,
+    "locker_hinges_price": 1000,
+    "dovodchik": true
+  },
+  "wall_panel": {
+    "active": false,
+    "height": 560
+  }
+}

@@ -1,0 +1,160 @@
+#top_panel{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+.k_sum{
+    color: #ffffff!important;
+}
+
+#left_panel{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+#state_panel{
+    background: #353537!important;
+    color: #ffffff!important;
+}
+
+.accordion_heading{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+.accordion_block{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+.left_subpanel .mask{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+.left_subpanel .left_subpanel_subpanel{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+.top_submenu{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+#materials_panel{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+#materials_panel_button{
+    background: #353537!important;
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+
+.top_panel_group{
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+.acc_block{
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+
+.mat_wrapper.selected{
+    border-color: #484848!important;
+
+}
+
+.materials_panel_body > div{
+    border-color: #484848!important;
+    color: #ffffff!important;
+}
+
+.submenu_button{
+    border-color: #484848!important;
+}
+
+.submenu_button.clicked{
+    background: #4c8613!important;
+}
+
+#show_order_modal{
+    background: #4c8613!important;
+}
+
+#show_order_modal:hover {
+    background: #3a6511!important
+}
+
+.left_subpanel .panel_close{
+    color: #ffffff!important;
+}
+
+.material_subcategory_heading{
+    color: #ffffff!important;
+}
+
+.btn-default{
+    text-shadow: none;
+    border: none;
+    background: #fafafa;
+    color: #333333;
+}
+
+.btn-default:hover {
+    background: #e0e0e0;
+    color: #333333;
+}
+
+.btn-default.active, .btn-default:active {
+    background-color: #e0e0e0;
+    border-color: #dbdbdb;
+    color: #333333;
+}
+
+.btn-default:focus, .btn-default:hover {
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover{
+    background-color: #e0e0e0;
+    color: #333333;
+}
+
+/*Магазин комплектующих*/
+
+
+
+
+#shop_modal_wrapper{
+
+}
+
+.shop_products_tags{
+
+}
+
+.shop_products{
+
+}
+
+.acc_category_block.active{
+
+}
+
+
+

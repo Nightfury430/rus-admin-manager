@@ -1,0 +1,4779 @@
+{
+  "corpus": [
+    {
+      "id": "17",
+      "price": "6000.00",
+      "parent": null,
+      "get_from_parent": false
+    },
+    {
+      "id": "18",
+      "price": "8000.00",
+      "parent": null,
+      "get_from_parent": false
+    }
+  ],
+  "glass": [
+    {
+      "id": "1",
+      "price": "0.00",
+      "parent": null,
+      "get_from_parent": false
+    },
+    {
+      "id": "2",
+      "price": "0.00",
+      "parent": null,
+      "get_from_parent": false
+    },
+    {
+      "id": "3",
+      "price": "0.00",
+      "parent": null,
+      "get_from_parent": false
+    }
+  ],
+  "cokol": [
+    {
+      "id": "17",
+      "price": "1000.00",
+      "parent": null,
+      "get_from_parent": false
+    },
+    {
+      "id": "18",
+      "price": "1200.00",
+      "parent": null,
+      "get_from_parent": false
+    }
+  ],
+  "tabletop": [
+    {
+      "id": "22",
+      "price": "0.00",
+      "parent": null,
+      "get_from_parent": false
+    },
+    {
+      "id": "23",
+      "price": null,
+      "parent": "22",
+      "get_from_parent": true
+    },
+    {
+      "id": "24",
+      "price": null,
+      "parent": "22",
+      "get_from_parent": true
+    },
+    {
+      "id": "25",
+      "price": null,
+      "parent": "22",
+      "get_from_parent": true
+    },
+    {
+      "id": "26",
+      "price": "0.00",
+      "parent": null,
+      "get_from_parent": false
+    }
+  ],
+  "wallpanel": [
+    {
+      "id": "22",
+      "price": "5000.00",
+      "parent": null,
+      "get_from_parent": false
+    },
+    {
+      "id": "23",
+      "price": null,
+      "parent": "22",
+      "get_from_parent": true
+    },
+    {
+      "id": "24",
+      "price": null,
+      "parent": "22",
+      "get_from_parent": true
+    },
+    {
+      "id": "25",
+      "price": null,
+      "parent": "22",
+      "get_from_parent": true
+    },
+    {
+      "id": "26",
+      "price": "6000.00",
+      "parent": null,
+      "get_from_parent": false
+    },
+    {
+      "id": "27",
+      "price": "7000.00",
+      "parent": null,
+      "get_from_parent": false
+    }
+  ],
+  "facades": [
+    {
+      "id": "41",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "36",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "34",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "30",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "29",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [],
+      "radius_full": [],
+      "radius_window": [],
+      "radius_frame": []
+    },
+    {
+      "id": "28",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [],
+      "radius_full": [],
+      "radius_window": [],
+      "radius_frame": []
+    },
+    {
+      "id": "27",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [],
+      "radius_full": [],
+      "radius_window": [],
+      "radius_frame": []
+    },
+    {
+      "id": "26",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [],
+      "radius_full": [],
+      "radius_window": [],
+      "radius_frame": []
+    },
+    {
+      "id": "25",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [],
+      "radius_full": [],
+      "radius_window": [],
+      "radius_frame": []
+    },
+    {
+      "id": "24",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "23",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "20",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "19",
+      "full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "frame": [],
+      "radius_full": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "1",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "2",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "3",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "4",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "5",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "6",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "7",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "8",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "9",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "10",
+          "price": null,
+          "parent": "1",
+          "get_from_parent": true
+        },
+        {
+          "id": "11",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "19",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "20",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        },
+        {
+          "id": "21",
+          "price": null,
+          "parent": "11",
+          "get_from_parent": true
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "17",
+      "full": [
+        {
+          "id": "16",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "16",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "16",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [
+        {
+          "id": "16",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_window": [
+        {
+          "id": "16",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_frame": []
+    },
+    {
+      "id": "16",
+      "full": [
+        {
+          "id": "17",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "18",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "window": [
+        {
+          "id": "17",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "18",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "frame": [
+        {
+          "id": "17",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        },
+        {
+          "id": "18",
+          "price": "0.00",
+          "parent": null,
+          "get_from_parent": false
+        }
+      ],
+      "radius_full": [],
+      "radius_window": [],
+      "radius_frame": []
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "types": [
+    "common",
+    "dryer",
+    "oven",
+    "microwave",
+    "hob",
+    "washer"
+  ],
+  "categories": {},
+  "items": {
+    "bim1": {
+      "id": "bim1",
+      "type": "dryer",
+      "icon": "/common_assets/models/builtin/1/dryer_icon.jpg",
+      "name": "Сушка",
+      "variants": [
+        {
+          "width": 364,
+          "height": 360,
+          "depth": 250,
+          "module_width": 400,
+          "model": "/common_assets/models/builtin/1/dryer_400.fbx"
+        },
+        {
+          "width": 414,
+          "height": 360,
+          "depth": 250,
+          "module_width": 450,
+          "model": "/common_assets/models/builtin/1/dryer_450.fbx"
+        },
+        {
+          "width": 464,
+          "height": 360,
+          "depth": 250,
+          "module_width": 500,
+          "model": "/common_assets/models/builtin/1/dryer_500.fbx"
+        },
+        {
+          "width": 514,
+          "height": 360,
+          "depth": 250,
+          "module_width": 550,
+          "model": "/common_assets/models/builtin/1/dryer_550.fbx"
+        },
+        {
+          "width": 564,
+          "height": 360,
+          "depth": 250,
+          "module_width": 600,
+          "model": "/common_assets/models/builtin/1/dryer_600.fbx"
+        },
+        {
+          "width": 764,
+          "height": 360,
+          "depth": 250,
+          "module_width": 800,
+          "model": "/common_assets/models/builtin/1/dryer_800.fbx"
+        },
+        {
+          "width": 864,
+          "height": 360,
+          "depth": 250,
+          "module_width": 900,
+          "model": "/common_assets/models/builtin/1/dryer_900.fbx"
+        }
+      ],
+      "draggable": false,
+      "exact": 1
+    },
+    "bim2": {
+      "id": "bim2",
+      "type": "oven",
+      "icon": "/common_assets/models/builtin/2/bim2_icon.jpg",
+      "model": "/common_assets/models/builtin/2/bim_oven.fbx",
+      "material": {
+        "type": "Phong",
+        "params": {
+          "color": "#ffffff",
+          "map": "/common_assets/models/builtin/2/map.png"
+        }
+      },
+      "name": "Встроенная духовка (черная)",
+      "variants": [
+        {
+          "width": 596,
+          "height": 596,
+          "depth": 527,
+          "module_width": 600
+        },
+        {
+          "width": 446,
+          "height": 596,
+          "depth": 527,
+          "module_width": 450
+        }
+      ],
+      "draggable": false
+    },
+    "bim3": {
+      "id": "bim3",
+      "type": "oven",
+      "icon": "/common_assets/models/builtin/2/bim3_icon.jpg",
+      "model": "/common_assets/models/builtin/2/bim_oven.fbx",
+      "material": {
+        "type": "Phong",
+        "params": {
+          "color": "#ffffff",
+          "map": "/common_assets/models/builtin/2/map_2.png"
+        }
+      },
+      "name": "Встроенная духовка (Белая)",
+      "variants": [
+        {
+          "width": 596,
+          "height": 596,
+          "depth": 527,
+          "module_width": 600
+        },
+        {
+          "width": 446,
+          "height": 596,
+          "depth": 527,
+          "module_width": 450
+        }
+      ],
+      "draggable": false
+    },
+    "bim4": {
+      "id": "bim4",
+      "type": "oven",
+      "icon": "/common_assets/models/builtin/3/bim4_icon.jpg",
+      "model": "/common_assets/models/builtin/3/bim_oven2.fbx",
+      "material": {
+        "type": "Phong",
+        "params": {
+          "color": "#ffffff",
+          "map": "/common_assets/models/builtin/3/map.jpg"
+        }
+      },
+      "name": "Встроенная духовка (Белая)",
+      "variants": [
+        {
+          "width": 596,
+          "height": 596,
+          "depth": 527,
+          "module_width": 600
+        },
+        {
+          "width": 446,
+          "height": 596,
+          "depth": 527,
+          "module_width": 450
+        }
+      ],
+      "draggable": false
+    },
+    "bim5": {
+      "id": "bim5",
+      "type": "microwave",
+      "icon": "/common_assets/assets/builtin/microwave/2.png",
+      "model": "/common_assets/assets/builtin/microwave/mic3.fbx",
+      "material": {
+        "type": "Phong",
+        "params": {
+          "color": "#ffffff",
+          "map": "/common_assets/assets/builtin/microwave/mic_map_w-1.png"
+        }
+      },
+      "name": "Встроенная микроволновая печь (Белая)",
+      "variants": [
+        {
+          "width": 596,
+          "height": 360,
+          "depth": 527,
+          "module_width": 600
+        },
+        {
+          "width": 446,
+          "height": 360,
+          "depth": 527,
+          "module_width": 450
+        }
+      ],
+      "draggable": false
+    },
+    "bim6": {
+      "id": "bim6",
+      "type": "microwave",
+      "icon": "/common_assets/assets/builtin/microwave/1.png",
+      "model": "/common_assets/assets/builtin/microwave/mic3.fbx",
+      "material": {
+        "type": "Phong",
+        "params": {
+          "color": "#ffffff",
+          "map": "/common_assets/assets/builtin/microwave/mic_map_b.jpg"
+        }
+      },
+      "name": "Встроенная микроволновая печь (Черная)",
+      "variants": [
+        {
+          "width": 596,
+          "height": 360,
+          "depth": 527,
+          "module_width": 600
+        },
+        {
+          "width": 446,
+          "height": 360,
+          "depth": 527,
+          "module_width": 450
+        }
+      ],
+      "draggable": false
+    },
+    "bim7": {
+      "id": "bim7",
+      "type": "microwave",
+      "icon": "/common_assets/assets/builtin/microwave/3.png",
+      "model": "/common_assets/assets/builtin/microwave/mic3.fbx",
+      "material": {
+        "type": "Phong",
+        "params": {
+          "color": "#ffffff",
+          "map": "/common_assets/assets/builtin/microwave/combo_map.jpg"
+        }
+      },
+      "name": "Встроенная микроволновая печь (Серебристая)",
+      "variants": [
+        {
+          "width": 596,
+          "height": 360,
+          "depth": 527,
+          "module_width": 600
+        },
+        {
+          "width": 446,
+          "height": 360,
+          "depth": 527,
+          "module_width": 450
+        }
+      ],
+      "draggable": false
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "is_kitchen_model": 0,
+  "door_offset": 2,
+  "shelve_offset": 10,
+  "corpus_thickness": 16,
+  "tabletop_thickness": 40,
+  "bottom_modules_height": 720,
+  "bottom_as_top_facade_models": true,
+  "bottom_as_top_facade_materials": true,
+  "bottom_as_top_corpus_materials": true,
+  "cokol_as_corpus": true,
+  "cokol_height": 120,
+  "models": {
+    "top": 1,
+    "bottom": 1
+  },
+  "materials": {
+    "top": {
+      "facades": [
+        1
+      ],
+      "corpus": [
+        1
+      ]
+    },
+    "bottom": {
+      "facades": [
+        1
+      ],
+      "corpus": [
+        1
+      ]
+    },
+    "cokol": [
+      1
+    ],
+    "glass": [
+      "1"
+    ],
+    "tabletop": [
+      1
+
+    ],
+    "walls": [
+      "1"
+    ],
+    "floor": [
+      1
+    ],
+    "wall_panel": [
+      1
+    ]
+  },
+  "selected_materials": {
+    "top": {
+      "facades": 2,
+      "corpus": 4
+    },
+    "bottom": {
+      "facades": 2,
+      "corpus": 4
+    },
+    "cokol": 4,
+    "glass": 1,
+    "tabletop": 3,
+    "wall_panel": 4,
+    "walls": 4,
+    "floor": 4
+  },
+  "handle": {
+    "orientation": "vertical",
+    "lockers_position": "top",
+    "selected_model": 1,
+    "preferable_size": 2,
+    "model": {
+      "id": 1,
+      "category": 2,
+      "name": "\u0420\u0435\u0439\u043b\u0438\u043d\u0433 1",
+      "icon": "\/common_assets\/models\/handles\/1\/icon_1.jpg",
+      "model": "\/common_assets\/models\/handles\/1\/model_1.fbx",
+      "type": "common",
+      "size_index": 2,
+      "material": {
+        "params": {
+          "color": "#dadada",
+          "roughness": "0.3",
+          "metalness": "0"
+        },
+        "add_params": {},
+        "type": "Standart"
+      },
+      "sizes": [
+        {
+          "width": "175",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "128",
+          "price": ""
+        },
+        {
+          "width": "207",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "160",
+          "price": ""
+        },
+        {
+          "width": "239",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "192",
+          "price": ""
+        },
+        {
+          "width": "367",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "320",
+          "price": ""
+        },
+        {
+          "width": "495",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "448",
+          "price": ""
+        },
+        {
+          "width": "527",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "480",
+          "price": ""
+        },
+        {
+          "width": "623",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "576",
+          "price": ""
+        },
+        {
+          "width": "815",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "768",
+          "price": ""
+        },
+        {
+          "width": "911",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "864",
+          "price": ""
+        }
+      ]
+    }
+  },
+  "hinges": {
+    "id": 0,
+    "name": "\u0421 \u0434\u043e\u0432\u043e\u0434\u0447\u0438\u043a\u043e\u043c",
+    "icon": "\/common_assets\/images\/with_dovod.jpg",
+    "door_hinges_price": 1000,
+    "locker_hinges_price": 1000,
+    "dovodchik": true
+  },
+  "wall_panel": {
+    "active": false,
+    "height": 550
+  }
+}

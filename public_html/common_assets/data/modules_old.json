@@ -1,0 +1,5454 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Нижние модули"
+    },
+    {
+      "id": 1,
+      "name": "Верхние модули"
+    },
+    {
+      "id": 2,
+      "name": "Пеналы"
+    },
+    {
+      "id": 3,
+      "name": "Прямые",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "name": "Угловые",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "name": "Завершения",
+      "parent": 0
+    },
+    {
+      "id": 6,
+      "name": "Прямые",
+      "parent": 1
+    },
+    {
+      "id": 7,
+      "name": "Угловые",
+      "parent": 1
+    },
+    {
+      "id": 8,
+      "name": "Завершения",
+      "parent": 1
+    },
+    {
+      "id": 9,
+      "name": "Прямые",
+      "parent": 2
+    },
+    {
+      "id": 10,
+      "name": "Угловые",
+      "parent": 2
+    }
+  ],
+  "items": [
+    {
+      "id": 0,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/0.png",
+      "params": {
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 1,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/1.png",
+      "params": {
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "bottom"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 720,
+            "depth": 600,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 720,
+            "depth": 600,
+            "price": 10000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 2,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/2.png",
+      "params": {
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 140,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%",
+            "position_offset_top": 140
+          },
+          {
+            "starting_point_y": "100%",
+            "position_offset_top": 140
+          }
+        ],
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": 140,
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 4,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/4.png",
+      "params": {
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 140,
+            "offset_bottom": 0,
+            "group": "bottom"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 140,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%",
+            "position_offset_top": 140
+          },
+          {
+            "starting_point_y": "100%",
+            "position_offset_top": 140
+          }
+        ],
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": 140,
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 4,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 4,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 720,
+            "depth": 600,
+            "price": 9000
+          },
+          {
+            "category": 0,
+            "template": 4,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 720,
+            "depth": 600,
+            "price": 10000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 5,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/5.png",
+      "params": {
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 140,
+            "offset_bottom": 0,
+            "group": "bottom"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 140,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%",
+            "position_offset_top": 140
+          },
+          {
+            "starting_point_y": "100%",
+            "position_offset_top": 140
+          },
+          {
+            "width": 140,
+            "orientation": "vertical",
+            "starting_point_y": "100%",
+            "direction_y": "bottom"
+          }
+        ],
+        "lockers": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": 140,
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": 140,
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "100%",
+            "starting_point_y": "100%",
+            "direction_x": "left",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 4,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 4,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 720,
+            "depth": 600,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 4,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 720,
+            "depth": 600,
+            "price": 10000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 6,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/6.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "25%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "25%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "25%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "25%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "25%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 7,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/7.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "25%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "25%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 8,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/8.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 9,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/9.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "41.8%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "19.4%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "41.8%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "19.4%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "61.2%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "19.4%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "80.6%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 10,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/10.png",
+      "params": {
+        "cabinet_group": "bottom",
+        "cabinet": {
+          "width": 600
+        },
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "oven": {
+          "active": true
+        },
+        "hob": {
+          "active": true
+        },
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 598,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 11,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/11.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 12,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/12.png",
+      "params": {
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 150,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 200,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 13,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/13.png",
+      "params": {
+        "cabinet_group": "bottom",
+        "cabinet": {
+          "width": 150
+        },
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "model": 1000000,
+            "walls_visible": false,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 150,
+            "height": 720,
+            "depth": 600,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 14,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/14.png",
+      "params": {
+        "cabinet_group": "bottom",
+        "cabinet": {
+          "width": 600,
+          "height": 960
+        },
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "oven": {
+          "active": true
+        },
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 598,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 15,
+      "category": 3,
+      "icon": "/common_assets/images/icons/modules_bottom/15.png",
+      "params": {
+        "cabinet_group": "bottom",
+        "cabinet": {
+          "width": 600,
+          "height": 1320
+        },
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "oven": {
+          "active": true
+        },
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": 360,
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": 360,
+            "depth": 525,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": 360,
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom",
+            "pX": 0,
+            "pY": 12,
+            "pZ": 26.5,
+            "rX": 0,
+            "rY": 0,
+            "rZ": 0
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 1320,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+
+    {
+      "id": 16,
+      "category": 4,
+      "icon": "/common_assets/images/icons/modules_bottom/16.png",
+      "params": {
+        "cabinet_group": "bottom",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "left",
+          "width": 1050
+        },
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 1050,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 17,
+      "category": 4,
+      "icon": "/common_assets/images/icons/modules_bottom/17.png",
+      "params": {
+        "cabinet_group": "bottom",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "right",
+          "width": 1050
+        },
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35
+          }
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 1050,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 17
+      }
+    },
+    {
+      "id": 18,
+      "category": 4,
+      "icon": "/common_assets/images/icons/modules_bottom/18.png",
+      "params": {
+        "cabinet_group": "bottom",
+        "cabinet": {
+          "type": "corner",
+          "orientation": "right",
+          "width": 1050
+        },
+        "tabletop": {
+          "offset": {
+            "front": 35,
+            "back": 35,
+            "right": 35
+          }
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 720,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "thickness": 18,
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "bottom"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 18
+      }
+    },
+
+
+
+
+    {
+      "id": 50,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/50.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 550,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 360,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 700,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1000,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1100,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1200,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 51,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/51.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 360,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 52,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/52.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 360,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 360,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 53,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/53.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 550,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 460,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 700,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1000,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1100,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1200,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 54,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/54.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 460,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 55,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/55.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 460,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 460,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 56,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/56.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 550,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 480,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 700,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1000,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1100,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 1200,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 57,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/57.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 480,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 58,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/58.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 480,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 480,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "shelves": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+
+    {
+      "id": 200,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/200.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 201,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/201.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "id": 201,
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 202,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/202.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 720,
+            "depth": 300,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 720,
+            "depth": 300,
+            "price": 10000
+          }
+        ],
+        "id": 202,
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 203,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/203.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 720,
+            "depth": 300,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 720,
+            "depth": 300,
+            "price": 10000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 204,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/204.png",
+      "params": {
+        "cabinet_group": "top",
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 205,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/205.png",
+      "params": {
+        "cabinet_group": "top",
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+
+
+    {
+      "id": 206,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/206.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 920,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 206
+      }
+    },
+    {
+      "id": 207,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/207.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 920,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "id": 201,
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 208,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/208.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 920,
+            "depth": 300,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 920,
+            "depth": 300,
+            "price": 10000
+          }
+        ],
+        "id": 202,
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 209,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/209.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 920,
+            "depth": 300,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 920,
+            "depth": 300,
+            "price": 10000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 210,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/210.png",
+      "params": {
+        "cabinet_group": "top",
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 920,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 211,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/211.png",
+      "params": {
+        "cabinet_group": "top",
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 920,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 212,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/212.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 960,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 213,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/213.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 960,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "id": 201,
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 214,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/214.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 960,
+            "depth": 300,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 960,
+            "depth": 300,
+            "price": 10000
+          }
+        ],
+        "id": 202,
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 215,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/215.png",
+      "params": {
+        "cabinet_group": "top",
+        "doors": [
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "50%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "variants": [
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 960,
+            "depth": 300,
+            "price": 9000,
+            "default": true
+          },
+          {
+            "category": 0,
+            "template": 1,
+            "code": "",
+            "name": "",
+            "width": 900,
+            "height": 960,
+            "depth": 300,
+            "price": 10000
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 216,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/216.png",
+      "params": {
+        "cabinet_group": "top",
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": [
+              "full",
+              "full"
+            ],
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 217,
+      "category": 6,
+      "icon": "/common_assets/images/icons/modules_top/217.png",
+      "params": {
+        "cabinet_group": "top",
+        "shelves": [
+          {
+            "starting_point_y": "50%"
+          }
+        ],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": "50%",
+            "type": "simple_top",
+            "style": "window",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "top",
+            "starting_point_x": "0%",
+            "starting_point_y": "50%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "variants": [
+          {
+            "code": "",
+            "name": "",
+            "width": 300,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 400,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 450,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 500,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          },
+          {
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 300,
+            "price": 8000,
+            "default": true
+          }
+        ],
+        "cabinet": {},
+        "tabletop": {
+          "offset": {}
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "lockers": [],
+        "oven": [],
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 300,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/300.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "left",
+          "width": 800,
+          "depth": 300
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "tabletop": {
+          "offset": {}
+        }
+      }
+    },
+    {
+      "id": 301,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/301.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "right",
+          "width": 800
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 17,
+        "tabletop": {
+          "offset": {}
+        }
+      }
+    },
+    {
+      "id": 302,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/302.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner",
+          "orientation": "right",
+          "width": 800
+        },
+        "tabletop": {
+          "offset": {
+            "front": 0,
+            "back": 0
+          }
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 720,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "thickness": 18,
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 18
+      }
+    },
+    {
+      "id": 303,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/300.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "left",
+          "width": 800,
+          "depth": 300
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "tabletop": {
+          "offset": {}
+        },
+        "id": 303
+      }
+    },
+    {
+      "id": 304,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/301.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "right",
+          "width": 800
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 17,
+        "tabletop": {
+          "offset": {}
+        }
+      }
+    },
+    {
+      "id": 305,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/302.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner",
+          "orientation": "right",
+          "width": 800
+        },
+        "tabletop": {
+          "offset": {
+            "front": 0,
+            "back": 0
+          }
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 920,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "thickness": 18,
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 18
+      }
+    },
+    {
+      "id": 306,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/300.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "left",
+          "width": 800,
+          "depth": 300
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "ltr",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "tabletop": {
+          "offset": {}
+        },
+        "id": 306
+      }
+    },
+    {
+      "id": 307,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/301.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner_straight",
+          "orientation": "right",
+          "width": 800
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 800,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "100%",
+            "starting_point_y": "0%",
+            "direction_x": "left",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 17,
+        "tabletop": {
+          "offset": {}
+        }
+      }
+    },
+    {
+      "id": 308,
+      "category": 7,
+      "icon": "/common_assets/images/icons/modules_top/302.png",
+      "params": {
+        "cabinet_group": "top",
+        "cabinet": {
+          "type": "corner",
+          "orientation": "right",
+          "width": 800
+        },
+        "tabletop": {
+          "offset": {
+            "front": 0,
+            "back": 0
+          }
+        },
+        "oven": {},
+        "lockers": [],
+        "variants": [
+          {
+            "category": 0,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 960,
+            "depth": 300,
+            "price": 8000
+          }
+        ],
+        "cornice": {},
+        "cokol": {
+          "height": 0
+        },
+        "facades": [],
+        "doors": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": "100%",
+            "thickness": 18,
+            "type": "rtl",
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "vertical",
+            "handle_position": "bottom",
+            "starting_point_x": "0%",
+            "starting_point_y": "100%",
+            "direction_x": "right",
+            "direction_y": "bottom",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "group": "top"
+          }
+        ],
+        "shelves": [],
+        "hob": [],
+        "sink": [],
+        "models": [],
+        "id": 18
+      }
+    },
+
+
+
+    {
+      "id": 500,
+      "category": 9,
+      "icon": "/common_assets/images/icons/modules_bottom/500.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": 360,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": 360,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": 360,
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom"
+          }
+        ],
+        "tabletop": {
+          "active": false,
+          "height": 0,
+          "offset":{
+            "front": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 2040,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {
+          "back_wall_offset": 35
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [
+          {
+            "offset_bottom": 1316,
+            "starting_point_y": "100%",
+            "direction_y": "bottom",
+            "handle_position": "bottom"
+          }
+
+        ],
+        "shelves": [
+          {
+            "starting_point_y": 360
+          },
+          {
+            "starting_point_y": 720
+          },
+          {
+            "starting_point_y": 1316
+          }
+        ],
+        "oven": {
+          "active": true,
+          "pY": 720
+        },
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 501,
+      "category": 9,
+      "icon": "/common_assets/images/icons/modules_bottom/501.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": 360,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom"
+          },
+          {
+            "active": true,
+            "width": "100%",
+            "height": 360,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": 360,
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom"
+          }
+        ],
+        "tabletop": {
+          "active": false,
+          "height": 0,
+          "offset":{
+            "front": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 2040,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {
+          "back_wall_offset": 35
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [
+          {
+            "offset_bottom": 1316,
+            "starting_point_y": "100%",
+            "height": "50%",
+            "direction_y": "bottom",
+            "handle_position": "bottom",
+            "type": "simple_top"
+          },
+          {
+            "offset_bottom": 1316,
+            "starting_point_y": 1316,
+            "height": "50%",
+            "direction_y": "top",
+            "handle_position": "bottom",
+            "type": "simple_top"
+          }
+
+        ],
+        "shelves": [
+          {
+            "starting_point_y": 360
+          },
+          {
+            "starting_point_y": 720
+          },
+          {
+            "starting_point_y": 1316
+          }
+        ],
+        "oven": {
+          "active": true,
+          "pY": 720
+        },
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 502,
+      "category": 9,
+      "icon": "/common_assets/images/icons/modules_bottom/502.png",
+      "params": {
+        "lockers": [
+          {
+            "active": true,
+            "width": "100%",
+            "height": 360,
+            "style": "full",
+            "handle_model": 0,
+            "handle_size_index": 2,
+            "handle_orientation": "horizontal",
+            "handle_position": "middle",
+            "starting_point_x": "0%",
+            "starting_point_y": "0%",
+            "direction_x": "right",
+            "direction_y": "top",
+            "offset_top": 0,
+            "offset_bottom": 0,
+            "walls_visible": true,
+            "group": "bottom"
+          }
+        ],
+        "tabletop": {
+          "active": false,
+          "height": 0,
+          "offset":{
+            "front": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 2040,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {
+          "back_wall_offset": 35
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [
+          {
+            "offset_bottom": 956,
+            "starting_point_y": "100%",
+            "height": "100%",
+            "direction_y": "bottom",
+            "handle_position": "bottom"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": 360
+          },
+          {
+            "starting_point_y": 956
+          }
+
+        ],
+        "oven": {
+          "active": true,
+          "pY": 360
+        },
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    },
+    {
+      "id": 503,
+      "category": 9,
+      "icon": "/common_assets/images/icons/modules_bottom/503.png",
+      "params": {
+        "lockers": [],
+        "tabletop": {
+          "active": false,
+          "height": 0,
+          "offset":{
+            "front": 35
+          }
+        },
+        "variants": [
+          {
+            "category": 0,
+            "template": 3,
+            "code": "",
+            "name": "",
+            "width": 600,
+            "height": 2040,
+            "depth": 600,
+            "price": 8000
+          }
+        ],
+        "cabinet": {
+          "back_wall_offset": 35
+        },
+        "cornice": {},
+        "cokol": {},
+        "facades": [],
+        "doors": [
+          {
+            "starting_point_y": "0%",
+            "height": 720,
+            "direction_y": "top",
+            "handle_position": "top"
+          },
+          {
+            "offset_bottom": 1316,
+            "starting_point_y": "100%",
+            "height": "100%",
+            "direction_y": "bottom",
+            "handle_position": "bottom"
+          }
+        ],
+        "shelves": [
+          {
+            "starting_point_y": 720
+          },
+          {
+            "starting_point_y": 1316
+          }
+
+        ],
+        "oven": {
+          "active": true,
+          "pY": 720
+        },
+        "hob": [],
+        "sink": [],
+        "models": []
+      }
+    }
+  ]
+}

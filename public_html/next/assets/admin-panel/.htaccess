@@ -1,0 +1,8 @@
+<IfModule mod_headers.c>
+    <FilesMatch ".svg$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+    <FilesMatch ".json$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>

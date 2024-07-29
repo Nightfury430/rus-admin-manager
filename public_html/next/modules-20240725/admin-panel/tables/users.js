@@ -1,0 +1,9 @@
+import{inject}from"../vendor/vue.esm-browser.js";import{App,JsonApi}from"../shared/admin-shared.js";import*as Table from"../shared/table.js";const UsersRoot={setup(){const{t:e}=inject("lang"),t={getData(e){return JsonApi.Post("/next/admin-panel/api/users/get-users",e)},saveData(e){return JsonApi.Post("/next/admin-panel/api/users/save-users",e)},deleteData(e){return JsonApi.Post("/next/admin-panel/api/users/delete-users",e)}},n={softDelete:!0},s=[{name:"id",label:"ci_id",type:"int",show:"none",edit:"none"},{name:"uid",label:e("fields.id"),type:"uid",show:"hide",edit:"none"},{name:"secret",label:e("fields.email"),type:"string",width:2,edit:"new"},{name:"username",label:e("fields.name"),type:"string",width:2},{name:"active",label:e("fields.active"),type:"bool"},{name:"client_active",label:e("users.fields.client_active"),type:"bool",edit:"none"},{name:"status",label:e("users.fields.status"),type:"string",edit:"none"},{name:"status_message",label:e("users.fields.statusMessage"),type:"string",edit:"none"},{name:"last_active",label:e("users.fields.lastActive"),type:"string",show:"hide",edit:"none"},{name:"created_at",label:e("fields.createdAt"),type:"string",show:"hide",edit:"none"},{name:"updated_at",label:e("fields.updatedAt"),type:"string",show:"hide",edit:"none"},{name:"deleted_at",label:e("fields.deletedAt"),type:"string",show:"hide",edit:"none"}],o={sort:{field:"uid",asc:!1}};return{dataProvider:t,pager:n,fields:s,filters:o}},template:`
+        <ap-page :page-title="$t('pages.users')">
+            <div class="main-content wide">
+                <div class="page">
+                    <table-container :data-provider="dataProvider" :pager="pager" :fields="fields" :filters="filters"></table-container>
+                </div>
+            </div>
+        </ap-page>
+    `};App.Mount(UsersRoot,Table.getTableComponents()),App.Run()

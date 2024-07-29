@@ -1,0 +1,217 @@
+<?php
+class Furniture_model extends CI_Model {
+
+    public function __construct()
+    {
+        $this->load->database();
+    }
+
+    public function get_sets()
+    {
+        $query = $this->db->get('Furniture_sets');
+        return $query->result_array();
+    }
+
+
+    public function add_set($data)
+    {
+        return $this->db->insert('Furniture_sets', $data);
+    }
+
+
+    public function get_categories()
+    {
+        $query = $this->db->get('Furniture_categories');
+        return $query->result_array();
+    }
+
+    public function get_category($id)
+    {
+        $query = $this->db->get_where('Furniture_categories', array('id' => $id));
+        return $query->row_array();
+    }
+
+    public function get_active_categories()
+    {
+        $this->db->from('Furniture_categories');
+        $this->db->where('active',1);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function add_category($data)
+    {
+        return $this->db->insert('Furniture_categories', $data);
+    }
+
+    public function update_category($id)
+    {
+        $data = array(
+            'name' => $this->input->post('name'),
+            'parent' => $this->input->post('parent'),
+            'active' => $this->input->post('active')
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('Furniture_categories', $data);
+
+
+        $children = $this->get_category_children($id);
+
+        if(count($children) > 0){
+            foreach ($children as $child){
+                $this->db->where('id', $child['id']);
+                $this->db->update('Furniture_categories', array('active' => $this->input->post('active')));
+            }
+        }
+    }
+
+    public function remove_category($id)
+    {
+        $this->db->delete('Furniture_categories', array('id' => $id));
+    }
+
+    public function check_category_for_children($id)
+    {
+        $this->db->limit(1);
+        $query = $this->db->get_where('Furniture_categories', array('parent' => $id));
+        return count($query->result_array());
+    }
+
+    public function get_category_children($id)
+    {
+        $query = $this->db->get_where('Furniture_categories', array('parent' => $id));
+        return $query->result_array();
+    }
+
+
+    public function get_items_temp()
+    {
+        $this->db->order_by('id','DESC');
+        $query = $this->db->get('Furniture_items');
+        return $query->result_array();
+    }
+
+    public function get_items_with_categories()
+    {
+        $this->db->from('Furniture_items');
+        $this->db->where('category !=',0);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function get_items_without_categories()
+    {
+        $this->db->from('Furniture_items');
+        $this->db->where('category',0);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+    public function get_items($category, $offset, $limit)
+    {
+        if($category == 0){
+            $this->db->order_by('id','DESC');
+            $query = $this->db->get('Furniture_items',$limit,$offset);
+            return $query->result_array();
+        } else {
+
+            $children = $this->get_category_children($category);
+
+            $this->db->from('Furniture_items');
+            $this->db->where('category',$category);
+
+
+            if(count($children) > 0){
+                foreach ($children as $child){
+                    $this->db->or_where('category',$child['id']);
+                }
+            }
+
+            $this->db->limit($limit, $offset);
+            $this->db->order_by('id','DESC');
+            $query = $this->db->get();
+            return $query->result_array();
+        }
+    }
+
+    public function get_all_items()
+    {
+        $this->db->order_by('id','DESC');
+        $query = $this->db->get('Furniture_items');
+        return $query->result_array();
+    }
+
+    public function get_all_active_items()
+    {
+        $this->db->order_by('id','DESC');
+        $this->db->from('Furniture_items');
+        $this->db->where('active',1);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
+
+    public function get_item($id)
+    {
+        $query = $this->db->get_where('Furniture_items', array('id' => $id));
+        return $query->row_array();
+    }
+
+
+
+
+    public function add_item($data)
+    {
+        $this->db->insert('Furniture_items', $data);
+        return $this->db->insert_id();
+    }
+
+    public function add_item_data($id, $data)
+    {
+        $this->db->where('id', $id);
+        $this->db->update('Furniture_items', $data);
+    }
+
+
+
+
+    public function update_item($id)
+    {
+        $data = array(
+            'name' => $this->input->post('name'),
+            'category' => $this->input->post('category'),
+            'active' => $this->input->post('active'),
+            'materials' => json_encode($this->input->post('materials'))
+
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('Furniture_items', $data);
+    }
+
+
+    public function remove_items($id)
+    {
+        $this->db->delete('Furniture_items', array('id' => $id));
+    }
+
+    public function get_items_count($category)
+    {
+        if($category == 0){
+            return $this->db->count_all('Furniture_items');
+        } else {
+            $children = $this->get_category_children($category);
+            $this->db->from("Furniture_items");
+            $this->db->where('category', $category);
+            if(count($children) > 0){
+                foreach ($children as $child){
+                    $this->db->or_where('category',$child['id']);
+                }
+            }
+            return $this->db->count_all_results();
+        }
+
+    }
+
+}

@@ -1,0 +1,1504 @@
+let app = null;
+let ajax_base_url = null;
+let controller_name = null;
+let lang_data = null;
+let templates_list = null;
+let custom_templates_list = null;
+let categories = null;
+let cat_tree = null;
+let cat_ordered = null;
+let categories_hash = null;
+let item_id = null;
+let cabinet = null;
+let module_data = null;
+let builtin_data = null;
+let facades_data = null;
+
+let input_timeout_time = 750;
+let input_timeout = null;
+
+let base_params = {
+    cabinet: {
+        top_wall: true,
+        left_wall: true,
+        right_wall: true,
+        back_wall: true,
+        bottom_wall: true,
+    },
+    tabletop: {
+        active: 1,
+        offset:{
+            left: 0,
+            right: 0,
+            back: 35,
+            front: 35
+        }
+    },
+    shelves:{
+        orientation: 'horizontal',
+        width: '100%',
+        starting_point_x: '0%',
+        starting_point_y: '0%',
+        position_offset_top: 0,
+        position_offset_bottom: 0,
+        v2:1
+    },
+    doors: {
+        type: 'rtl',
+        style: 'full',
+        width: '100%',
+        height: '100%',
+        starting_point_x: '0%',
+        starting_point_y: '0%',
+        offset_top: 0,
+        offset_bottom: 0,
+        group: 'bottom',
+        handle_position: 'top',
+        no_handle_forced: false
+    },
+    lockers: {
+        style: 'full',
+        width: '100%',
+        height: '100%',
+        starting_point_x: '0%',
+        starting_point_y: '0%',
+        position_offset_top: 0,
+        position_offset_bottom: 0,
+        no_handle_forced: false,
+        group: 'bottom',
+        inner: 0
+    },
+    oven: {
+        active: false,
+        pY: 0
+    },
+    hob: {
+        active: false,
+    },
+    sink: {
+        active: false,
+    },
+    built_in_models:{
+        type: 'common',
+        active: true,
+        id: 0,
+        pY: 0,
+        pX: 0,
+        pZ: 0
+    }
+
+}
+
+let door_types = [
+    {
+        name: 'Налево',
+        type: "rtl"
+    },
+    {
+        name: 'Направо',
+        type: "ltr"
+    },
+    {
+        name: 'Вверх',
+        type: "simple_top"
+    },
+    {
+        name: 'Вниз',
+        type: "simple_bottom"
+    },
+    {
+        name: 'Aventos HL',
+        type: 'front_top'
+    },
+    {
+        name: 'Aventos HF',
+        type: 'double_top'
+    },
+    {
+        name: 'Фальшфасад',
+        type: 'falsefacade'
+    }
+];
+let facade_styles = [
+    {
+        name: 'Глухой',
+        type: 'full'
+    },
+    {
+        name: 'Витрина',
+        type: 'window'
+    },
+    {
+        name: 'Решетка',
+        type: 'frame'
+    },
+];
+let handles_position = [
+    {
+        name: 'Сверху',
+        val: 'top'
+    },
+    {
+        name: 'Снизу',
+        val: 'bottom'
+    },
+    {
+        name: 'По центру',
+        val: 'middle'
+    },
+    {
+        name: 'Без ручки',
+        val: 'no_handle'
+    }
+
+];
+let facade_groups = [
+    {
+        name: 'Верхние модули',
+        val: 'top'
+    },
+    {
+        name: 'Нижние модули',
+        val: 'bottom'
+    }
+
+];
+
+let builtin_types = [
+    'common',
+    'dryer',
+    'oven',
+    'microwave',
+    'hob',
+    'washer'
+]
+
+let models_data = {};
+
+let template_height = {
+    "1":[],
+    "2":[],
+    "3":[]
+}
+
+let custom_template_height = {
+    "1":[],
+    "2":[],
+    "3":[]
+}
+
+let acc_url;
+let lang_div;
+
+let date_time234 = new Date().getTime();
+let date_timestamp234 = '?' + date_time234;
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    ajax_base_url = document.getElementById('ajax_base_url').value;
+    controller_name = document.getElementById('controller_name').value;
+    if(document.getElementById('item_id')) item_id = document.getElementById('item_id').value;
+
+
+    acc_url = document.getElementById('acc_base_url').value;
+    lang_data = {};
+    lang_div = document.getElementById('lang_phrases');
+    for (let i = 0; i < lang_div.children.length; i++){
+        lang_data[lang_div.children[i].id] = lang_div.children[i].innerHTML;
+    }
+
+
+
+    let data_url = ajax_base_url + '/'+ controller_name +'/get_data_ajax/' ;
+    if(document.getElementById('set_id').value != '') data_url = ajax_base_url + '/'+ controller_name +'/get_data_ajax/'+ document.getElementById('set_id').value + '/' ;
+
+    let promises = [];
+    promises.push(promise_request(data_url  + date_timestamp234) )
+
+
+
+    promises.push(promise_request(ajax_base_url + '/catalog/get_catalog_items/builtin' + date_timestamp234)  )
+    // promises.push(promise_request( ajax_base_url + '/catalog/get_item_common/facades_systems/' + 27))
+    promises.push(promise_request( ajax_base_url + '/'+ controller_name +'/get_facade_set_by_set_id_common/' + document.getElementById('set_id').value  + date_timestamp234) )
+
+    if(item_id != 0){
+        let item_url = ajax_base_url + '/'+ controller_name +'/get_item_data_ajax/' + item_id  + date_timestamp234;
+        promises.push(promise_request(item_url))
+    }
+
+
+
+    Promise.all(promises).then(function (results) {
+
+        let data = results[0];
+
+        data.categories.unshift({
+            id:"0",
+            name: lang_data['lang_no'],
+            parent: "0"
+        })
+        cat_tree = create_tree(data.categories);
+        cat_ordered = flatten(cat_tree);
+        categories_hash = get_hash(data.categories)
+
+        for (let i = 0; i < data.modules_templates_custom.length; i++){
+            if(data.modules_templates_custom[i].icon){
+                if(data.modules_templates_custom[i].icon.indexOf('/common_assets') < 0) data.modules_templates_custom[i].icon = acc_url + data.modules_templates_custom[i].icon
+            }
+        }
+        custom_templates_list = data.modules_templates_custom;
+        templates_list = data.modules_templates
+        //
+        // for (let i = 0; i < templates_list.length; i++){
+        //     let t = templates_list[i]
+        //
+        //     // let pars = JSON.parse(t[i].params);
+        //     // template_height[t.category].push(pars.variants[0].height)
+        // }
+        // console.log(template_height)
+
+
+        console.log(results[1])
+        builtin_data = results[1]
+        fs_data = {
+            1: JSON.parse(results[2].data)
+        }
+        facade_styles = [];
+
+        fs_data[1].materials = [];
+        fs_data[1].facades.additional_materials = {};
+
+        let start_id = 1000000000
+
+        for (let j = 0; j < fs_data[1].facades.materials_n.length; j++){
+
+            let it = fs_data[1].facades.materials_n[j];
+
+
+            fs_data[1].materials.push({
+                id: start_id + j,
+                add_params: it.add_params,
+                params: it.params,
+                name: it.name,
+                category: 0,
+                type: 'Standart',
+                code: ''
+            })
+
+            fs_data[1].facades.additional_materials[it.key] = {
+                fixed: 1,
+                key: it.key,
+                materials: [],
+                name: it.name,
+                required: false,
+                selected: start_id + j
+            }
+
+
+
+        }
+
+        Object.keys(fs_data[1].facades.types).forEach(function (k) {
+
+            let obj = {
+                name: fs_data[1].facades.types[k].name,
+                type: k
+            }
+
+            Object.keys(fs_data[1].facades.compatibility_types).forEach(function (key) {
+                if(fs_data[1].facades.compatibility_types[key] == k) obj.type = key;
+            })
+
+
+            facade_styles.push(obj)
+        })
+
+        console.log(123123123123)
+        console.log(fs_data[1])
+        fs_data[1].modules = "/common_assets/data/empty_modules.json"
+        demo_mode = false;
+        if(item_id != 0){
+            module_data = results[3];
+            if(module_data.icon){
+                if(module_data.icon.indexOf('/common_assets') < 0) module_data.icon = acc_url + module_data.icon
+            }
+        }
+
+        let name = 'fs';
+        let key = 100000;
+
+        let category = {
+            id: key,
+            parent: 0,
+            code:'',
+            name: name,
+            items: [],
+            categories: []
+        }
+
+
+
+        let in2 = setInterval(function () {
+            if(facades_lib.tree){
+
+                Object.keys(fs_data).forEach(function (k) {
+                    // console.log(fs_data[k])
+
+                    let materials_category = {
+                        id: key + '-' + k,
+                        active: 0,
+                        parent: 0,
+                        code:'',
+                        name: name,
+                        items: [],
+                        categories: []
+                    }
+
+                    let facade = copy_object(fs_data[k].facades)
+                    category.items.push(facade)
+
+                    facade.id = key + '-' + k;
+                    facade.category = key;
+                    facade.icon = fs_data[k].icon;
+                    facade.materials = [key + '-' + k]
+                    Object.keys(facade.additional_materials).forEach(function (mat_key) {
+                        facade.additional_materials[mat_key].selected = key + '-' + k + '-' + facade.additional_materials[mat_key].selected;
+                    })
+
+                    facade.is_fs = true;
+                    facade.fs_id = k
+
+                    if(fs_data[k].cornice){
+                        if(fs_data[k].cornice.model !=''){
+
+                            let co = {
+                                model: fs_data[k].cornice.model,
+                                corner_model: fs_data[k].cornice.corner_model,
+                                corner_model_45: fs_data[k].cornice.corner_model_45,
+                                corner_model_45_code: fs_data[k].cornice.corner_model_45_code,
+                                corner_model_45_name: fs_data[k].cornice.corner_model_45_name,
+                                corner_model_code: fs_data[k].cornice.corner_model_code,
+                                corner_model_name: fs_data[k].cornice.corner_model_name,
+
+                                model_code: fs_data[k].cornice.model_code,
+                                model_name: fs_data[k].cornice.model_name,
+                                name: fs_data[k].cornice.name,
+                                radius_model: fs_data[k].cornice.radius,
+                                radius_code: fs_data[k].cornice.radius_code,
+                                radius_name: fs_data[k].cornice.radius_name
+                            }
+
+                            cornice_lib.add_item(key + '-' + k, co)
+                        }
+                    }
+
+                    if(fs_data[k].cokol){
+                        if(fs_data[k].cokol.model !=''){
+                            cokol_lib.add_item(key + '-' + k, fs_data[k].cokol)
+                        }
+                    }
+
+                    if(fs_data[k].cokol_top){
+                        if(fs_data[k].cokol_top.model !=''){
+                            cokol_top_lib.add_item(key + '-' + k, fs_data[k].cokol_top)
+                        }
+                    }
+
+                    if(fs_data[k].molding){
+                        if(fs_data[k].molding.model !=''){
+                            molded_lib.add_item(key + '-' + k, fs_data[k].molding)
+                        }
+                    }
+
+                    facades_lib.add_item(key + '-' + k, facade)
+
+                    let materials = copy_object(fs_data[k].materials)
+
+                    for (let i = 0; i < materials.length; i++){
+                        materials[i].id = key + '-' + k + '-' + materials[i].id;
+                        materials_lib.add_item(materials[i].id, materials[i])
+                        materials_category.items.push(materials[i])
+                    }
+
+                    materials_lib.add_category(key + '-' + k, materials_category)
+
+
+
+                })
+
+
+                facades_lib.add_category(key, category)
+                facades_lib.tree.push(category)
+
+                clearInterval(in2)
+                // test_fs('100000-1')
+
+
+            }
+        }, 100)
+
+
+
+        init_vue();
+
+    })
+
+
+});
+
+
+function init_vue(){
+    app = new Vue({
+        el: '#sub_form',
+        components:{
+            draggable: vuedraggable,
+            'v-select': VueSelect.VueSelect
+        },
+
+        created: function(){
+            this.$options.cat_ordered = cat_ordered
+            this.$options.categories = categories
+
+            this.$options.builtin = builtin_data
+            this.$options.builtin_hash = get_hash(builtin_data.items)
+
+            this.templates_list = templates_list;
+            this.custom_templates_list = custom_templates_list;
+
+            let scope = this;
+
+            if(item_id != 0){
+
+
+                if(!categories_hash[module_data.category]) module_data.category = "0";
+
+                Object.keys(module_data).forEach(function (key) {
+                    if(key == 'params'){
+
+                        Vue.set(scope.item, key, JSON.parse(module_data[key]).params)
+
+
+
+                        if(scope.item.params.fixed_facade_material){
+                            scope.fixed_material = scope.item.params.fixed_facade_material
+                            console.log(scope.item.params.fixed_facade_material)
+                        }
+
+                        if(scope.item.params.sizes_limit){
+                            Vue.set(scope, 'sizes_limit', scope.item.params.sizes_limit)
+                        }
+
+                    } else {
+                        Vue.set(scope.item, key, module_data[key])
+                    }
+                })
+
+
+
+                Vue.set(scope.item, 'icon_file', '')
+            }
+
+        },
+
+        data: {
+            url: glob.base_url + '/catalog/' + 'file_manager',
+            folder_url: glob.base_url + '/catalog/' + 'create_folder',
+            file_url: glob.base_url + '/catalog/' + 'upload_files',
+            remove_url: glob.base_url + '/catalog/' + 'remove_files',
+            fm_mode: 'images',
+            fm_item: null,
+            fm_prop: null,
+            fm_update_mat: false,
+            categories: [],
+            item:{
+                active: 1,
+                order: 0,
+                category: "0",
+                icon: '',
+                icon_file: '',
+                template_id: '',
+                is_custom_template: '',
+                params:{
+                    variants:[
+                        {
+                            name: '',
+                            code: '',
+                            price: '',
+                            width: '',
+                            height: '',
+                            depth: '',
+                            default: 1
+                        }
+                    ]
+                },
+
+            },
+
+            config_params: {},
+
+            drag: false,
+            add_modal: false,
+            templates_list:[],
+            custom_templates_list:[],
+            template_mode: 'template',
+            edit_mode: 0,
+            template_category: 1,
+            template_height: '',
+            errors:[],
+            fixed_material: null,
+            sizes_limit:{
+                min_width: 0,
+                max_width: 0,
+                min_height: 0,
+                max_height: 0,
+                min_depth: 0,
+                max_depth: 0
+            },
+
+            editor_tabs: {
+                mode: 1,
+                shelves: 0,
+                doors: 0,
+                lockers: 0,
+                builtin: 0
+            },
+            select_model: 0
+        },
+        mounted(){
+
+            let scope = this;
+            if (document.getElementById('item_id')) {
+                let inter = setInterval(function () {
+
+                    if(scene !== undefined){
+
+
+
+                        clearInterval(inter);
+                        cabinet = sc.add_object('cabinet', scope.get_data().params, false);
+                        cabinet.position.set(100, 0, 100)
+                        test_fs('100000-1')
+
+
+                    }
+
+                }, 100)
+            }
+
+            this.$options.door_types = door_types;
+            this.$options.facade_styles = facade_styles;
+            this.$options.handles_position = handles_position;
+            this.$options.facade_groups = facade_groups;
+
+
+
+        },
+
+        computed:{
+            dragOptions() {
+                return {
+                    animation: 500,
+                    group: "description",
+                    disabled: false,
+                    ghostClass: "ghost"
+                };
+            },
+            show_delete: function () {
+                if(this.item.icon_file != '') return true;
+                if(this.item.icon.indexOf('module_sets_modules_icons') > -1) return true;
+            }
+        },
+        methods: {
+
+            get_models_data: function(){
+
+            },
+
+            make_icon: function(gray){
+                if(!cabinet) return;
+                let scope = this;
+                let camera_pos = camera.position.clone();
+                let controls_target = controls.target.clone();
+                let cab_pos = cabinet.position.clone();
+
+                if(gray){
+                    let mt = materials_lib.items[1];
+                    mt.params.color = '#545454';
+                    mt.params.transparent = true;
+                    mt.params.opacity = 0.7;
+
+                    gray_mat.transparent = true;
+                    gray_mat.opacity = 0.7;
+
+                    cabinet.change_facade_material({id:1,group:'all'})
+                }
+
+                this.set_design_mode();
+
+                controls.target.set(
+                    0,
+                    0,
+                    0
+                );
+                camera.position.set(
+                    140,
+                    64,
+                    205
+                );
+
+                if(cabinet.params.cabinet.type === 'corner' || cabinet.params.cabinet.type === 'corner_90'){
+                    cabinet.rotation.y = Math.PI/3;
+                }
+
+                if (cabinet.params.cabinet.orientation === 'left'){
+                    camera.position.set(
+                        -140,
+                        64,
+                        205
+                    );
+                }
+
+
+                let box = new THREE.Box3().setFromObject(cabinet).getSize();
+                cabinet.position.set(
+                    0,- box.y / 2,0
+                );
+
+                hide_sizes();
+                room.hide();
+                controls.update();
+
+
+                setTimeout(function () {
+
+                    let canvas = document.createElement('canvas');
+
+
+                    if (cabinet.params.cabinet.height < 1250){
+                        canvas.width = 200;
+                        canvas.height = 200;
+                        let ctx = canvas.getContext('2d');
+
+                        let left0 = renderer.domElement.width / 2 - 110;
+                        let top0 = renderer.domElement.height / 2 - 110;
+
+                        if(
+                            cabinet.params.cabinet.type == 'corner' ||
+                            cabinet.params.cabinet.type == 'corner_90' ||
+                            cabinet.params.cabinet.type == 'corner_straight'
+                        ) {
+                            left0-=10
+                            top0-=10
+
+                            ctx.drawImage(renderer.domElement,left0,top0 + 20,250,250,0,0,200,200);
+                        } else{
+                            ctx.drawImage(renderer.domElement,left0,top0+20,220,220,0,0,200,200);
+                        }
+
+
+
+
+                    }
+
+                    if(cabinet.params.cabinet.height >= 1250){
+                        canvas.width = 200;
+                        canvas.height = 400;
+                        let ctx = canvas.getContext('2d');
+
+                        let left0 = renderer.domElement.width / 2 - 125;
+                        let top0 = renderer.domElement.height / 2 - 250;
+
+
+                        ctx.drawImage(renderer.domElement,left0,top0,250,500,0,0,200,400);
+                    }
+                    if(cabinet.params.cabinet.height >= 2200){
+                        canvas.width = 200;
+                        canvas.height = 400;
+                        let ctx = canvas.getContext('2d');
+
+                        let left0 = renderer.domElement.width / 2 - 150;
+                        let top0 = renderer.domElement.height / 2 - 300;
+
+
+                        ctx.drawImage(renderer.domElement,left0,top0,300,600,0,0,200,400);
+                    }
+
+
+
+
+
+                    let data = canvas.toDataURL('image/jpeg', 0.8);
+                    console.log(data)
+
+                    scope.item.icon_file = data;
+
+                    controls.target.set(controls_target.x, controls_target.y, controls_target.z);
+                    camera.position.set(camera_pos.x, camera_pos.y, camera_pos.z);
+                    cabinet.position.set(cab_pos.x, cab_pos.y, cab_pos.z);
+                    room.show();
+                    controls.update();
+                    show_sizes();
+
+                    if(gray){
+                        let mt = materials_lib.items[1];
+                        mt.params.color = '#932129';
+                        mt.params.transparent = false;
+
+                        gray_mat.transparent = false;
+
+                        cabinet.change_facade_material({id:1,group:'all'})
+                    }
+
+                    scope.set_edit_mode();
+
+                },1000)
+
+            },
+
+            set_edit_mode: function(){
+                if(cabinet){
+                    global_options.mode = 'edges';
+                    transparent_edges(true);
+                    cabinet.edges_mode();
+                }
+
+            },
+            set_design_mode: function(){
+                if(cabinet) {
+                    global_options.mode = 'design';
+                    cabinet.build();
+                }
+            },
+
+            check_cabinet_type: function(){
+                if(!this.item.params.cabinet) Vue.set(this.item.params, 'cabinet', {});
+                return (this.item.params.cabinet.type == undefined || this.item.params.cabinet.type == 'common');
+            },
+
+            check_bottom: function(){
+                return this.item.params.cabinet_group == 'bottom' || !this.item.params.cabinet_group;
+            },
+
+            check_percent: function(val){
+                val+='';
+                if(val.indexOf('%') > -1){
+                    return '%'
+                }
+                return 'mm'
+            },
+
+            change_percent: function(event, index, param, group){
+                let val = event.target.value;
+
+                if(this.item.params[group][index][param] === undefined) this.item.params[group][index][param] = base_params[group][param]
+
+                if(val == '%'){
+                    this.item.params[group][index][param] = parseInt(this.item.params[group][index][param]) + '%';
+                } else {
+                    this.item.params[group][index][param] = parseInt(this.item.params[group][index][param]);
+                }
+                if(cabinet){
+                    this.build_parts(group)
+                }
+            },
+
+            build_parts: function(group){
+                cabinet.params[group] = this.get_data().params[group];
+                if(group == 'shelves') cabinet.build_shelves()
+                if(group == 'doors') cabinet.build_doors()
+                if(group == 'lockers') cabinet.build_lockers()
+                if(group == 'built_in_models') cabinet.build_fixed_models()
+                cabinet.edges_mode(cabinet[group]);
+            },
+
+            change_shelves: function(event, group, index, param, check_select){
+                let scope = this;
+                debounce(function () {
+                    let val = '';
+                    let input = event.target;
+                    let select;
+                    val = parseInt(input.value);
+
+                    if(isNaN(val)) val = input.value;
+
+                    if(check_select){
+                        select = input.parentElement.getElementsByTagName('SELECT')[0];
+                        if(select.value == '%'){
+                            val = val+'%';
+                        }
+                    }
+
+                    if(group == 'shelves'){
+                        scope.item.params[group][index].v2 = 1;
+                        if(!scope.item.params[group][index].starting_point_x) scope.item.params[group][index].starting_point_x = "0%"
+                    }
+
+                    if(group == 'doors'){
+                        if(param == 'handle_position'){
+                            if(val == 'no_handle'){
+                                scope.item.params[group][index].no_handle_forced = 1;
+                            } else {
+                                if( scope.item.params[group][index].no_handle_forced) delete scope.item.params[group][index].no_handle_forced
+                            }
+                        }
+                    }
+
+                    scope.item.params[group][index][param] = val;
+
+                    if(group == 'lockers'){
+                        if(param == 'no_handle_forced'){
+                            if(val == 'true'){
+                                scope.item.params[group][index].no_handle_forced = 1;
+                            } else {
+                                if( scope.item.params[group][index].no_handle_forced){
+                                    delete scope.item.params[group][index].no_handle_forced
+                                    delete cabinet.params[group][index].no_handle_forced
+                                }
+                            }
+                        }
+
+
+
+                    }
+
+                    if(cabinet){
+                        scope.build_parts(group)
+                    }
+                })
+            },
+
+            change_offset: function(event, side){
+                let scope = this;
+                debounce(function () {
+                    let val = '';
+                    let input = event.target;
+                    val = parseInt(input.value);
+
+                    scope.item.params.tabletop.offset[side] = val;
+                    if(cabinet){
+                        cabinet.params.tabletop.offset[side] = val;
+                        cabinet.build();
+                    }
+                })
+            },
+
+            change_models: function(event, group, param) {
+                let scope = this;
+                debounce(function () {
+                    let val = parseInt(event.target.value);
+                    if(!scope.item.params[group]) scope.item.params[group] = {};
+                    scope.item.params[group][param] = val;
+                    let data = scope.get_data();
+                    if(cabinet){
+                        Object.keys(data.params[group]).forEach(function (k) {
+
+                            if(typeof data.params[group][k] != 'object'){
+                                cabinet.params[group][k] = data.params[group][k];
+                            } else {
+                                Object.keys(data.params[group][k]).forEach(function (key) {
+                                    cabinet.params[group][k][key] = data.params[group][k][key];
+                                })
+                            }
+                        })
+                    }
+                    cabinet.build();
+                })
+
+            },
+            change_cabinet: function (event, group, param) {
+
+                let val = event.target.checked;
+
+                if (!this.item.params[group]) this.item.params[group] = {};
+
+                this.item.params[group][param] = val;
+
+                if (group == 'tabletop' && !val) {
+                    this.item.params.tabletop.height = 0;
+                } else {
+                    delete this.item.params.tabletop.height;
+                }
+
+                let data = this.get_data();
+                if (cabinet) {
+                    Object.keys(data.params[group]).forEach(function (k) {
+
+                        if (typeof data.params[group][k] != 'object') {
+                            cabinet.params[group][k] = data.params[group][k];
+                        } else {
+                            Object.keys(data.params[group][k]).forEach(function (key) {
+                                cabinet.params[group][k][key] = data.params[group][k][key];
+                            })
+                        }
+                    })
+
+                    if (group == 'tabletop') {
+                        if (!val) {
+                            cabinet.params.tabletop.height = 0;
+                        } else {
+                            cabinet.params.tabletop.height = 40;
+                        }
+                        cabinet.build_tabletop();
+                    } else {
+                        cabinet.build();
+                    }
+                }
+
+            },
+
+            change_90_or: function(event){
+                console.log(event.target.value)
+
+
+
+                if(event.target.value == 'left'){
+                    Vue.set(this.item.params.cabinet, 'orientation', 'left')
+                    Vue.set(this.item.params.doors[0], 'type', 'corner_90_rtl')
+                    cabinet.params.cabinet.orientation = 'left';
+                    cabinet.params.doors[0].type = 'corner_90_rtl';
+                } else {
+                    Vue.delete(this.item.params.cabinet, 'orientation')
+                    delete cabinet.params.cabinet.orientation
+                    cabinet.params.doors[0].type = 'corner_90_ltr';
+                }
+
+                cabinet.build();
+
+
+            },
+            get_90_or: function(){
+                if (this.item.params.cabinet.orientation == 'left') return 'left';
+                return 'right';
+            },
+            add_part: function(group){
+                let scope = this;
+                if(!this.item.params[group]) Vue.set(this.item.params, group, [])
+
+                this.item.params[group].push(JSON.parse(JSON.stringify(base_params[group])))
+
+                this.editor_tabs[group] = this.item.params[group].length - 1;
+
+                if(cabinet){
+                    scope.build_parts(group)
+                    // setTimeout(function () {
+                    //     cabinet.shelves.children[scope.editor_tabs.shelves].material = red_mat_opac
+                    // },150)
+                }
+
+
+
+            },
+
+            add_model: function(id){
+                let scope = this;
+                let group = 'built_in_models'
+                if(!this.item.params[group]) Vue.set(this.item.params, group, [])
+                let params = JSON.parse(JSON.stringify(base_params[group]));
+
+                let data = JSON.parse(this.$options.builtin_hash[id].model_data)
+                console.log(data)
+                params.id = 'bim' + id;
+                params.type = data.type;
+                this.item.params[group].push(params)
+                this.editor_tabs[group] = this.item.params[group].length - 1;
+
+                if(cabinet){
+                    scope.build_parts(group)
+                }
+
+            },
+
+            delete_part: function(index, group){
+                let scope = this;
+
+                swal({
+                    title: document.getElementById('are_u_sure_message').innerHTML,
+                    text: $('#delete_confirm_message').html(),
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    cancelButtonText: document.getElementById('lang_no_message').innerHTML,
+                    confirmButtonText: document.getElementById('lang_yes_message').innerHTML,
+                    closeOnConfirm: true
+                }, function () {
+
+                    scope.item.params[group].splice(index,1)
+                    scope.editor_tabs[group] = scope.item.params[group].length - 1;
+                    if(cabinet){
+                        scope.build_parts(group)
+                    }
+
+                });
+            },
+
+            get_type_params(type, index, name){
+
+                if(index == null){
+
+                    if(this.item.params[type] == undefined){
+                        return base_params[type][name];
+                    }
+                    if(this.item.params[type][name] == undefined){
+                        return base_params[type][name];
+                    } else {
+                        return this.item.params[type][name]
+                    }
+
+                } else {
+                    if(this.item.params[type][index][name] == undefined){
+                        return base_params[type][name];
+                    } else {
+                        return this.item.params[type][index][name]
+                    }
+                }
+
+
+            },
+
+            get_data: function () {
+                return JSON.parse(JSON.stringify(this.item))
+            },
+
+            resize_viewport(){
+                setTimeout(function () {
+                    resize_viewport();
+                    test_fs('100000-1')
+                },10)
+            },
+
+            get_json: function(){
+                document.getElementById('json_input').value = JSON.stringify(this.get_data().params,null, 4);
+            },
+
+            apply_json: function(){
+                let scope = this;
+                try {
+                    let params = JSON.parse(document.getElementById('json_input').value);
+                    Vue.set(scope.item, 'params', JSON.parse(document.getElementById('json_input').value))
+
+                    scope.rebuild_module();
+                    toastr.success(document.getElementById('success_message').innerHTML);
+                } catch (e) {
+                    toastr.error(document.getElementById('mod_json_error').innerHTML)
+                }
+            },
+
+            check_w2: function(w1, w2){
+                if(w2 != w1){
+                    Vue.delete(this.item.params.doors[0], 'available_opens')
+                    Vue.set(this.item.params.doors[0], 'type', 'corner_90_ltr')
+                }
+                // if(w2 > w1){
+                //     Vue.set(this.item.params.cabinet, 'orientation', 'right');
+                //     Vue.set(this.item.params.cabinet, 'width2', w2);
+                //
+                // } else {
+                //     Vue.set(this.item.params.cabinet, 'orientation', 'left');
+                //     Vue.set(this.item.params.cabinet, 'width2', w2);
+                // }
+                // Vue.delete(this.item.params.doors[0], 'available_opens')
+            },
+
+
+            rebuild_module: function(){
+                if(!cabinet) return;
+                if(cabinet) cabinet.delete();
+
+                dControls.s_helper.hide();
+
+
+                cabinet = sc.add_object('cabinet', this.get_data().params, false);
+                cabinet.position.set(100,0,100)
+            },
+
+
+
+
+
+            select_template: function (template, custom) {
+
+                console.log(template)
+                Vue.set(this.item, 'icon', template.icon);
+                Vue.set(this.item, 'template_id', template.id);
+                Vue.set(this.item, 'is_custom_template', custom);
+                // Vue.set(this.item, 'variants', template.variants);
+
+                let params = JSON.parse(template.params).params;
+
+                if(!params.variants){
+                    params.variants = [];
+                }
+
+                if(!params.shelves) params.shelves = [];
+                if(!params.doors) params.doors = [];
+                if(!params.lockers) params.lockers = [];
+
+
+                if(this.fixed_material != null && this.fixed_material != 0) params.fixed_facade_material = this.fixed_material
+                if(this.sizes_limit != null) params.sizes_limit = this.sizes_limit
+
+                Vue.set(this.item, 'params', params);
+
+
+
+
+                if(this.item.params.variants){
+                    for (let i = 0; i < this.item.params.variants.length; i++){
+                        this.item.params.variants[i].price = '';
+                        this.item.params.variants[i].name = '';
+                        this.item.params.variants[i].code = '';
+
+                        this.item.params.variants[i].default == true ? this.item.params.variants[i].default = 1 : this.item.params.variants[i].default = 0;
+
+                    }
+                }
+
+
+
+
+                if(cabinet) cabinet.delete();
+                dControls.s_helper.hide();
+
+                console.log(this.get_data().params);
+                cabinet = sc.add_object('cabinet', this.get_data().params, false);
+                cabinet.position.set(100,0,100)
+            },
+
+            add_variant:function () {
+                this.item.params.variants.push(
+                    {
+                        name: '',
+                        code: '',
+                        price: '',
+                        width: '',
+                        height: '',
+                        depth: '',
+                        default: 0
+                    }
+                )
+
+                if(this.item.params.variants.length == 1)  this.item.params.variants[0].default = 1;
+
+            },
+            remove_variant(index){
+
+                let fl = 0;
+                if(this.item.params.variants[index].default == 1) fl = 1;
+
+                this.item.params.variants.splice(index,1);
+
+                if(fl == 1){
+                    if(this.item.params.variants.length) this.item.params.variants[0].default = 1;
+                }
+
+
+            },
+
+            process_icon_file: function (event) {
+                if(event.target.files.length){
+
+                    if(!check_filename(event.target.files[0])){
+                        event.target.value = '';
+                        alert(document.getElementById('lang_incorrect_chars_in_file_name').innerHTML);
+                        return;
+                    }
+
+                    this.item.icon_file = event.target.files[0];
+                } else {
+                    this.item.icon_file = '';
+                }
+            },
+            get_icon_src:function (file) {
+                if(this.item.icon != '' && this.item.icon_file == '') return this.item.icon;
+                if(this.item.icon_file != ''){
+                    if(typeof this.item.icon_file == 'object') return URL.createObjectURL(file);
+                    return this.item.icon_file
+                }
+                if(this.item.icon == '' &&  this.item.icon_file == '') return 'https://via.placeholder.com/120x120';
+            },
+            remove_icon: function () {
+                this.item.icon = '';
+                this.item.icon_file = '';
+                this.$refs.icon_file.value = '';
+
+                if(this.item.template_id != ''){
+
+                    if(this.item.is_custom_template == 1){
+                        for (let i = 0; i < this.custom_templates_list.length; i++){
+                            if(this.custom_templates_list[i].id == this.item.template_id) this.item.icon = this.custom_templates_list[i].icon
+                        }
+                    } else {
+                        for (let i = 0; i < this.templates_list.length; i++){
+                            if(this.templates_list[i].id == this.item.template_id) this.item.icon = this.templates_list[i].icon
+                        }
+                    }
+
+
+                }
+
+            },
+            on_drag({ relatedContext, draggedContext }) {
+                const relatedElement = relatedContext.element;
+                const draggedElement = draggedContext.element;
+                return (
+                    (!relatedElement || !relatedElement.fixed) && !draggedElement.fixed
+                );
+            },
+            process_default: function (index) {
+                for (let i = 0; i < this.item.params.variants.length; i++){
+
+                    if(i == index){
+                        this.item.params.variants[i].default = 1;
+                    } else {
+                        this.item.params.variants[i].default = 0;
+                    }
+                }
+            },
+            show_swal: function (index) {
+                let scope = this;
+
+                swal({
+                    title: document.getElementById('are_u_sure_message').innerHTML,
+                    text: $('#delete_confirm_message').html(),
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    cancelButtonText: document.getElementById('lang_no_message').innerHTML,
+                    confirmButtonText: document.getElementById('lang_yes_message').innerHTML,
+                    closeOnConfirm: true
+                }, function () {
+                    scope.remove_variant(index)
+                });
+            },
+            submit: function (e) {
+                e.preventDefault();
+                let scope = this;
+                let data = scope.get_data();
+                data.icon = data.icon.replace(acc_url,'');
+                delete data.icon_file;
+
+
+                scope.errors = [];
+
+
+                if(!data.params.variants) data.params.variants = [];
+
+                for (let i = data.params.variants.length - 1; i >= 0; i--){
+                    if(data.params.variants[i].width == '' || data.params.variants[i].height == '' || data.params.variants[i].height == ''){
+                        data.params.variants.splice(i,1)
+                    }
+                }
+
+
+
+                if(!data.params || !Object.keys(data.params).length)scope.errors.push(lang_data['error_no_template_selected']);
+                if(!data.params.variants.length) scope.errors.push(lang_data['error_no_variants']);
+                if(data.category == 0) scope.errors.push(lang_data['error_no_category_selected']);
+
+
+
+                if(scope.errors.length) return false;
+
+
+                if(this.fixed_material != null && this.fixed_material != 0) data.params.fixed_facade_material = this.fixed_material
+                if(this.sizes_limit != null) data.params.sizes_limit = this.sizes_limit
+
+                let item_id = data.id;
+                if(!data.id) item_id = '';
+
+                let send_data = {};
+
+                send_data.id = item_id
+                send_data.category = data.category
+                send_data.icon = data.icon
+                send_data.order = data.order
+                send_data.params = JSON.stringify({params: data.params})
+                send_data.active = data.active
+                send_data.set_id = document.getElementById('set_id').value
+
+
+                console.log(send_data)
+
+
+
+                let formData = new FormData();
+
+                formData.append('category',  send_data.category);
+                formData.append('icon',  send_data.icon);
+                formData.append('params',  send_data.params);
+                formData.append('active',  send_data.active);
+                formData.append('set_id',  send_data.set_id);
+                formData.append('order',  send_data.order);
+
+
+
+                $.ajax({
+                    url : ajax_base_url + '/catalog/add_item_ajax_no_files_common/modules_sets_modules/' + item_id,
+                    type : 'POST',
+                    data : formData,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success : function(msg) {
+                        console.log(msg)
+                        let response = JSON.parse(msg);
+                        if(response == 'success'){
+                            window.location = ajax_base_url + '/catalog/items_common/modules_sets_modules/' + document.getElementById('set_id').value;
+                        }
+
+
+                    }
+                });
+
+                return false;
+
+            }
+        }
+    });
+
+}
+
+
+
+
+function get_base_data(){
+    let data = {};
+
+    let item_id = document.getElementById('item_id');
+    if(item_id != 0){
+        data.item_id = item_id.value;
+    } else {
+        data.item_id = 0;
+    }
+
+    let controller_name = document.getElementById('footer_controller_name');
+    if(controller_name != null){
+        data.controller_name = controller_name.value;
+    } else {
+        data.controller_name = '';
+    }
+
+
+    data.base_url = document.getElementById('ajax_base_url').value;
+    data.acc_url = document.getElementById('acc_base_url').value;
+    data.lang = JSON.parse(document.getElementById('lang_json').value);
+
+
+    data.is_common = 0;
+
+    if(document.getElementById('footer_is_common')){
+        data.is_common = document.getElementById('footer_is_common').value;
+    }
+
+    data.c_method_name = 'categories_get';
+    if(data.is_common) data.c_method_name += '_common';
+
+    data.i_method_name = 'get_item';
+    if(data.is_common) data.i_method_name += '_common';
+    return data;
+}
+
+function create_tree(dataset) {
+    let hashTable = Object.create(null)
+    dataset.forEach(function (aData) {
+        hashTable[aData.id] = aData;
+        aData.children = [];
+    })
+    let dataTree = []
+    dataset.forEach(function (aData) {
+        if (aData.parent && aData.parent > 0) hashTable[aData.parent].children.push(hashTable[aData.id])
+        else dataTree.push(hashTable[aData.id])
+    })
+    return dataTree
+}
+
+
+function get_hash(data) {
+    return data.reduce(function(map, obj) {
+        map[obj.id] = obj;
+        return map;
+    }, {});
+}
+
+function check_filename(file) {
+    let split_arr = file.name.split('.');
+    if(split_arr.length > 2) return false;
+    return !(split_arr[0].match(/[^\u0000-\u007f]/));
+}
+
+function promise_request (url) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.send();
+    return new Promise(function (resolve, reject) {
+        xhr.onreadystatechange = function (e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText);
+                resolve(data);
+            } else if (xhr.readyState == 4) {
+                reject();
+            }
+        };
+    });
+}
+
+function send_xhr_get(url, ready) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.send();
+    xhr.addEventListener("readystatechange", function () {
+        if (xhr.readyState === 4) {
+            if(typeof ready == "function") ready(xhr);
+        }
+    });
+}
+
+function send_xhr_post(url, data, ready) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.send(data);
+    xhr.addEventListener("readystatechange", function () {
+        if (xhr.readyState === 4) {
+            ready(xhr);
+        }
+    });
+}
+
+function copy_object(obj) {
+    return JSON.parse(JSON.stringify(obj))
+}
+
+function save_file( blob, filename ) {
+    var link = document.createElement( 'a' );
+    link.style.display = 'none';
+    document.body.appendChild( link );
+    link.href = URL.createObjectURL( blob );
+    link.download = filename;
+    link.click();
+    link.remove();
+}
+
+
+
+async function get_tree_async(url, no_item) {
+    let result = {};
+    let data = await promise_request(url)
+
+    if(no_item){
+        data.unshift(no_item)
+    }
+
+    console.log(data)
+
+    result.tree = create_tree(copy_object(data));
+    result.ordered = flatten(copy_object(result.tree))
+    result.hash = get_hash(copy_object(data))
+
+    return result;
+}
+
+
+function debounce(callback) {
+    clearTimeout(input_timeout);
+    input_timeout = setTimeout(callback, input_timeout_time);
+}

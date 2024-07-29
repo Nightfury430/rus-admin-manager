@@ -1,0 +1,1 @@
+import{App}from"./admin-shared.js";const PageRoot={template:"#v-PageRoot"};App.Mount(PageRoot),App.Run()

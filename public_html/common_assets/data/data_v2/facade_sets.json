@@ -1,0 +1,162 @@
+[
+  {
+    "id": 0,
+    "name": "Гладкий",
+    "icon": "/common_assets/images/icons/facades/MDF_modern_gladkiy.jpg",
+    "category": 1,
+    "facades": {
+      "facade": 1,
+      "facade_window": 2,
+      "facade_window_frame": 0,
+      "facade_radius": 3,
+      "facade_radius_window": 4
+    },
+    "materials": [
+      0,
+      2999,
+      1989989
+    ],
+    "default": true,
+    "top_category": 0
+  },
+  {
+    "id": 1,
+    "category": 2,
+    "icon": "/common_assets/images/icons/facades/MDF_classic_ark.jpg",
+    "name": "Арка",
+    "facades": {
+      "facade": 11,
+      "facade_window": 13,
+      "facade_radius": 3,
+      "facade_radius_window": 4,
+      "facade_window_frame": 12
+    },
+    "materials": [
+      0,
+      2999
+    ],
+    "top_category": 0
+  },
+  {
+    "id": 2,
+    "category": 2,
+    "icon": "/common_assets/images/icons/facades/MDF_classic_rect.jpg",
+    "name": "Прямоугольник",
+    "facades": {
+      "facade": 14,
+      "facade_window": 15,
+      "facade_window_frame": 16,
+      "facade_radius": 17,
+      "facade_radius_window": 4
+    },
+    "materials": [
+      0,
+      2999
+    ],
+    "top_category": 0
+  },
+  {
+    "id": 3,
+    "name": "Пластик",
+    "icon": "/common_assets/images/icons/facades/Plastic.jpg",
+    "category": 3,
+    "facades": {
+      "facade": 5,
+      "facade_window": 0,
+      "facade_radius": 3,
+      "facade_radius_window": 4,
+      "facade_window_frame": 99
+    },
+    "materials": [
+      100
+    ],
+    "top_category": 3
+  },
+  {
+    "id": 4,
+    "name": "ДСП",
+    "icon": "/common_assets/images/icons/facades/DSP.jpg",
+    "category": 4,
+    "facades": {
+      "facade": 5,
+      "facade_window": 0,
+      "facade_radius": null,
+      "facade_radius_window": null,
+      "facade_window_frame": 99
+    },
+    "materials": [
+      101,
+      6000
+    ],
+    "top_category": 4
+  },
+  {
+    "id": 20,
+    "category": 20,
+    "icon": "/common_assets/images/icons/facades/MDF_country_lzheviborka_shirokaya.jpg",
+    "name": "Лжевыборка широкая",
+    "facades": {
+      "facade": 200,
+      "facade_window": 201,
+      "facade_window_frame": null,
+      "facade_radius": null,
+      "facade_radius_window": null
+    },
+    "materials": [
+      0,
+      2999
+    ],
+    "top_category": 0
+  },
+  {
+    "id": 21,
+    "category": 20,
+    "icon": "/common_assets/images/icons/facades/MDF_country_lzheviborka_uzkaya.jpg",
+    "name": "Лжевыборка узкая",
+    "facades": {
+      "facade": 202,
+      "facade_window": 203,
+      "facade_window_frame": null,
+      "facade_radius": null,
+      "facade_radius_window": null
+    },
+    "materials": [
+      0,
+      2999
+    ],
+    "top_category": 0
+  },
+  {
+    "id": 10000,
+    "name": "Гладкий",
+    "icon": "/common_assets/tmp/1.jpg",
+    "facades": {
+      "facade": 5,
+      "facade_window": 99,
+      "facade_radius": 3,
+      "facade_radius_window": 4,
+      "facade_window_frame": 99
+    },
+    "materials": [
+      101,
+      6000
+    ]
+  },
+  {
+    "id": 1000000,
+    "name": "Массив",
+    "icon": "/common_assets/images/icons/facades/Massive.jpg",
+    "category": 5,
+    "facades": {
+      "facade": 1,
+      "facade_window": 2,
+      "facade_window_frame": 16,
+      "facade_radius": 3,
+      "facade_radius_window": 4
+    },
+    "materials": [
+      1989989
+    ],
+    "top_category": 5
+  }
+]

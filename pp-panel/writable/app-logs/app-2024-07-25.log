@@ -1,0 +1,4 @@
+APP - 2024-07-25 11:22:39 - user[uid=...bzp1cp95, ip=2a02:2698:2d:13ed:9683:c4ff:fe13:6cfe] --> Client folder created: folder=34206559-36dk, login=one@overide.ru
+APP - 2024-07-25 11:24:31 - user[uid=...bzp1cp95, ip=2a02:2698:2d:13ed:9683:c4ff:fe13:6cfe] --> Email has been sent: subject=Создан аккаунт, to=one@overide.ru, success=true
+APP - 2024-07-25 17:25:42 - user[uid=...bzp1cp95, ip=2a02:2698:2d:13ed:9683:c4ff:fe13:6cfe] --> Client folder created: folder=34206559-36dk-dy0r, login=one@overide.ru, isSub=true, masterFolder=34206559-36dk
+APP - 2024-07-25 17:28:15 - user[uid=...bzp1cp95, ip=2a02:2698:2d:13ed:9683:c4ff:fe13:6cfe] --> Client folder created: folder=34206559-36dk-rsds, login=one@overide.ru, isSub=true, masterFolder=34206559-36dk

@@ -1,0 +1,15 @@
+<script src="/common_assets/libs/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+<script src="/common_assets/libs/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="/common_assets/libs/Tween.js" type="text/javascript"></script>
+
+<script src="/common_assets/libs/three.min.js" type="text/javascript"></script>
+<script src="/common_assets/libs/OrbitControls.js" type="text/javascript"></script>
+<script src="/common_assets/libs/PointerLockControls.js" type="text/javascript"></script>
+<script src="/common_assets/libs/ColladaLoader2.js" type="text/javascript"></script>
+<script src="/common_assets/libs/inflate.min.js" type="text/javascript"></script>
+<script src="/common_assets/libs/FBXLoader.js" type="text/javascript"></script>
+<script src="/common_assets/libs/dat.gui.min.js" type="text/javascript"></script>
+<script src="/common_assets/libs/stats.min.js" type="text/javascript"></script>

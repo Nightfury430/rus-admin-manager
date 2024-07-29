@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "\u0420\u0443\u0447\u043a\u0438"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "category": 2,
+      "name": "\u0420\u0435\u0439\u043b\u0438\u043d\u0433 1",
+      "icon": "\/common_assets\/models\/handles\/1\/icon_1.jpg",
+      "model": "\/common_assets\/models\/handles\/1\/model_1.fbx",
+      "type": "common",
+      "material": {
+        "params": {
+          "color": "#dadada",
+          "roughness": "0.3",
+          "metalness": "0"
+        },
+        "add_params": {},
+        "type": "Standart"
+      },
+      "sizes": [
+        {
+          "width": "175",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "128",
+          "price": ""
+        },
+        {
+          "width": "207",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "160",
+          "price": ""
+        },
+        {
+          "width": "239",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "192",
+          "price": ""
+        },
+        {
+          "width": "367",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "320",
+          "price": ""
+        },
+        {
+          "width": "495",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "448",
+          "price": ""
+        },
+        {
+          "width": "527",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "480",
+          "price": ""
+        },
+        {
+          "width": "623",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "576",
+          "price": ""
+        },
+        {
+          "width": "815",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "768",
+          "price": ""
+        },
+        {
+          "width": "911",
+          "height": "14",
+          "depth": "35",
+          "code": "",
+          "axis_size": "864",
+          "price": ""
+        }
+      ]
+    }
+  ]
+}

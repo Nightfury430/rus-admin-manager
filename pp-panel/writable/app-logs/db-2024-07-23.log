@@ -1,0 +1,10 @@
+DB - 2024-07-23 10:30:51 - user[ip=62.16.40.219] --> User created: id=1, group=ap-admin, email=admin_s@planplace.ru, password=Eq6pQYkNtINhyy8HtDSN, client_active=1, active=1, uid=01j3fj9mbnetqp31w9h7vcd2jz
+DB - 2024-07-23 10:31:15 - user[ip=62.16.40.219] --> User created: id=2, group=ap-admin, email=sales@planplace.ru, password=Eq6pQYkNtINhyy8HtDSN, client_active=1, active=1, uid=01j3fjabzfmp6952e9gpqdezgf
+DB - 2024-07-23 10:32:46 - user[ip=2a02:2698:2d:13ed:9683:c4ff:fe13:6cfe] --> User created: id=3, group=ap-admin, email=volojee@planplace.ru, password=V$z5JX@nEQV$yR%49y3Wv7by^4H$gm, client_active=1, active=1, uid=01j3fjd4qqcps1p799bzp1cp95
+DB - 2024-07-23 11:06:03 - user[uid=...gpqdezgf, ip=62.16.40.219] --> User created: id=341, group=cp-admin, active=1, client_active=0, email=mae1storm2305@ya.ru, uid=01j3fma3stez2msz6ad38vt2qz
+DB - 2024-07-23 11:06:03 - user[uid=...gpqdezgf, ip=62.16.40.219] --> Client created: id=01j3fma3stez2msz6ad38vt2qz, ci_id=341, name=TEST, email=mae1storm2305@ya.ru, login=mae1storm2305@ya.ru, folder=34132763-t2qz, active=0, is_phys=0, in_crm=0, is_test=0
+DB - 2024-07-23 11:14:47 - user[uid=...bzp1cp95, ip=2a02:2698:2d:13ed:9683:c4ff:fe13:6cfe] --> Users 'client_active' updated: client_active=0, ids=[160, 211, 223, 224, 225, 226, 227]
+DB - 2024-07-23 11:16:53 - user[uid=...gpqdezgf, ip=62.16.40.219] --> Client saved: name=TEST, email=mae1storm2305@ya.ru, login=mae1storm2305@ya.ru, date_end=2025-01-23T11:14:46, active=0, is_phys=0, in_crm=0, is_test=0, id=01j3fma3stez2msz6ad38vt2qz
+DB - 2024-07-23 11:16:53 - user[uid=...gpqdezgf, ip=62.16.40.219] --> User 'client_active' updated: id=341, client_active=0
+DB - 2024-07-23 11:17:09 - user[uid=...gpqdezgf, ip=62.16.40.219] --> Client saved: name=TEST, email=mae1storm2305@ya.ru, login=mae1storm2305@ya.ru, tariff=50, date_end=2025-01-23T11:14:46, active=0, is_phys=0, in_crm=0, is_test=0, id=01j3fma3stez2msz6ad38vt2qz
+DB - 2024-07-23 11:17:09 - user[uid=...gpqdezgf, ip=62.16.40.219] --> User 'client_active' updated: id=341, client_active=0

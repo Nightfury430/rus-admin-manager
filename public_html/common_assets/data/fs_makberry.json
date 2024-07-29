@@ -1,0 +1,2662 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Ника Доро Белая",
+      "category": 7,
+      "icon": "/common_assets/models/decorative/nika/nika_icon.jpg",
+      "facades": [
+        {
+          "name": "Глухой",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B9",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/1_nika_full_min_w116_h116.fbx",
+              "min_width": 116,
+              "min_height": 116
+            },
+            {
+              "model": "/common_assets/models/decorative/nika/facades/2_nika_full_min_w176_h176.fbx",
+              "min_width": 176,
+              "min_height": 176
+            },
+            {
+              "model": "/common_assets/models/decorative/nika/facades/test4.fbx",
+              "min_width": 246,
+              "min_height": 246
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "full"
+        },
+        {
+          "name": "Витрина",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%92%D0%B8%D1%82%D1%80%D0%B8%D0%BD%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/10_nila_window_min_w296_h716.fbx",
+              "min_width": 116,
+              "min_height": 116
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "window"
+        },
+        {
+          "name": "Фасад с колонками",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/frame.fbx",
+              "min_width": 116,
+              "min_height": 116
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "frame"
+        },
+        {
+          "name": "Фасад с колонками под стекло",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/glasscol.fbx",
+              "min_width": 116,
+              "min_height": 116
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "frame"
+        },
+        {
+          "name": "Фасад радиус глухой",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/radius.fbx",
+              "min_width": 0,
+              "min_height": 0
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "radius"
+        },
+        {
+          "name": "Фасад радиус витрина",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/radius_window.fbx",
+              "min_width": 0,
+              "min_height": 0
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "radius_window"
+        }
+      ],
+      "door_thickness": 24,
+      "materials": [
+        1
+      ],
+      "fixed_materials": [
+        1000000000,
+        1000000001,
+        1000000002,
+        1000000003,
+        1000000004,
+        1000000005,
+        1000000006,
+        1000000007,
+        1000000008,
+        1000000009,
+        1000000010,
+        1000000011
+      ],
+      "additional_materials": [
+        {
+          "params": {
+            "color": "#f7f9ef",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {},
+          "id": 1000000000,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#d8aa52",
+            "roughness": 0.8,
+            "metalness": 0
+          },
+          "add_params": {},
+          "id": 1000000001,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/947.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 20,
+            "real_height": 20,
+            "stretch_width": false,
+            "stretch_height": false,
+            "wrapping": "repeat"
+          },
+          "id": 1000000002,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/948.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 256,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 1000000003,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/949.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 1000000004,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/950.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 1000000005,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/951.png",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": true
+          },
+          "add_params": {
+            "real_width": 292,
+            "real_height": 651,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "repeat"
+          },
+          "id": 1000000006,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/1019.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "repeat"
+          },
+          "id": 1000000007,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/1021.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 1000000008,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/1022.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 1000000009,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/1023.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 1000000010,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/1024.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 1000000011,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        }
+      ],
+      "v": 2,
+      "custom_sizes": 0,
+      "available_modules": [],
+      "custom_cokol": {
+        "height": 150,
+        "model": "/common_assets/models/decorative/nika/cokol.fbx",
+        "model_radius": null
+      },
+      "custom_cornice": {
+        "model": "/common_assets/models/decorative/nika/cornice.fbx",
+        "corner_model": "/common_assets/models/decorative/nika/cornice_corner.fbx",
+        "corner_model_45": "/common_assets/models/decorative/nika/cornice_corner45.fbx",
+        "radius_model": "/common_assets/models/decorative/nika/cornice_radius.fbx"
+      },
+      "decorations": {
+        "categories": [
+          {
+            "id": 1
+          }
+        ],
+        "items": [
+          {
+            "category": 1,
+            "id": 1,
+            "icon": "/common_assets/models/decorative/nika/icons/coromislo.jpg",
+            "params": {
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "type": "decoration",
+              "width": 600,
+              "height": 125,
+              "thickness": 27,
+              "model": "/common_assets/models/decorative/nika/coromislo.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 2,
+            "icon": "/common_assets/models/decorative/nika/icons/ramka1.jpg",
+            "params": {
+              "type": "decoration",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "width": 896,
+              "height": 716,
+              "thickness": 24,
+              "model": "/common_assets/models/decorative/nika/ramka1.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 3,
+            "icon": "/common_assets/models/decorative/nika/icons/portal.jpg",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 1900,
+                  "height": 1050,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "cornice": {
+                "offset_front": 130
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 130,
+                  "model": "/common_assets/models/decorative/nika/portal.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ],
+              "cabinet": {
+                "back_wall": "false",
+                "bottom_wall": "false"
+              },
+              "shelves": [
+                {
+                  "v2": true,
+                  "width_offset_left": 234,
+                  "width_offset_right": 234,
+                  "starting_point_y": "100%",
+                  "direction_x": "right",
+                  "direction_y": "top",
+                  "position_offset_top": 268,
+                  "starting_point_x": 234,
+                  "front_offset": 0
+                },
+                {
+                  "v2": true,
+                  "orientation": "vertical",
+                  "starting_point_x": "0%",
+                  "direction_x": "right",
+                  "position_offset_left": 234,
+                  "position_offset_top": 268,
+                  "front_offset": 0
+                },
+                {
+                  "v2": true,
+                  "orientation": "vertical",
+                  "starting_point_x": "0%",
+                  "direction_x": "left",
+                  "position_offset_right": 234,
+                  "front_offset": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 4,
+            "icon": "/common_assets/models/decorative/nika/icons/nika_col_1.jpg",
+            "params": {
+              "type": "decoration",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "width": 93,
+              "height": 870,
+              "thickness": 93,
+              "wall_distance": 0,
+              "model": "/common_assets/models/decorative/nika/nika_col1.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 5,
+            "icon": "/common_assets/models/decorative/nika/icons/nika_col_3_bottom.jpg",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 50,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika/nika_col3.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 6,
+            "icon": "/common_assets/models/decorative/nika/icons/nika_col_3_top.jpg",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 50,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika/nika_col3.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 7,
+            "icon": "/common_assets/models/decorative/nika/icons/nika_pilyastra_bottom.jpg",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 210,
+                  "height": 870,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "cornice": {
+                "offset_front": 80
+              },
+              "cokol": {
+                "height": 0
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 90,
+                  "model": "/common_assets/models/decorative/nika/pilyastra.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 8,
+            "icon": "/common_assets/models/decorative/nika/icons/nika_pilyastra_top.jpg",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 210,
+                  "height": 870,
+                  "depth": 300,
+                  "price": 0
+                },
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 210,
+                  "height": 1660,
+                  "depth": 300,
+                  "price": 0
+                },
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 210,
+                  "height": 2280,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "cornice": {
+                "offset_front": 80
+              },
+              "cokol": {
+                "height": 0
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 90,
+                  "model": "/common_assets/models/decorative/nika/pilyastra.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 9,
+            "icon": "/common_assets/models/decorative/nika/icons/nika_col_2_bottom.jpg",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 35,
+                  "model": "/common_assets/models/decorative/nika/nika_col2.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 10,
+            "icon": "/common_assets/models/decorative/nika/icons/nika_col_2_top.jpg",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "cokol": {
+                "height": 0
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 35,
+                  "model": "/common_assets/models/decorative/nika/nika_col2.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 11,
+            "icon": "/common_assets/models/decorative/nika/icons/bal_s_nikia.jpg",
+            "params": {
+              "width": 600,
+              "wall_distance": 300,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 12,
+            "icon": "/common_assets/models/decorative/nika/icons/bal_l_nika.jpg",
+            "params": {
+              "radius": true,
+              "orientation": "left",
+              "wall_distance": 0,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 13,
+            "icon": "/common_assets/models/decorative/nika/icons/bal_r_nika.jpg",
+            "params": {
+              "radius": true,
+              "wall_distance": 0,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "vit": [
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_1100x270_1276x446.png",
+          "width": "270",
+          "height": "1100"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_180x270_356x446.png",
+          "width": "270",
+          "height": "180"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_180x420_356x596.png",
+          "width": "420",
+          "height": "180"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_180x720_356x896.png",
+          "width": "720",
+          "height": "180"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_342x720_716x446_col.png",
+          "width": "270",
+          "height": "340"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_540x120_716x296.png",
+          "width": "120",
+          "height": "540"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_540x220_716x396.png",
+          "width": "220",
+          "height": "540"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_540x270_716x446.png",
+          "width": "270",
+          "height": "540"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_582x270_ 956x446_col.png",
+          "width": "270",
+          "height": "582"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_636x270_1010x446_col.png",
+          "width": "270",
+          "height": "636"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_780x120_956x296.png",
+          "width": "120",
+          "height": "780"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_780x220_956x396.png",
+          "width": "220",
+          "height": "780"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_780x270_956x446.png",
+          "width": "270",
+          "height": "780"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_834x120_1010x296.png",
+          "width": "120",
+          "height": "834"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_834x220_1010x396.png",
+          "width": "220",
+          "height": "834"
+        },
+        {
+          "texture": "/common_assets/models/decorative/nika/vit/v_834x270_1010x446.png",
+          "width": "270",
+          "height": "834"
+        }
+      ],
+      "modules": "/common_assets/models/decorative/nika/data/modules.json",
+      "handle": {
+        "orientation": "vertical",
+        "lockers_position": "middle",
+        "selected_model": 280,
+        "preferable_size": 0,
+        "model": {
+          "id": 280,
+          "category": 5,
+          "name": "Классика бронза",
+          "icon": "/common_assets/models/handles/14/icon_14.jpg",
+          "model": "/common_assets/models/handles/14/model_14.fbx",
+          "type": "common",
+          "material": {
+            "params": {
+              "color": "#ffffff",
+              "roughness": "0.4",
+              "metalness": "0",
+              "map": "/common_assets/models/handles/14/map_14.jpg"
+            },
+            "add_params": {
+              "real_width": "512",
+              "real_height": "512",
+              "stretch_width": "1",
+              "stretch_height": "1",
+              "wrapping": "mirror"
+            },
+            "type": "Standart"
+          },
+          "sizes": [
+            {
+              "width": "126",
+              "height": "37",
+              "depth": "26",
+              "code": "",
+              "axis_size": "",
+              "price": ""
+            }
+          ],
+          "size_index": 0
+        },
+        "no_handle": false
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ника Ноче",
+      "category": 7,
+      "icon": "/common_assets/models/decorative/nika_noce/nika_noce.jpg",
+      "facades": [
+        {
+          "name": "Глухой",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B9",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/1_nika_full_min_w116_h116.fbx",
+              "min_width": 116,
+              "min_height": 116
+            },
+            {
+              "model": "/common_assets/models/decorative/nika/facades/2_nika_full_min_w176_h176.fbx",
+              "min_width": 176,
+              "min_height": 176
+            },
+            {
+              "model": "/common_assets/models/decorative/nika/facades/test4.fbx",
+              "min_width": 246,
+              "min_height": 246
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "full"
+        },
+        {
+          "name": "Витрина",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%92%D0%B8%D1%82%D1%80%D0%B8%D0%BD%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/10_nila_window_min_w296_h716.fbx",
+              "min_width": 116,
+              "min_height": 116
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "window"
+        },
+        {
+          "name": "Фасад с колонками",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/frame.fbx",
+              "min_width": 116,
+              "min_height": 116
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "frame"
+        },
+        {
+          "name": "Фасад с колонками под стекло",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/glasscol.fbx",
+              "min_width": 116,
+              "min_height": 116
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "frame"
+        },
+        {
+          "name": "Фасад радиус глухой",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/radius.fbx",
+              "min_width": 0,
+              "min_height": 0
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "radius"
+        },
+        {
+          "name": "Фасад радиус витрина",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%A0%D0%B5%D1%88%D0%B5%D1%82%D0%BA%D0%B0",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/nika/facades/radius_window.fbx",
+              "min_width": 0,
+              "min_height": 0
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "radius_window"
+        }
+      ],
+      "door_thickness": 24,
+      "materials": [
+        1
+      ],
+      "fixed_materials": [
+        2000000000,
+        2000000001,
+        2000000002,
+        2000000003,
+        2000000004,
+        2000000005,
+        2000000006,
+        2000000007,
+        2000000008,
+        2000000009,
+        2000000010,
+        2000000011
+      ],
+      "additional_materials": [
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat1.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 256,
+            "real_height": 512,
+            "stretch_width": false,
+            "stretch_height": false,
+            "wrapping": "mirror"
+          },
+          "id": 2000000000,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#2B1A13",
+            "roughness": 0.8,
+            "metalness": 0
+          },
+          "add_params": {},
+          "id": 2000000001,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat3.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 20,
+            "real_height": 20,
+            "stretch_width": false,
+            "stretch_height": false,
+            "wrapping": "repeat"
+          },
+          "id": 2000000002,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat4.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 256,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000003,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat5.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000004,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat6.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000005,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/951.png",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": true
+          },
+          "add_params": {
+            "real_width": 292,
+            "real_height": 651,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "repeat"
+          },
+          "id": 2000000006,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat8.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "repeat"
+          },
+          "id": 2000000007,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat9.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000008,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat10.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000009,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat11.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000010,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat12.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000011,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        }
+      ],
+      "v": 2,
+      "custom_sizes": 0,
+      "available_modules": [],
+      "custom_cokol": {
+        "height": 150,
+        "normal": "/common_assets/models/decorative/nika/cokol.fbx",
+        "radius": null
+      },
+      "custom_cornice": {
+        "model": "/common_assets/models/decorative/nika/cornice.fbx",
+        "corner_model": "/common_assets/models/decorative/nika/cornice_corner.fbx",
+        "corner_model_45": "/common_assets/models/decorative/nika/cornice_corner45.fbx",
+        "radius_model": "/common_assets/models/decorative/nika/cornice_radius.fbx"
+      },
+      "decorations": {
+        "categories": [
+          {
+            "id": 1
+          }
+        ],
+        "items": [
+          {
+            "category": 1,
+            "id": 1,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/1.png",
+            "params": {
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "type": "decoration",
+              "width": 600,
+              "height": 125,
+              "thickness": 27,
+              "model": "/common_assets/models/decorative/nika/coromislo.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 2,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/2.png",
+            "params": {
+              "type": "decoration",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "width": 896,
+              "height": 716,
+              "thickness": 24,
+              "model": "/common_assets/models/decorative/nika/ramka1.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 3,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/3.jpg",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 1900,
+                  "height": 1050,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "cornice": {
+                "offset_front": 130
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 130,
+                  "model": "/common_assets/models/decorative/nika/portal.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ],
+              "cabinet": {
+                "back_wall": "false",
+                "bottom_wall": "false"
+              },
+              "shelves": [
+                {
+                  "v2": true,
+                  "width_offset_left": 234,
+                  "width_offset_right": 234,
+                  "starting_point_y": "100%",
+                  "direction_x": "right",
+                  "direction_y": "top",
+                  "position_offset_top": 268,
+                  "starting_point_x": 234,
+                  "front_offset": 0
+                },
+                {
+                  "v2": true,
+                  "orientation": "vertical",
+                  "starting_point_x": "0%",
+                  "direction_x": "right",
+                  "position_offset_left": 234,
+                  "position_offset_top": 268,
+                  "front_offset": 0
+                },
+                {
+                  "v2": true,
+                  "orientation": "vertical",
+                  "starting_point_x": "0%",
+                  "direction_x": "left",
+                  "position_offset_right": 234,
+                  "front_offset": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 4,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/4.png",
+            "params": {
+              "type": "decoration",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "width": 93,
+              "height": 870,
+              "thickness": 93,
+              "wall_distance": 0,
+              "model": "/common_assets/models/decorative/nika/nika_col1.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 5,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/5.png",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 50,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika/nika_col3.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 6,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/6.png",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 50,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika/nika_col3.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 7,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/7.png",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_1.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 8,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/8.png",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 870,
+                  "depth": 300,
+                  "price": 0
+                },
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 1660,
+                  "depth": 300,
+                  "price": 0
+                },
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 2280,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "cornice": {
+                "offset_front": 0
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_1.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 9,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/9.png",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 75,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 26,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_2.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 10,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/10.png",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 75,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "cokol": {
+                "height": 0
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 26,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_2.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 11,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/11.png",
+            "params": {
+              "width": 600,
+              "wall_distance": 300,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 12,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/12.png",
+            "params": {
+              "radius": true,
+              "orientation": "left",
+              "wall_distance": 0,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 13,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/13.png",
+            "params": {
+              "radius": true,
+              "wall_distance": 0,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "vit": [
+        {
+          "width": 270,
+          "height": 180,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x180_446x356.png"
+        },
+        {
+          "width": 420,
+          "height": 180,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_420x180_596x356.png"
+        },
+        {
+          "width": 720,
+          "height": 180,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_720x180_896x356.png"
+        },
+        {
+          "width": 270,
+          "height": 342,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x342_col446x716.png"
+        },
+        {
+          "width": 120,
+          "height": 540,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_120x540_296x716.png"
+        },
+        {
+          "width": 220,
+          "height": 540,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_220x540_396x716.png"
+        },
+        {
+          "width": 270,
+          "height": 540,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x540_446x716.png"
+        },
+        {
+          "width": 270,
+          "height": 582,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x582_446x956.png"
+        },
+        {
+          "width": 270,
+          "height": 636,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x582_446x956.png"
+        },
+        {
+          "width": 120,
+          "height": 780,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_120x780_296_956.png"
+        },
+        {
+          "width": 220,
+          "height": 780,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_220x780_396_956.png"
+        },
+        {
+          "width": 270,
+          "height": 780,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x780_446x956.png"
+        },
+        {
+          "width": 120,
+          "height": 834,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_120x834_296x1010.png"
+        },
+        {
+          "width": 220,
+          "height": 834,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_220x834_396x1010.png"
+        },
+        {
+          "width": 270,
+          "height": 834,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x834_446x1010.png"
+        },
+        {
+          "width": 270,
+          "height": 1100,
+          "texture": "/common_assets/models/decorative/nika_noce/vit/v_270x1100_446x1276.png"
+        }
+      ],
+      "modules": "/common_assets/models/decorative/nika_noce/data/modules.json",
+      "handle": {
+        "orientation": "vertical",
+        "lockers_position": "middle",
+        "selected_model": 280,
+        "preferable_size": 0,
+        "model": {
+          "id": 280,
+          "category": 5,
+          "name": "Классика бронза",
+          "icon": "/common_assets/models/handles/14/icon_14.jpg",
+          "model": "/common_assets/models/handles/14/model_14.fbx",
+          "type": "common",
+          "material": {
+            "params": {
+              "color": "#ffffff",
+              "roughness": "0.4",
+              "metalness": "0",
+              "map": "/common_assets/models/handles/14/map_14.jpg"
+            },
+            "add_params": {
+              "real_width": "512",
+              "real_height": "512",
+              "stretch_width": "1",
+              "stretch_height": "1",
+              "wrapping": "mirror"
+            },
+            "type": "Standart"
+          },
+          "sizes": [
+            {
+              "width": "126",
+              "height": "37",
+              "depth": "26",
+              "code": "",
+              "axis_size": "",
+              "price": ""
+            }
+          ],
+          "size_index": 0
+        },
+        "no_handle": false
+      }
+    },
+    {
+      "id": 3,
+      "name": "Турин",
+      "category": 7,
+      "icon": "https://via.placeholder.com/80x133.png?text=%D0%9D%D0%B8%D0%BA%D0%B0",
+      "facades": [
+        {
+          "name": "Глухой",
+          "icon": "https://via.placeholder.com/80x133.png?text=%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B9",
+          "models": [
+            {
+              "model": "/common_assets/models/decorative/turin/facades/1_turin_full_min_w200_h200_exp.fbx",
+              "min_width": 200,
+              "min_height": 200
+            }
+          ],
+          "materials": [],
+          "selected_material": {},
+          "type": "full"
+        }
+      ],
+      "materials_sets": {
+        "pat": {
+          "fixed": false,
+          "name": "Патина",
+          "categories": [
+            1,
+            22
+          ],
+          "selected_material": 1
+        },
+        "osn": {
+          "fixed": false,
+          "name": "Основной материал",
+          "categories": [
+            17,
+            18
+          ],
+          "selected_material": 68
+        }
+      },
+      "selected_materials": {
+        "top": {
+          "facades": 2000000000
+        },
+        "bottom": {
+          "facades": 2000000000
+        }
+      },
+      "door_thickness": 24,
+      "v": 3,
+      "custom_sizes": 0,
+      "available_modules": [],
+      "modules": "/common_assets/models/decorative/nika_noce/data/modules.json",
+      "fixed_materials": [
+        2000000000,
+        2000000001,
+        2000000002,
+        2000000003,
+        2000000004,
+        2000000005,
+        2000000006,
+        2000000007,
+        2000000008,
+        2000000009,
+        2000000010,
+        2000000011
+      ],
+      "additional_materials": [
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/turin/materials/turin.jpg",
+            "roughness": 0.4,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 256,
+            "real_height": 512,
+            "stretch_width": false,
+            "stretch_height": false,
+            "wrapping": "mirror"
+          },
+          "id": 2000000000,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#2B1A13",
+            "roughness": 0.8,
+            "metalness": 0
+          },
+          "add_params": {},
+          "id": 2000000001,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat3.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 20,
+            "real_height": 20,
+            "stretch_width": false,
+            "stretch_height": false,
+            "wrapping": "repeat"
+          },
+          "id": 2000000002,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat4.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 256,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000003,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat5.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000004,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat6.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000005,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika/materials/951.png",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": true
+          },
+          "add_params": {
+            "real_width": 292,
+            "real_height": 651,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "repeat"
+          },
+          "id": 2000000006,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat8.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "repeat"
+          },
+          "id": 2000000007,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat9.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000008,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat10.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 512,
+            "real_height": 512,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000009,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat11.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000010,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        },
+        {
+          "params": {
+            "color": "#ffffff",
+            "map": "/common_assets/models/decorative/nika_noce/materials/mat12.jpg",
+            "roughness": 0.8,
+            "metalness": 0,
+            "transparent": false
+          },
+          "add_params": {
+            "real_width": 128,
+            "real_height": 128,
+            "stretch_width": true,
+            "stretch_height": true,
+            "wrapping": "mirror"
+          },
+          "id": 2000000011,
+          "name": "",
+          "code": "",
+          "category": 0,
+          "type": "Standart"
+        }
+      ],
+      "custom_cokol": {
+        "height": 150,
+        "normal": "/common_assets/models/decorative/nika/cokol.fbx",
+        "radius": null
+      },
+      "custom_cornice": {
+        "model": "/common_assets/models/decorative/nika/cornice.fbx",
+        "corner_model": "/common_assets/models/decorative/nika/cornice_corner.fbx",
+        "corner_model_45": "/common_assets/models/decorative/nika/cornice_corner45.fbx",
+        "radius_model": "/common_assets/models/decorative/nika/cornice_radius.fbx"
+      },
+      "decorations": {
+        "categories": [
+          {
+            "id": 1
+          }
+        ],
+        "items": [
+          {
+            "category": 1,
+            "id": 1,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/1.png",
+            "params": {
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "type": "decoration",
+              "width": 600,
+              "height": 125,
+              "thickness": 27,
+              "model": "/common_assets/models/decorative/nika/coromislo.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 2,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/2.png",
+            "params": {
+              "type": "decoration",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "width": 896,
+              "height": 716,
+              "thickness": 24,
+              "model": "/common_assets/models/decorative/nika/ramka1.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 3,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/3.jpg",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 1900,
+                  "height": 1050,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "cornice": {
+                "offset_front": 130
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 130,
+                  "model": "/common_assets/models/decorative/nika/portal.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ],
+              "cabinet": {
+                "back_wall": "false",
+                "bottom_wall": "false"
+              },
+              "shelves": [
+                {
+                  "v2": true,
+                  "width_offset_left": 234,
+                  "width_offset_right": 234,
+                  "starting_point_y": "100%",
+                  "direction_x": "right",
+                  "direction_y": "top",
+                  "position_offset_top": 268,
+                  "starting_point_x": 234,
+                  "front_offset": 0
+                },
+                {
+                  "v2": true,
+                  "orientation": "vertical",
+                  "starting_point_x": "0%",
+                  "direction_x": "right",
+                  "position_offset_left": 234,
+                  "position_offset_top": 268,
+                  "front_offset": 0
+                },
+                {
+                  "v2": true,
+                  "orientation": "vertical",
+                  "starting_point_x": "0%",
+                  "direction_x": "left",
+                  "position_offset_right": 234,
+                  "front_offset": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 4,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/4.png",
+            "params": {
+              "type": "decoration",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 600,
+                  "height": 125,
+                  "depth": 27,
+                  "price": 0
+                }
+              ],
+              "width": 93,
+              "height": 870,
+              "thickness": 93,
+              "wall_distance": 0,
+              "model": "/common_assets/models/decorative/nika/nika_col1.fbx",
+              "draggable": true
+            }
+          },
+          {
+            "category": 1,
+            "id": 5,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/5.png",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 50,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika/nika_col3.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 6,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/6.png",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 50,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika/nika_col3.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 7,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/7.png",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_1.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 8,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/8.png",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 870,
+                  "depth": 300,
+                  "price": 0
+                },
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 1660,
+                  "depth": 300,
+                  "price": 0
+                },
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 148,
+                  "height": 2280,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "cornice": {
+                "offset_front": 0
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 40,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_1.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 9,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/9.png",
+            "params": {
+              "cabinet_group": "bottom",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 75,
+                  "height": 720,
+                  "depth": 600,
+                  "price": 0
+                }
+              ],
+              "tabletop": {
+                "offset": {
+                  "front": 35,
+                  "back": 35
+                }
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 26,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_2.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 10,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/10.png",
+            "params": {
+              "cabinet_group": "top",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 75,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ],
+              "cokol": {
+                "height": 0
+              },
+              "decorations": [
+                {
+                  "width": "100%",
+                  "height": "100%",
+                  "thickness": 26,
+                  "model": "/common_assets/models/decorative/nika_noce/nika_noche_col_2.fbx",
+                  "starting_point_y": "100%",
+                  "starting_point_x": "center",
+                  "direction_y": "bottom"
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 11,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/11.png",
+            "params": {
+              "width": 600,
+              "wall_distance": 300,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 12,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/12.png",
+            "params": {
+              "radius": true,
+              "orientation": "left",
+              "wall_distance": 0,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          },
+          {
+            "category": 1,
+            "id": 13,
+            "icon": "/common_assets/models/decorative/nika_noce/icons/13.png",
+            "params": {
+              "radius": true,
+              "wall_distance": 0,
+              "type": "molded",
+              "variants": [
+                {
+                  "code": "",
+                  "name": "",
+                  "width": 152,
+                  "height": 720,
+                  "depth": 300,
+                  "price": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "handle": {
+        "orientation": "vertical",
+        "lockers_position": "middle",
+        "selected_model": 280,
+        "preferable_size": 0,
+        "model": {
+          "id": 280,
+          "category": 5,
+          "name": "Классика бронза",
+          "icon": "/common_assets/models/handles/14/icon_14.jpg",
+          "model": "/common_assets/models/handles/14/model_14.fbx",
+          "type": "common",
+          "material": {
+            "params": {
+              "color": "#ffffff",
+              "roughness": "0.4",
+              "metalness": "0",
+              "map": "/common_assets/models/handles/14/map_14.jpg"
+            },
+            "add_params": {
+              "real_width": "512",
+              "real_height": "512",
+              "stretch_width": "1",
+              "stretch_height": "1",
+              "wrapping": "mirror"
+            },
+            "type": "Standart"
+          },
+          "sizes": [
+            {
+              "width": "126",
+              "height": "37",
+              "depth": "26",
+              "code": "",
+              "axis_size": "",
+              "price": ""
+            }
+          ],
+          "size_index": 0
+        },
+        "no_handle": false
+      }
+    }
+  ]
+}

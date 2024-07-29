@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "active": 1,
+    "order": 100000,
+    "name": "Гладкая",
+    "compatibility_types": {
+      "full": 0,
+      "window": 1,
+      "frame": 2,
+      "radius": 3,
+      "radius_window": 4
+    },
+    "category": 1,
+    "materials": [
+      1
+    ],
+    "icon": "models/facades/17/new_dsp_icon.jpg",
+    "handle": 1,
+    "handle_offset": 30,
+    "types": {
+      "0": {
+        "name": "Глухой",
+        "icon": "",
+        "items": [
+          {
+            "min_width": 0,
+            "min_height": 0,
+            "model": "/common_assets/models/facades/6/plastic_full.fbx",
+            "group": "all"
+          }
+        ],
+        "icon_file": ""
+      },
+      "1": {
+        "name": "Витрина",
+        "icon": "",
+        "items": [
+          {
+            "min_width": 0,
+            "min_height": 0,
+            "model": "/common_assets/models/facades/1/mdf_frame.fbx",
+            "group": "all"
+          }
+        ],
+        "icon_file": ""
+      },
+      "2": {
+        "name": "Решетка",
+        "icon": "",
+        "items": [
+          [
+            {
+              "model": "/common_assets/models/facades/1/mdf_full.fbx",
+              "min_width": 0,
+              "min_height": 0,
+              "group": "all"
+            },
+            {
+              "model": "/common_assets/models/facades/3/rect_frame_w396_h356.fbx",
+              "min_width": 256,
+              "min_height": 296,
+              "group": "all"
+            },
+            {
+              "model": "/common_assets/models/facades/3/rect_frame_w296_h716.fbx",
+              "min_width": 256,
+              "min_height": 716,
+              "group": "all"
+            },
+            {
+              "model": "/common_assets/models/facades/3/rect_frame_w296_h956.fbx",
+              "min_width": 256,
+              "min_height": 956,
+              "group": "all"
+            }
+          ]
+        ],
+        "icon_file": ""
+      },
+      "3": {
+        "name": "Радиус глухой",
+        "icon": "",
+        "items": [
+          {
+            "min_width": 0,
+            "min_height": 0,
+            "model": "/common_assets/models/facades/6/mdf_full_radius.fbx",
+            "group": "all"
+          }
+        ],
+        "radius": 1,
+        "icon_file": ""
+      },
+      "4": {
+        "name": "Радиус витрина",
+        "icon": "",
+        "items": [
+          {
+            "min_width": 0,
+            "min_height": 0,
+            "model": "/common_assets/models/facades/6/mdf_window_radius.fbx",
+            "group": "all"
+          }
+        ],
+        "radius": 1,
+        "icon_file": ""
+      }
+    },
+    "types_radius": {},
+    "types_double": {},
+    "types_triple": {},
+    "double_offset": 0,
+    "triple_decor_model": {
+      "model": "",
+      "model_file": "",
+      "current_model": "",
+      "thickness": 0,
+      "height": 0,
+      "offset": 0
+    },
+    "additional_materials": {},
+    "add_params": {}
+  }
+]

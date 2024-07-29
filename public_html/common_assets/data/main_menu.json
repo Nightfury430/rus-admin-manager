@@ -1,0 +1,381 @@
+[
+
+  {
+    "label": "Помещение",
+    "icon": "icon_room",
+    "menu_id": "room",
+    "component": null,
+    "children":[
+      {
+        "label": "Размеры",
+        "icon": "",
+        "menu_id": "room_params",
+        "component": {
+          "id": "room_params",
+          "props": {}
+        }
+      },
+      {
+        "label": "Конструкции",
+        "icon": "",
+        "menu_id": "constructions",
+        "component": {
+          "id": "constr_picker",
+          "props": {
+            "catalog": "constructions",
+            "categories": null
+          }
+        }
+      },
+      {
+        "label": "Коммуникации",
+        "icon": "",
+        "menu_id": "communications",
+        "component": {
+          "id": "model_picker",
+          "props": {
+            "catalog": "comms",
+            "categories": null
+          }
+        }
+      },
+      {
+        "label": "Стены",
+        "icon": "",
+        "menu_id": "walls_material",
+        "component": {
+          "id": "walls_material_picker",
+          "props": {
+            "categories": "materials.walls",
+            "selected": "selected_materials.walls",
+            "fn": "set_walls_material"
+          }
+        }
+      },
+      {
+        "label": "Пол",
+        "icon": "",
+        "menu_id": "floor_material",
+        "component": {
+          "id": "floor_material_picker",
+          "props": {
+            "categories": "materials.floor",
+            "selected": "selected_materials.floor",
+            "fn": "set_floor_material"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "label": "Параметры кухни",
+    "icon": "icon_settings",
+    "menu_id": "kitchen_params",
+    "component": {
+      "id": "kitchen_params",
+      "props": {
+        "categories": null
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Карнизы",
+    "icon": "icon_cornice",
+    "menu_id": "cornice_picker",
+    "component": {
+      "id": "cornice_picker",
+      "props": {}
+    },
+    "children": []
+  },
+  {
+    "label": "Модели кухни",
+    "icon": "icon_kuhni",
+    "menu_id": "kitchen_style_picker",
+    "component": {
+      "id": "kitchen_style_picker",
+      "props": {
+        "categories": null
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Материалы",
+    "icon": "icon_material",
+    "menu_id": "materials",
+    "children":[
+      {
+        "label": "Фасады",
+        "icon": "",
+        "menu_id": "facades_picker",
+        "component": {
+          "id": "facades_picker",
+          "props": {
+            "facades": "defaults.facades",
+            "materials": "selected_materials.facades",
+            "lib": "facades"
+          }
+        }
+      },
+      {
+        "label": "Наполнение витрин",
+        "icon": "",
+        "menu_id": "glass_material_picker",
+        "component": {
+          "id": "glass_material_picker",
+          "props": {
+            "categories": "materials.glass",
+            "selected": "selected_materials.glass",
+            "lib": "glass",
+            "fn": "set_glass_material"
+          }
+        }
+      },
+      {
+        "label": "Корпус",
+        "icon": "",
+        "menu_id": "corpus_material_picker",
+        "component": {
+          "id": "corpus_material_picker",
+          "props": {
+            "mode": "p",
+            "categories": "materials.top.corpus",
+            "selected": "selected_materials.top.corpus",
+            "selected2": "selected_materials.bottom.corpus",
+            "lib": "materials",
+            "fn": "set_corpus_material"
+          }
+        }
+      },
+      {
+        "label": "Задняя стенка",
+        "icon": "",
+        "menu_id": "backwall_material_picker",
+        "component": {
+          "id": "backwall_material_picker",
+          "props": {
+            "heading": "",
+            "categories": "materials.top.back_wall_material",
+            "selected": "selected_materials.top.back_wall_material",
+            "selected2": "selected_materials.bottom.back_wall_material",
+            "fn": "change_back_wall_material"
+          }
+        }
+      },
+      {
+        "label": "Фартук",
+        "icon": "",
+        "menu_id": "wallpanel_materials_picker",
+        "component": {
+          "id": "wallpanel_materials_picker",
+          "props": {
+            "heading": "",
+            "categories": "materials.wall_panel",
+            "mode": "c"
+          }
+        }
+      },
+      {
+        "label": "Цоколь",
+        "icon": "",
+        "menu_id": "cokol_material_picker",
+        "component": {
+          "id": "cokol_material_picker",
+          "props": {
+            "categories": "materials.cokol",
+            "selected": "selected_materials.cokol",
+            "fn": "set_cokol_material"
+          }
+        }
+      },
+      {
+        "label": "Столешница",
+        "icon": "",
+        "menu_id": "tabletop_materials_picker",
+        "component": {
+          "id": "tabletop_materials_picker",
+          "props": {
+            "categories": "materials.tabletop",
+            "selected": "selected_materials.tabletop",
+            "fn": "set_tabletop_material"
+          }
+        }
+      },
+      {
+        "label": "Столешница",
+        "icon": "",
+        "menu_id": "tabletop_picker",
+        "component": {
+          "id": "tabletop_picker",
+          "props": {
+            "categories": "",
+            "selected": "defaults.tabletop",
+            "fn": "set_tabletop"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "label": "Модули",
+    "icon": "icon_modules",
+    "menu_id": "module_picker",
+    "component": {
+      "id": "module_picker",
+      "props": {
+        "categories": null
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Полки",
+    "icon": "icon_shelves",
+    "menu_id": "shelve_picker",
+    "component": {
+      "id": "shelve_picker",
+      "props": {
+        "catalog": "shelves"
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Столешницы",
+    "icon": "icon_bardesk",
+    "menu_id": "bardesk_picker",
+    "component": {
+      "id": "bardesk_picker",
+      "props": {
+        "catalog": "bardesk"
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Столешницы",
+    "icon": "icon_bardesk",
+    "menu_id": "bardesks_picker",
+    "component": {
+      "id": "bardesks_picker",
+      "props": {
+        "catalog": "bardesks",
+        "categories": null
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Ручки",
+    "icon": "icon_furniture_handle",
+    "menu_id": "handles_picker",
+    "component": {
+      "id": "handles_picker",
+      "props": {
+
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Фурнитура",
+    "icon": "icon_furnitura",
+    "menu_id": "furniture_picker",
+    "component": {
+      "id": "furniture_picker",
+      "props": {}
+    },
+    "children": []
+  },
+
+  {
+    "label": "Мойки",
+    "icon": "icon_sink",
+    "menu_id": "washer_picker",
+    "component": {
+      "id": "washer_picker",
+      "props": {}
+    },
+    "children":[]
+  },
+  {
+    "label": "Мойки",
+    "icon": "icon_sink",
+    "menu_id": "washes_picker",
+    "component": {
+      "id": "washes_picker",
+      "props": {}
+    },
+    "children":[]
+  },
+  {
+    "label": "Техника",
+    "icon": "icon_technic",
+    "menu_id": "tech_picker",
+    "component": {
+      "id": "model_picker",
+      "props": {
+        "catalog": "tech",
+        "categories": null
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Интерьер",
+    "icon": "icon_interior",
+    "menu_id": "interior_picker",
+    "component": {
+      "id": "model_picker",
+      "props": {
+        "catalog": "interior",
+        "categories": null
+      }
+    },
+    "children":[]
+  },
+  {
+    "label": "Корпусная мебель",
+    "icon": "icon_shkafy",
+    "menu_id": "corpus_mebel_picker",
+    "component": {
+      "id": "catalog_picker",
+      "props": {
+        "catalog": "catalog",
+        "categories": null
+      }
+    },
+    "children":[]
+  },
+
+
+  {
+    "label": "Проекты",
+    "icon": "icon_your_project",
+    "menu_id": "project_picker",
+    "component": {
+      "id": "project_picker",
+      "props": {}
+    },
+    "children":[]
+  },
+
+  {
+    "label": "Комплектующие",
+    "icon": "icon_basket",
+    "menu_id": "accessories_component",
+    "component": {
+      "id": "accessories_component",
+      "props": {}
+    },
+    "fn": {
+      "name": "show_accessories_new",
+      "params": {
+        "mode": 0
+      }
+    },
+    "children":[]
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": ""
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "category": 1,
+      "code": "",
+      "name": "",
+      "params": {
+        "color": "#932129"
+      }
+    },
+    {
+      "id": 4,
+      "category": 1,
+      "code": "",
+      "name": "",
+      "params": {
+        "color": "#ffffff"
+      }
+    },
+    {
+      "id": 2,
+      "category": 1,
+      "code": "",
+      "name": "",
+      "params": {
+        "color": "#a1232b"
+      }
+    },
+    {
+      "id": 3,
+      "category": 1,
+      "code": "",
+      "name": "",
+      "params": {
+        "color": "#d3c3b3"
+      }
+    },
+    {
+      "id": "w_mat_0",
+      "params": {
+        "color": "#ffffff",
+        "metalness": 0.2,
+        "roughness": 0.8
+      },
+      "add_params": {},
+      "name": "Material"
+      
+    }
+  ]
+}
