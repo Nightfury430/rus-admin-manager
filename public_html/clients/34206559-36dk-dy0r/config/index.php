@@ -98,7 +98,7 @@ switch (ENVIRONMENT)
  * Set the path if it is not in the same directory as this file.
  */
 //	$system_path = 'system';
-	$system_path = $_SERVER['DOCUMENT_ROOT'] . '/rus/public_html/common_assets/config/system';
+	$system_path = $_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/system';
 
 /*
  *---------------------------------------------------------------
@@ -116,7 +116,7 @@ switch (ENVIRONMENT)
  * NO TRAILING SLASH!
  */
 //	$application_folder = 'application';
-	$application_folder = $_SERVER['DOCUMENT_ROOT'] . '/rus/public_html/common_assets/config/application';
+	$application_folder = $_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/application';
 
 /*
  *---------------------------------------------------------------

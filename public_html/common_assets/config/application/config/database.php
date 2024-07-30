@@ -73,8 +73,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-print_r($_SERVER['DOCUMENT_ROOT']); exit;
-
 
 $dbpath = 'sqlite:./../data/db';
 
@@ -106,9 +104,8 @@ $db['default'] = array(
 
 //print_r(basename(dirname(FCPATH)));
 
-
 $db['common'] = array(
-    'dsn'	=> 'sqlite:'. $_SERVER['DOCUMENT_ROOT'] .'/rus/public_html/common_assets/data/db_common',
+    'dsn'	=> 'sqlite:'. $_SERVER['DOCUMENT_ROOT'] .'/common_assets/data/db_common',
     'hostname' => 'localhost',
     'username' => '',
     'password' => '',
