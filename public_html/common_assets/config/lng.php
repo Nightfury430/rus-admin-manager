@@ -8,6 +8,7 @@ $lang_arr['loading'] = 'Загрузка...';
 $lang_arr['kitchen_constructor'] = 'Конструктор кухонь';
 $lang_arr['kitchen'] = 'Кухни';
 
+$lang_arr['user_management'] = 'Управление пользователями';
 $lang_arr['renew_license'] = 'Продлить лицензию';
 $lang_arr['clear_settings'] = 'Сброс и обновление';
 $lang_arr['tech_support'] = 'Тех. Поддержка';

@@ -21,12 +21,7 @@ class Settings extends CI_Controller {
 
     public function index()
     {
-
-
-
-
         $this->load->model('languages_model');
-
         $data['lang_arr'] = get_default_lang();
         if($this->config->item('ini')['language']['language'] !== 'default'){
             $custom_lang = json_decode($this->languages_model->get($this->config->item('ini')['language']['language']));
@@ -36,7 +31,6 @@ class Settings extends CI_Controller {
                 }
             }
         }
-
 
         $this->load->view('templates/header', $data);
         $this->load->view('/settings', $data);

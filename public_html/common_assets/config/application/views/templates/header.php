@@ -83,6 +83,12 @@
                         <span class="nav-label"><?php echo $lang_arr['clients_orders_label'] ?></span>
                     </a>
                 </li>
+                <li class="<?php if (strpos($this->uri->uri_string(), 'user/index') !== false) echo 'active' ?>">
+                    <a href="<?php echo site_url('user/index') ?>">
+                        <i class="fa fa-address-book"></i>
+                        <span class="nav-label"><?php echo $lang_arr['user_management'] ?></span>
+                    </a>
+                </li>
                 <li class="<?php if (strpos($this->uri->uri_string(), 'settings') !== false && strpos($this->uri->uri_string(), 'project_settings') === false && strpos($this->uri->uri_string(), 'modules_settings') === false) echo 'active' ?>">
                     <a href="<?php echo site_url('settings/') ?>">
                         <i class="fa fa-code"></i>
@@ -709,8 +715,6 @@
     <div id="page-wrapper" class="gray-bg dashbard-1">
         <div class="row border-bottom">
             <nav class="navbar navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-
-
                 <ul class="nav navbar-top-links navbar-left pl-2">
 
                     <li style="text-align: left">

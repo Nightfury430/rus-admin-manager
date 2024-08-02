@@ -22,7 +22,6 @@ class Updater extends CI_Controller
     public function index()
     {
         if (!file_exists($this->version_path)) file_put_contents($this->version_path, 0);
-
         $this->current_version = (int)file_get_contents($this->version_path);
         $config_version = (int)file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/version');
 
@@ -43,7 +42,6 @@ class Updater extends CI_Controller
 
     private function upd1()
     {
-
         $config_path = FCPATH;
         $root_path = dirname(FCPATH);
 
