@@ -85,7 +85,6 @@ function userManagement(users){
                 data: formData,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }).then((res) => {
-                console.log('res', res);
                 if(selectedUser === 0){
                     allUsers.value.push(res.data);
                 } else {
@@ -105,8 +104,6 @@ function userManagement(users){
         modalShow.value = true;
         [userName.value, userAddress.value, userEmail.value, userPhoneNumber.value, userRole.value] = [user.name, user.address, user.email, user.phone_number, user.role];
         changeSelUser(user.id);
-        console.log('user', user.id)
-        console.log('selectedUser', selectedUser)
     }
 
     function delUser(user){
