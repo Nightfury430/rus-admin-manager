@@ -1,4 +1,4 @@
-// state 0 editing 1 Saving 2 Updating
+// selectedUser 0 editing Saving  Not 0 Updating
 let app = null;
 let lang = null;
 let controller_name = null;
@@ -43,7 +43,7 @@ function userManagement(users){
     const userRole = ref('');
     const userPassword = ref('');
     const userConfirmPassword = ref('');
-    const state = ref(0);
+    let selectedUser = 0;
     function langFunc(str) {
         return lang[str]
     }
@@ -68,31 +68,34 @@ function userManagement(users){
         let email = userEmail.value;
         let password = userPassword.value;
         let url = base_url + '/user/'
-        if(state === 1){
-            url =+ 'insert_user';
-        } else if(state === 2){
-            url =+ 'update_user';
+        let data = ''
+        if(selectedUser === 0){
+            url += 'insert_user';
+            data = JSON.stringify({name, address, phone_number : phoneNumber, role, email, password})
+        } else {
+            url += 'edit_user';
+            data = JSON.stringify({name, address, phone_number : phoneNumber, role, email, password, id : selectedUser})
         }
-
         if(validation([name, gender, address, phoneNumber, role], email)){
             let formData = new FormData();
-            formData.append('data', JSON.stringify({name, gender, address, phoneNumber, role, email, password}));
+            formData.append('data', data);
             axios({
                 method: 'post',
                 url: url,
                 data: formData,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }).then((res) => {
-                if(state === 1){
+                console.log('res', res);
+                if(selectedUser === 0){
                     allUsers.value.push(res.data);
-                } else if(state === 2){
-                    const findIndex = allUsers.findIndex((user) => { user === res.data.id })
-                    allUsers.splice( findIndex, 1, res.data )
+                } else {
+                    const findIndex = allUsers.value.findIndex((user) => ( user.id === res.data.id ));
+                    allUsers.value.splice( findIndex, 1, res.data )
                 }
-                changeState(0)
+                changeSelUser(0)
             })
         }else {
-            changeState(0)
+            changeSelUser(0)
             alert('Insert Correctly')
         }
         clearField();
@@ -101,20 +104,24 @@ function userManagement(users){
     function editUser(user){
         modalShow.value = true;
         [userName.value, userAddress.value, userEmail.value, userPhoneNumber.value, userRole.value] = [user.name, user.address, user.email, user.phone_number, user.role];
-        changeState(2)        
+        changeSelUser(user.id);
+        console.log('user', user.id)
+        console.log('selectedUser', selectedUser)
     }
 
     function delUser(user){
+        let formData = new FormData();
+        formData.append('data', JSON.stringify({ id : user.id }));
         axios({
             method: 'post',
             url: base_url + '/user/delete_user',
-            data: { id : user.id },
+            data: formData,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then((res) => {
-            const findIndex = allUsers.findIndex( (user) => {
-                user.id === res.id
-            } )
-            allUsers.splice(findIndex, 1);
+            const findIndex = allUsers.value.findIndex( (user) => (
+                user.id === res.data
+             ) )
+            allUsers.value.splice(findIndex, 1);
         })
     }
 
@@ -127,12 +134,12 @@ function userManagement(users){
         } return false
     }
 
-    function changeState(state){
-        state.value = state;
+    function changeSelUser(selUser){
+        selectedUser = selUser;
     }
 
     function saveModalShow(){
-        changeState(1);
+        changeSelUser(0);
         modalShow.value = true
     }
 
@@ -152,17 +159,15 @@ function userManagement(users){
                 userPassword,
                 userConfirmPassword,
                 allUsers,
-                state,
+                selectedUser,
                 lang :langFunc,
                 clearField,
                 saveUser,
                 editUser,
                 delUser,
-                changeState,
                 saveModalShow
             }
         }
     });
-
     app.mount('#user_container');
 }

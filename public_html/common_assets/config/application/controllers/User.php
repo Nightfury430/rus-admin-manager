@@ -30,16 +30,20 @@ class User extends CI_Controller {
 
     public function insert_user(){
         $user = json_decode($this->input->post('data'));
-        $user = $this->User_model->insert_user($user);
-        echo json_encode($user);
+        $inserted_user = $this->User_model->insert_user($user);
+        echo json_encode($inserted_user);
     }
 
     public function delete_user(){
-
+        $data = json_decode($this->input->post('data'));
+        $this->User_model->delete_user($data->id);
+        echo json_encode($data->id);
     }
 
     public function edit_user(){
-    
+        $user = json_decode($this->input->post('data'));
+        $changed_user = $this->User_model->edit_user($user);
+        echo json_encode($changed_user);
     }
 
     public function get_all_users(){

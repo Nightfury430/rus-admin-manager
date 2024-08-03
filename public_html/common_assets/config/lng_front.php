@@ -517,6 +517,9 @@ $lang_arr_front['clear_guides'] = 'Удалить все направляющи�
 
 
 $lang_arr_front['confirm_action'] = 'Подтвердите действие';
+$lang_arr_front['success_insert_message'] = 'Вы успешно зарегистрированы.';
+$lang_arr_front['success_update_message'] = 'Он был успешно изменен.';
+$lang_arr_front['success_delete_message'] = 'Оно было успешно удалено.';
 
 
 

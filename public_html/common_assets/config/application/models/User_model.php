@@ -22,36 +22,34 @@ class User_model extends CI_Model {
     }
 
     public function insert_user($user){
-        $data = array(
-            'name' => $user->name,
-            // 'gender' => $user->gender,
-            'address' => $user->address,
-            'phone_number' => $user->phoneNumber,
-            'role' => $user->role,
-            'email' => $user->email,
-            'password' => $user->password
-        );
-        $this->db->insert('Users', $data);
+        $this->db->insert('Users', $user);
         $insert_id = $this->db->insert_id();
-
-        // Fetch the newly inserted data
         $this->db->where('id', $insert_id);
         $query = $this->db->get('users');
         $insert_user = $query->row();
         return $insert_user;
     }
 
-    public function update_user($user){
+    public function edit_user($user){
         $this->db->where('id', $user->id);
-        $this->db->update('Users', $user);
-        return true;
+        $data = array();
+        if($user->password === ''){
+            $data['name'] = $user->name;
+            $data['email'] = $user->email;
+            $data['address'] = $user->address;
+            $data['phone_number'] = $user->phone_number;
+            $data['role'] = $user->role;
+        } else {
+            $data = $user;
+        }
+        $this->db->update('Users', $data);
+        return $user;
     }
 
-    public function delete_user($user){
-        $this->db->where('id', $user->id);
+    public function delete_user($id){
+        $this->db->where('id', $id);
         $this->db->delete('Users');
         return true;
     }
 }
-
 ?>
