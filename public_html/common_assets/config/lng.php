@@ -1024,6 +1024,17 @@ $lang_arr['kitchen_models_categories'] = 'Категории моделей ку
 
 $lang_arr['price_from_accs'] = 'Брать цену из комплектующих';
 
+//user.php
+$lang_arr['home_address'] = 'Домашний адрес';
+$lang_arr['phone_number'] = 'номер телефона';
+$lang_arr['gender'] = 'пол';
+$lang_arr['add_user'] = 'Добавить пользователя';
+$lang_arr['role'] = 'права пользователя';
+$lang_arr['confirm_password'] = 'подтвердите пароль';
+$lang_arr['update_user_info'] = 'Изменить информацию';
+
+
+
 if(isset($_GET['get_lang'])){
     echo json_encode($lang_arr);
     exit();

@@ -166,17 +166,12 @@ function init_vue() {
             hide_dz: false
         },
         created: function () {
-
             Vue.set(this, 'items', createDataTree(categories_data))
-
-
-
         },
         mounted: function () {
             this.modals.add_category.name = lang['no_name'];
         },
         methods: {
-
             correct_url: function(path){
                 if(path == '') return '/common_assets/images/placeholders/125x125.png'
                 return glob.acc_url + path +  '?' + new Date().getTime();

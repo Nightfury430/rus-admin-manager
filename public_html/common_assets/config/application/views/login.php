@@ -3,11 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="/common_assets/libs/bootstrap/bootstrap_w_theme.min.css">
+
+
     <script src="/common_assets/libs/jquery_1.12.5.js" type="text/javascript"></script>
     <script src="/common_assets/libs/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+
+
 </head>
 <body>
+
+
+
 <div class="container">
+
+
 	<?php if($reset_pwd == 1 ): ?>
         <form class="form-signin" method="post" accept-charset="UTF-8" action="<?php echo site_url('login/generate_pwd') ?>">
             <h2 class="form-signin-heading">Вход</h2>
@@ -31,13 +40,24 @@
                 <button class="btn btn-md btn-primary login_btn" type="submit"><?php echo $lang_arr['login_password_generate_send_password']?></button>
             </div>
         </form>
+
+
+
 	<?php else:?>
         <?php
         $action = site_url('login');
+
         if($get_through == 1) $action = site_url('login') . '?npr=a74lmFhy'
 
         ?>
+
+
+
+
         <form class="form-signin" method="post" accept-charset="UTF-8" action="<?php echo $action ?>">
+
+
+
             <h2 class="form-signin-heading"><?php echo $lang_arr['login_header']?></h2>
 
 			<?php if(isset($login_message)):?>
@@ -59,6 +79,8 @@
             </div>
         </form>
 	<?php endif;?>
+
+
 </div>
 
 <style>
@@ -66,6 +88,9 @@
         max-width: 400px;
         margin: 0 auto;
     }
+
+
+
 </style>
 </body>
 </html>
