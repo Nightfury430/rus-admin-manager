@@ -18,7 +18,7 @@
                     </div>
                     <div class="ibox-content">
                         <div class="row d-flex align-items-center justify-content-end">
-                            <button class="btn btn-primary btn-sm" type="button" @click="modalShow = !modalShow"><?php echo $lang_arr['add']?></button>
+                            <button class="btn btn-primary btn-sm" type="button" @click="saveModalShow"><?php echo $lang_arr['add']?></button>
                         </div>
                         <div class="row align-items-center pt-3">
                             <table class="table table-bordered table-stripped toggle-arrow-tiny" data-paging="true" data-sorting="true" data-paging-container="#paging-ui-container" data-paging-size="50">
@@ -27,7 +27,6 @@
                                         <td data-name="id" data-type="number" data-sorted="true" data-direction="DESC">Id</td>
                                         <td data-name="name"><?php echo $lang_arr['name']?></td>
                                         <td data-name="email"><?php echo $lang_arr['email']?></td>
-                                        <td data-name="gender"><?php echo $lang_arr['gender']?></td>
                                         <td data-name="address" data-type="number"><?php echo $lang_arr['home_address']?></td>
                                         <td data-name="phone" data-formatter="type_format"><?php echo $lang_arr['phone_number']?></td>
                                         <td data-name="role"><?php echo $lang_arr['role']?></td>
@@ -40,11 +39,13 @@
                                             <td>{{ index + 1 }}</td>
                                             <td>{{user.name}}</td>
                                             <td>{{user.email}}</td>
-                                            <td>{{user.gender}}</td>
                                             <td>{{user.address}}</td>
                                             <td>{{user.phone_number}}</td>
                                             <td>{{user.role}}</td>
-                                            <td></td>
+                                            <td>
+                                                <i :title="lang('edit')" @click="editUser(user)"  class="fa fa-edit btn btn-outline btn-success"></i>
+                                                <i :title="lang('delete')" @click="delUser(user)" class="fa fa-trash btn btn-outline btn-danger"></i>
+                                            </td>
                                         </tr>
                                     </template>
                                 </tbody>
@@ -73,10 +74,6 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">{{lang('email')}}</label>
                             <div class="col-sm-10"><input v-model="userEmail" type="text" class="form-control" :value="userEmail"></div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">{{lang('gender')}}</label>
-                            <div class="col-sm-10"><input v-model="userGender" type="text" class="form-control" :value="userGender"></div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">{{lang('home_address')}}</label>
