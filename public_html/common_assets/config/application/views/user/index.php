@@ -190,7 +190,7 @@
                             />
                         </div>
                         <div class="col-12 text-center">
-                            <button type="submit" @click="saveUser" class="btn btn-primary me-3" data-bs-dismiss="modal" aria-label="Close">{{ lang('save') }}</button>
+                            <button type="submit" @click="saveUser" class="btn btn-primary me-3">{{ lang('save') }}</button>
                             <button
                             type="reset"
                             class="btn btn-label-secondary"
