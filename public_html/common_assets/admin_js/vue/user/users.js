@@ -20,6 +20,145 @@ document.addEventListener('DOMContentLoaded', function () {
         is_common = document.getElementById('is_common').value
     }
 
+    //form validation
+    const formValidationExamples = document.getElementById('UserForm');
+    const fv = FormValidation.formValidation(formValidationExamples, {
+        fields: {
+            modalUserFirstName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your first name'
+                    }
+                }
+            },
+            modalUserLastName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your last name'
+                    }
+                }
+            },
+            modalEditMiddleName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your middle name'
+                    }
+                }
+            },
+            modalUserName: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your username'
+                    }
+                },
+                stringLength: {
+                    min: 6,
+                    max: 30,
+                    message: 'The username must be more than 6 and less than 30 characters long',
+                },
+                regexp: {
+                    regexp: /^[a-zA-Z0-9_]+$/,
+                    message: 'The username can only consist of alphabetical, number and underscore',
+                },
+            },
+            modalUserEmail: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your email'
+                    },
+                    emailAddress: {
+                        message: 'The value is not a valid email address'
+                    }
+                }
+            },
+            modalUserPhoneNumber: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your phoneNumber'
+                    }
+                }
+            },
+            modalUserAddress: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your address'
+                    }
+                }
+            },
+            modalUserRole: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select role'
+                    }
+                }
+            },
+            modalUserPassword: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter password'
+                    }
+                }
+            },
+            modalUserConfirmPassword: {
+                validators: {
+                    notEmpty: {
+                    message: 'Please confirm password'
+                    },
+                    identical: {
+                    compare: function () {
+                        return formValidationExamples.querySelector('[name="modalUserPassword"]').value;
+                    },
+                    message: 'The password and its confirm are not the same'
+                    }
+                }
+            }
+        },
+        plugins: {
+            trigger: new FormValidation.plugins.Trigger(),
+            bootstrap5: new FormValidation.plugins.Bootstrap5({
+            // Use this for enabling/changing valid/invalid class
+            // eleInvalidClass: '',
+            eleValidClass: '',
+            rowSelector: function (field, ele) {
+                // field is the field name & ele is the field element
+                switch (field) {
+                case 'modalUserFirstName':
+                case 'modalUserLastName':
+                case 'modalUserMiddleName':
+                case 'modalUserName':
+                case 'modalUserEmail':
+                case 'modalUserPhoneNumber':
+                case 'modalUserAddress':
+                case 'modalUserRole':
+                case 'modalUserPassword':
+                case 'modalUserConfirmPassword':
+                default:
+                    return '.row';
+                }
+            }
+            }),
+            submitButton: new FormValidation.plugins.SubmitButton(),
+            // Submit the form when all fields are valid
+            defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+            autoFocus: new FormValidation.plugins.AutoFocus()
+        },
+        init: instance => {
+            instance.on('plugins.message.placed', function (e) {
+            //* Move the error message out of the `input-group` element
+            if (e.element.parentElement.classList.contains('input-group')) {
+                // `e.field`: The field name
+                // `e.messageElement`: The message element
+                // `e.element`: The field element
+                e.element.parentElement.insertAdjacentElement('afterend', e.messageElement);
+            }
+            //* Move the error message out of the `row` element for custom-options
+            if (e.element.parentElement.parentElement.classList.contains('custom-option')) {
+                e.element.closest('.row').insertAdjacentElement('afterend', e.messageElement);
+            }
+            });
+        }
+    });
+
     Promise.all([
         promise_request(base_url + '/user/get_all_users'),
     ]).then(function (results) {
@@ -32,10 +171,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function userManagement(users){
     const { createApp, ref } = Vue
-    const modalShow = ref(false);
     const allUsers = ref(users);
     const modalTitle = ref('add_user');
     const userName = ref('');
+    const userFirstName = ref('');
+    const userLastName = ref('');
+    const userMiddleName = ref('');
     const userGender = ref('');
     const userAddress = ref('');
     const userPhoneNumber = ref('');
@@ -49,8 +190,10 @@ function userManagement(users){
     }
 
     function clearField(){
-        modalShow.value = false;
         userName.value = '';
+        userFirstName.value = '';
+        userLastName.value = '';
+        userMiddleName.value = '';
         userAddress.value = '';
         userPhoneNumber.value = '';
         userEmail.value = '';
@@ -60,8 +203,10 @@ function userManagement(users){
     }
 
     function saveUser(){
-        let name = userName.value;
-        let gender = userGender.value;
+        let first_name = userFirstName.value;
+        let middle_name = userMiddleName.value;
+        let last_name = userLastName.value;
+        let user_name = userName.value;
         let address = userAddress.value;
         let phoneNumber = userPhoneNumber.value;
         let role = userRole.value;
@@ -71,13 +216,12 @@ function userManagement(users){
         let data = ''
         if(selectedUser === 0){
             url += 'insert_user';
-            data = JSON.stringify({name, address, phone_number : phoneNumber, role, email, password})
+            data = JSON.stringify({user_name, first_name, middle_name, last_name, address, phone_number : phoneNumber, role, email, password})
         } else {
             url += 'edit_user';
-            data = JSON.stringify({name, address, phone_number : phoneNumber, role, email, password, id : selectedUser})
+            data = JSON.stringify({user_name, first_name, middle_name, last_name, address, phone_number : phoneNumber, role, email, password, id : selectedUser})
         }
-        if(validation([name, gender, address, phoneNumber, role], email)){
-            let formData = new FormData();
+        let formData = new FormData();
             formData.append('data', data);
             axios({
                 method: 'post',
@@ -92,18 +236,15 @@ function userManagement(users){
                     allUsers.value.splice( findIndex, 1, res.data )
                 }
                 changeSelUser(0)
-            })
-        }else {
-            changeSelUser(0)
-            alert('Insert Correctly')
-        }
+        })
         clearField();
     }
 
     function editUser(user){
-        modalShow.value = true;
-        [userName.value, userAddress.value, userEmail.value, userPhoneNumber.value, userRole.value] = [user.name, user.address, user.email, user.phone_number, user.role];
+        [ userFirstName.value, userLastName.value, userMiddleName.value, userName.value, userAddress.value, userEmail.value, userPhoneNumber.value, userRole.value] = [ user.first_name, user.last_name, user.middle_name, user.user_name, user.address, user.email, user.phone_number, user.role];
         changeSelUser(user.id);
+        console.log('user.role', user.role);
+        document.getElementById('modalUserRole').value = user.role;
     }
 
     function delUser(user){
@@ -122,28 +263,17 @@ function userManagement(users){
         })
     }
 
-    function validation(infos, email){
-        if(infos.findIndex((info) => { info === '' }) === -1){
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if(emailPattern.test(email)){
-                return true
-            } else return false
-        } return false
-    }
-
     function changeSelUser(selUser){
         selectedUser = selUser;
     }
 
     function saveModalShow(){
         changeSelUser(0);
-        modalShow.value = true
     }
 
     const app = createApp({
         setup() {
             return {
-                modalShow,
                 modalTitle,
                 base_url,
                 acc_url,
@@ -157,12 +287,15 @@ function userManagement(users){
                 userConfirmPassword,
                 allUsers,
                 selectedUser,
+                userFirstName,
+                userLastName,
+                userMiddleName,
                 lang :langFunc,
                 clearField,
                 saveUser,
                 editUser,
                 delUser,
-                saveModalShow
+                saveModalShow,
             }
         }
     });

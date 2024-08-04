@@ -1029,9 +1029,15 @@ $lang_arr['home_address'] = 'Домашний адрес';
 $lang_arr['phone_number'] = 'номер телефона';
 $lang_arr['gender'] = 'пол';
 $lang_arr['add_user'] = 'Добавить пользователя';
-$lang_arr['role'] = 'права пользователя';
+$lang_arr['role'] = 'пользователя';
 $lang_arr['confirm_password'] = 'подтвердите пароль';
 $lang_arr['update_user_info'] = 'Изменить информацию';
+$lang_arr['first_name'] = 'имя';
+$lang_arr['last_name'] = 'фамилия';
+$lang_arr['middle_name'] = 'второе имя';
+$lang_arr['user_name'] = 'идентификатор';
+
+
 
 
 

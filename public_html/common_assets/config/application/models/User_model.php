@@ -22,6 +22,7 @@ class User_model extends CI_Model {
     }
 
     public function insert_user($user){
+        $user->password = crypt($user->password,'JL68XT@!9%OUN#_ZG:R!2PhxuOFUDKrQPtK"!b~u+um@$4^KE:@AR=8_S;lfd#U');
         $this->db->insert('Users', $user);
         $insert_id = $this->db->insert_id();
         $this->db->where('id', $insert_id);
@@ -34,12 +35,16 @@ class User_model extends CI_Model {
         $this->db->where('id', $user->id);
         $data = array();
         if($user->password === ''){
-            $data['name'] = $user->name;
+            $data['user_name'] = $user->user_name;
+            $data['first_name'] = $user->first_name;
+            $data['middle_name'] = $user->middle_name;
+            $data['last_name'] = $user->last_name;
             $data['email'] = $user->email;
             $data['address'] = $user->address;
             $data['phone_number'] = $user->phone_number;
             $data['role'] = $user->role;
         } else {
+            $user->password = crypt($user->password,'JL68XT@!9%OUN#_ZG:R!2PhxuOFUDKrQPtK"!b~u+um@$4^KE:@AR=8_S;lfd#U');
             $data = $user;
         }
         $this->db->update('Users', $data);
