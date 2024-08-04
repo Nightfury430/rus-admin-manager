@@ -23,9 +23,8 @@ class User extends CI_Controller {
 				}
 			}
 		}
-        $this->load->view('templates/header', $data);
-        $this->load->view('user/index');
-        $this->load->view('templates/footer', $data);
+        $data['include'] = 'user/index';
+        $this->load->view('templates/layout', $data);
     }
 
     public function insert_user(){

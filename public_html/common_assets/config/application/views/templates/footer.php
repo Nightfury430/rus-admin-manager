@@ -1,174 +1,43 @@
-<div class="footer fixed">
-    <div class="float-right">
-    </div>
-    <div class="hidden">
-        <span>{elapsed_time}</span>
-        <span>{memory_usage}</span>
-    </div>
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
 
-</div>
+    <script src="/common_assets/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="/common_assets/assets/vendor/libs/popper/popper.js"></script>
+    <script src="/common_assets/assets/vendor/js/bootstrap.js"></script>
+    <script src="/common_assets/assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="/common_assets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/common_assets/assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="/common_assets/assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="/common_assets/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="/common_assets/assets/vendor/js/menu.js"></script>
 
+    <!-- endbuild -->
 
-<div class="modal inmodal" id="backup_bd_modal" >
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Резервная копия БД</h4>
-            </div>
-            <div class="modal-body">
-                <div class="m_content">
+    <!-- Vendors JS -->
+    <script src="/common_assets/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="/common_assets/assets/vendor/libs/swiper/swiper.js"></script>
+    <script src="/common_assets/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
-                </div>
-                <div class="buttons">
-                    <button id="make_backup" type="button" class="btn btn-outline btn-primary">Сделать резервную копию</button>
-                    <button id="restore_backup" type="button" class="btn btn-outline btn-info">Восстановить резервную копию</button>
-                </div>
+    <!-- Main JS -->
+    <script src="/common_assets/assets/js/main.js"></script>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal"><?php echo $lang_arr['ok']?></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="modal inmodal" id="change_password_modal" >
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title"><?php echo $lang_arr['change_password']?></h4>
-            </div>
-            <div class="modal-body">
-
-                    <div class="row form-group">
-                        <label class="col-sm-12"><?php echo $lang_arr['old_password']?></label>
-                        <div class="col-sm-12">
-                            <input type="text" id="password_change_old" class="form-control">
-                            <span id="password_old_error" style="opacity: 0" class="form-text m-b-none text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <label class="col-sm-12"><?php echo $lang_arr['new_password']?></label>
-                        <div class="col-sm-12">
-                            <input type="text" id="password_change_new" class="form-control">
-                            <span id="password_new_error" style="opacity: 0" class="form-text m-b-none text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-sm-12">
-                            <span id="password_same_error" style="opacity: 0" class="form-text m-b-none text-danger"></span>
-                        </div>
-                    </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal"><?php echo $lang_arr['cancel']?></button>
-                <button type="button" class="btn btn-primary" id="run_password_change"><?php echo $lang_arr['apply']?></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="modal inmodal " id="export_settings_errors" >
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title"><?php echo $lang_arr['error']?></h4>
-            </div>
-            <div class="modal-body export_settings_errors_list">
-
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo $lang_arr['ok']?></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="modal inmodal " id="clear_settings_modal" tabindex="-1" role="dialog"  aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title"><?php echo $lang_arr['error']?></h4>
-            </div>
-            <div class="modal-body export_settings_errors_list">
-
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo $lang_arr['ok']?></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-</div>
-</div>
-
-
-
+    <!-- Page JS -->
+    <script src="/common_assets/assets/js/dashboards-analytics.js"></script>
 
 
 <script src="/common_assets/libs/selectize/selectize.min.js" type="text/javascript"></script>
 <script src="/common_assets/libs/lodash.js" type="text/javascript"></script>
 <script src="/common_assets/admin_js/production/modal.js" type="text/javascript"></script>
 <script src="/common_assets/libs/axios.min.js"></script>
-
-
-
-<!-- Custom and plugin javascript -->
-<script src="/common_assets/theme/js/inspinia.js"></script>
-<script src="/common_assets/theme/js/plugins/pace/pace.min.js"></script>
-
-<!-- jQuery UI -->
-<script src="/common_assets/theme/js/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-<!-- GITTER -->
-<script src="/common_assets/theme/js/plugins/gritter/jquery.gritter.min.js"></script>
-
-<!-- Sparkline -->
-<script src="/common_assets/theme/js/plugins/sparkline/jquery.sparkline.min.js"></script>
-
-<!-- Mainly scripts -->
-<script src="/common_assets/theme/js/popper.min.js"></script>
-<script src="/common_assets/theme/js/bootstrap.js"></script>
-<script src="/common_assets/theme/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="/common_assets/theme/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-<!-- Sweet alert -->
-<script src="/common_assets/theme/js/plugins/sweetalert/sweetalert.min.js"></script>
-
-<!-- Toastr -->
-<script src="/common_assets/theme/js/plugins/toastr/toastr.min.js"></script>
-<!--<script src="/common_assets/theme/js/plugins/summernote/summernote-bs4.min.js"></script>-->
-
-<!-- Switchery -->
-<script src="/common_assets/theme/js/plugins/switchery/switchery.js"></script>
-<!-- Jasny -->
-<script src="/common_assets/theme/js/plugins/jasny/jasny-bootstrap.min.js"></script>
-<script src="/common_assets/theme/js/popper.min.js"></script>
-<script src="/common_assets/theme/js/tippy.min.js"></script>
-
-<link href="/common_assets/theme/css/plugins/footable/footable.bootstrap.min.css" rel="stylesheet">
-<!--<link href="/common_assets/theme/css/plugins/footable/footable.core.css" rel="stylesheet">-->
-<!--<script src="/common_assets/theme/js/plugins/footable/footable.all.min_old.js"></script>-->
-<script src="/common_assets/theme/js/plugins/footable/footable.min.js"></script>
 <script src="/common_assets/admin_js/common_functions.js"></script>
 
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
+
 <div class="hidden">
     <div id="delete_confirm_message"><?php echo $lang_arr['delete_confirm_message']?></div>
     <div id="change_confirm_message"><?php echo $lang_arr['change_confirm_message']?></div>
@@ -197,15 +66,8 @@
     <input type="hidden" id="footer_is_common" value='<?php echo $common?>'>
 <?php endif;?>
 
-
-
-
-
 <script>
-
     $(document).ready(function () {
-
-
 
         $('#backup_bd_modal').on('show.bs.modal', async function (e) {
             let body = $('#backup_bd_modal .m_content')
@@ -268,77 +130,65 @@
         })
 
 
+        // document.getElementById('run_password_change').addEventListener('click', function () {
+        //     let old_pass = document.getElementById('password_change_old')
+        //     let new_pass = document.getElementById('password_change_new')
 
+        //     let old_pass_error = document.getElementById('password_old_error');
+        //     let new_pass_error = document.getElementById('password_new_error');
+        //     let password_same_error = document.getElementById('password_same_error');
 
-        document.getElementById('run_password_change').addEventListener('click', function () {
-            let old_pass = document.getElementById('password_change_old')
-            let new_pass = document.getElementById('password_change_new')
+        //     old_pass.addEventListener('input', function () {
+        //         old_pass_error.style.opacity = 0;
+        //         password_same_error.style.opacity = 0;
+        //     })
+        //     new_pass.addEventListener('input', function () {
+        //         new_pass_error.style.opacity = 0;
+        //         password_same_error.style.opacity = 0;
+        //     })
 
-            let old_pass_error = document.getElementById('password_old_error');
-            let new_pass_error = document.getElementById('password_new_error');
-            let password_same_error = document.getElementById('password_same_error');
+        //     let errors = 0;
 
+        //     if(!check_foldername(old_pass.value)){
+        //         old_pass_error.innerHTML = "<?php echo $lang_arr['error_wrong_password']?>"
+        //         old_pass_error.style.opacity = 1;
+        //         errors++;
+        //     }
 
+        //     if(!check_foldername(new_pass.value)){
+        //         new_pass_error.innerHTML = "<?php echo $lang_arr['error_wrong_password']?>"
+        //         new_pass_error.style.opacity = 1;
+        //         errors++
+        //     }
 
+        //     if(errors > 0){
+        //         return;
+        //     }
 
-            old_pass.addEventListener('input', function () {
-                old_pass_error.style.opacity = 0;
-                password_same_error.style.opacity = 0;
-            })
-            new_pass.addEventListener('input', function () {
-                new_pass_error.style.opacity = 0;
-                password_same_error.style.opacity = 0;
-            })
+        //     if(old_pass.value == new_pass.value){
+        //         password_same_error.innerHTML = "<?php echo $lang_arr['error_same_password']?>"
+        //         password_same_error.style.opacity = 1;
+        //     }
 
+        //     let f_data = new FormData();
+        //     f_data.append('old_pass', old_pass.value)
+        //     f_data.append('new_pass', new_pass.value)
 
-            let errors = 0;
+        //     promise_request_post( $('#ajax_base_url').val() + '/settings/change_password', f_data ).then(function (response) {
+        //         console.log(response)
 
-            if(!check_foldername(old_pass.value)){
-                old_pass_error.innerHTML = "<?php echo $lang_arr['error_wrong_password']?>"
-                old_pass_error.style.opacity = 1;
-                errors++;
-            }
+        //         if(response == 'old_pass_wrong'){
+        //             password_same_error.innerHTML = "<?php echo $lang_arr['old_pass_wrong']?>"
+        //             password_same_error.style.opacity = 1;
+        //         }
 
-            if(!check_foldername(new_pass.value)){
-                new_pass_error.innerHTML = "<?php echo $lang_arr['error_wrong_password']?>"
-                new_pass_error.style.opacity = 1;
-                errors++
-            }
+        //         if(response == 'success'){
+        //             $('#change_password_modal').modal('hide')
+        //         }
 
-
-
-            if(errors > 0){
-                return;
-            }
-
-            if(old_pass.value == new_pass.value){
-                password_same_error.innerHTML = "<?php echo $lang_arr['error_same_password']?>"
-                password_same_error.style.opacity = 1;
-            }
-
-
-            let f_data = new FormData();
-            f_data.append('old_pass', old_pass.value)
-            f_data.append('new_pass', new_pass.value)
-
-            promise_request_post( $('#ajax_base_url').val() + '/settings/change_password', f_data ).then(function (response) {
-                console.log(response)
-
-                if(response == 'old_pass_wrong'){
-                    password_same_error.innerHTML = "<?php echo $lang_arr['old_pass_wrong']?>"
-                    password_same_error.style.opacity = 1;
-                }
-
-                if(response == 'success'){
-                    $('#change_password_modal').modal('hide')
-                }
-
-            })
-
-
-
-            // $('#change_password_modal').modal('hide')
-        })
+        //     })
+        //     // $('#change_password_modal').modal('hide')
+        // })
 
 
 
@@ -539,65 +389,6 @@
         });
 
 
-    });
 
-
-
-
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "progressBar": true,
-        "preventDuplicates": false,
-        "positionClass": "toast-top-right",
-        "onclick": null,
-        "showDuration": "400",
-        "hideDuration": "1000",
-        "timeOut": "7000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    }
+    })
 </script>
-
-<script>
-
-    let event = new Event('Glob_ready');
-    let glob = '';
-
-    $(document).ready(function () {
-
-        $('.help_span').each(function () {
-            tippy($(this)[0], {
-                // content: document.getElementById('content_account_email').innerHTML,
-                content: $('#help_messages').find('[data-target="'+ $(this).attr('data-id') +'"]').html(),
-                theme:'light',
-                placement: 'bottom-start',
-                maxWidth:500,
-                trigger: 'click',
-                interactive: true,
-            })
-        })
-
-        glob = get_base_data();
-
-        document.dispatchEvent(event);
-
-    });
-
-
-
-</script>
-
-<div class="hidden" id="help_messages">
-
-
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/help_messages.php'?>
-
-
-</div>
-
-</body>
-</html>
