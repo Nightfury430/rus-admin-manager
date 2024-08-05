@@ -55,6 +55,7 @@ var MenuManage = function(){
                 opened: true
               },
               id : 0,
+              order : 0,
               children: childNodes.length === 0 ? [] : childNodes
             }
           ]
@@ -62,7 +63,7 @@ var MenuManage = function(){
     }
 
     function makeMenuStructure(flatArray, parentId) {
-        const nodes = flatArray.filter(node => node.parent_id == parentId);
+        const nodes = flatArray.filter(node => node.parent_id == parentId).sort((a, b) => a.order - b.order);
         return nodes.map(node => ({
             text: node.title,
             id: node.id,
@@ -73,7 +74,9 @@ var MenuManage = function(){
     }
 
     var saveMenu = (event) => {
+        let order = getRanking(document.getElementById('node_id').value) + 1;
         const formData = new FormData(event.target);
+        formData.append('order', order);
         send_xhr_post(
             base_url + '/menu_manage/insert_menu', formData, function(xhr){
                 menus.push(JSON.parse(xhr.response).menu);
@@ -81,6 +84,11 @@ var MenuManage = function(){
                 showToastr('success', 'Success');
             }
         )
+    }
+
+    var getRanking = (parent_id) => {
+        let nodes = menus.filter(menu => menu.parent_id == parent_id);
+        return nodes.length;
     }
 
     var updateMenu = (event) => {
@@ -116,6 +124,25 @@ var MenuManage = function(){
                     $('#icon_name').val('');
                     showToastr('success', 'Success');
                     }
+            }
+        )
+    }
+
+    var orderUpdate = (node_id, parent_id, order) => {
+        const formData = new FormData();
+        formData.append('node_id', node_id);
+        formData.append('parent_id', parent_id);
+        formData.append('order', order);
+        send_xhr_post(
+            base_url + '/menu_manage/update_menu', formData, function(xhr){
+                const updatedMenu = JSON.parse(xhr.response).menu;
+                const index = menus.findIndex(menu => menu.id === updatedMenu.id);
+                if (index !== -1) {
+                    menus[index] = updatedMenu;
+                    update_flag = false;
+                    convertDataFormat(menus);
+                    showToastr('success', 'Success');
+                }
             }
         )
     }
@@ -159,7 +186,11 @@ var MenuManage = function(){
                 $('#title').val(data.node.original.text);
                 $('#page_url').val(data.node.original.page_url);
                 $('#icon_name').val(data.node.original.icon_name);
-            })
+            });
+            ajaxTree.on('move_node.jstree', function(e, data) {
+                let brothers = menus.filter( menu => ( menu.id == data.parent))
+                orderUpdate(data.node.original.id, data.parent, brothers.length + 1);
+            });
         }
     }
 
