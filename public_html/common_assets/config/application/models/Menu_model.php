@@ -11,7 +11,7 @@ class Menu_model extends CI_Model {
 
     }
 
-    public function get_all_menu(){
+    public function get_all_menus(){
         return $this->db->get('menus')->result();
     }
 

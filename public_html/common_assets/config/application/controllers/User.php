@@ -23,6 +23,23 @@ class User extends CI_Controller {
 				}
 			}
 		}
+
+        $data['js_include'] = [
+            'libs/vue3/vue.global.js',
+            'libs/vue3/vueuse.shared.iife.min.js',
+            'libs/vue3/vueuse.core.iife.min.js',
+            'libs/vue3/vue-slicksort.umd.js',
+            'libs/vue3/vue-select.umd.js',
+            'libs/vue3/pp-tree.js',
+            'assets/vendor/libs/i18n/i18n.js',
+            'assets/vendor/libs/@form-validation/popular.js',
+            'assets/vendor/libs/@form-validation/bootstrap5.js',
+            'assets/vendor/libs/@form-validation/auto-focus.js',
+            'admin_js/vue/user/users.js',
+        ];
+
+        $data['css_include'] = [];
+
         $data['include'] = 'user/index';
         $this->load->view('templates/layout', $data);
     }

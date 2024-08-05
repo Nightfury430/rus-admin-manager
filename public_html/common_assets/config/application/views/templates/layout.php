@@ -22,7 +22,15 @@
 
     <meta name="description" content="" />
     <?php include 'header.php'; ?>
-    
+    <?php
+	
+		if(count($css_include) !== 0){
+			foreach ($css_include as $key => $css) {
+				echo '<link rel="stylesheet" href="/common_assets/'.$css.'" />';
+			}
+		}
+	?>
+	<link rel="stylesheet" href="https://unpkg.com/vue3-tree/dist/style.css">
   </head>
   <?php if (!$this->config->item('sub_account')) $this->config->set_item('sub_account', false); ?>
   <body>
@@ -71,5 +79,12 @@
     </div>
     <!-- / Layout wrapper -->
     <?php include 'footer.php' ?>
+    <?php 
+      	if(count($js_include) !== 0){
+			foreach ($js_include as $key => $js) {
+				echo '<script src="/common_assets/'.$js.'"></script>';
+			}
+      	}
+    ?>
   </body>
 </html>

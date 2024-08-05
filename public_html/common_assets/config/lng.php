@@ -1036,7 +1036,8 @@ $lang_arr['first_name'] = 'имя';
 $lang_arr['last_name'] = 'фамилия';
 $lang_arr['middle_name'] = 'второе имя';
 $lang_arr['user_name'] = 'идентификатор';
-
+//menu.php
+$lang_arr['menu_manage'] = 'меню управление';
 
 
 

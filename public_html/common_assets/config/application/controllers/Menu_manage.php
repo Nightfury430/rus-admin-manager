@@ -2,16 +2,44 @@
     class Menu_manage extends CI_Controller{
         function __construct(){
             parent::__construct();
+            $this->load->helper('url_helper');
+            $this->load->library('session');
+            $this->load->model('User_model');
             $this->load->model("Menu_model");
         }
 
         function index(){
-            print_r('asdgasdg'); exit;
-            // $this->load->view("");
+            $data = array();
+            $this->load->model('languages_model');
+            $data['lang_arr'] = get_default_lang();
+            if($this->config->item('ini')['language']['language'] !== 'default'){
+                $custom_lang = json_decode($this->languages_model->get($this->config->item('ini')['language']['language']));
+                foreach ($data['lang_arr'] as $key=>$value){
+                    if(isset($custom_lang->$key)) {
+                        if(!empty($custom_lang->$key)) $data['lang_arr'][$key] = $custom_lang->$key;
+                    }
+                }
+            }
+
+            $data['js_include'] = [
+                'assets/vendor/libs/i18n/i18n.js',
+                'assets/vendor/libs/@form-validation/popular.js',
+                'assets/vendor/libs/@form-validation/bootstrap5.js',
+                'assets/vendor/libs/@form-validation/auto-focus.js',
+                'assets/vendor/libs/jstree/jstree.js',
+                'admin_js/vue/menu/menu_manage.js',
+            ];
+
+            $data['css_include'] = [
+                'assets/vendor/libs/jstree/jstree.css'
+            ];
+
+            $data['include'] = 'menu/menu_manage';
+            $this->load->view('templates/layout', $data);
         }
 
-        function get_all_menu(){
-            $menus = $this->Menu_model->get_all_menu();
+        function get_all_menus(){
+            $menus = $this->Menu_model->get_all_menus();
             echo json_encode(array('status'=> 'success', 'menus' => $menus));
         }
 

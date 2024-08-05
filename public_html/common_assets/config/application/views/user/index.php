@@ -70,7 +70,7 @@
                     <div class="text-center mb-6">
                         <h4 class="mb-2" v-html="lang(modalTitle)"></h4>
                     </div>
-                    <form id="UserForm" class="row g-6 " onsubmit="return false">
+                    <form id="UserForm" class="row g-6 needs-validation " novalidate>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserFirstName">{{lang('first_name')}}</label>
                             <input
@@ -81,7 +81,10 @@
                             placeholder="Alexander"
                             v-model="userFirstName"
                             :value="userFirstName" 
+                            required
                             />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter first name.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserLastName">{{lang('last_name')}}</label>
@@ -93,7 +96,10 @@
                             placeholder="Petrov"
                             v-model="userLastName"
                             :value="userLastName" 
+                            required
                             />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter last name.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserMiddleName">{{lang('middle_name')}}</label>
@@ -105,7 +111,10 @@
                             placeholder="Ivanovich"
                             v-model="userMiddleName"
                             :value="userMiddleName" 
+                            required
                             />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter middle name.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserName">{{lang('user_name')}}</label>
@@ -116,7 +125,10 @@
                             class="form-control"
                             v-model="userName"
                             :value="userName" 
+                            required
                             />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter User Id.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserEmail">{{lang('email')}}</label>
@@ -128,7 +140,10 @@
                             placeholder="example@domain.com"
                             v-model="userEmail"
                             :value="userEmail"
+                            required
                             />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter a valid email</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserPhoneNumber">{{lang('phone_number')}}</label>
@@ -140,7 +155,10 @@
                             placeholder=""
                             v-model="userPhoneNumber"
                             :value="userPhoneNumber"
+                            required
                             />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter phone number.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserAddress">{{lang('home_address')}}</label>
@@ -152,22 +170,27 @@
                             placeholder=""
                             v-model="userAddress"
                             :value="userAddress"
+                            required
                             />
+                            <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">Please enter home address.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="modalUserRole">Role</label>
                             <select
                             id="modalUserRole"
                             name="modalUserRole"
-                            class="select2 form-select"
+                            class="select2 form-select flatpickr-validation"
                             v-model="userRole"
                             aria-label="Default select example">
-                            <option disabled selected></option>
-                            <option value="0">Admin</option>
-                            <option value="1">User</option>
+                                <option disabled selected></option>
+                                <option value="0">Admin</option>
+                                <option value="1">User</option>
                             </select>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please select role.</div>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-12">
                             <label class="form-label" for="modalUserPassword">{{lang('password')}}</label>
                             <input
                             type="password"
@@ -177,20 +200,11 @@
                             :value="userPassword"
                             v-model="userPassword"
                             />
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <label class="form-label" for="modalUserConfirmPassword">{{lang('confirm_password')}}</label>
-                            <input
-                            type="password"
-                            id="modalUserConfirmPassword"
-                            name="modalUserConfirmPassword"
-                            class="form-control"
-                            :value="userConfirmPassword"
-                            v-model="userConfirmPassword"
-                            />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter your password.</div>
                         </div>
                         <div class="col-12 text-center">
-                            <button type="submit" @click="saveUser" class="btn btn-primary me-3">{{ lang('save') }}</button>
+                            <button @click="saveUser" class="btn btn-primary me-3">{{ lang('save') }}</button>
                             <button
                             type="reset"
                             class="btn btn-label-secondary"
@@ -206,20 +220,4 @@
         </div>
     </div>
 </div>
-
-<script src="/common_assets/libs/vue3/vue.global.js"></script>
-<script src="/common_assets/libs/vue3/vueuse.shared.iife.min.js"></script>
-<script src="/common_assets/libs/vue3/vueuse.core.iife.min.js"></script>
-<script src="/common_assets/libs/vue3/vue-slicksort.umd.js"></script>
-<script src="/common_assets/libs/vue3/vue-select.umd.js"></script>
-<script src="/common_assets/libs/vue3/pp-tree.js"></script>
-<script src="/common_assets/assets/vendor/libs/@form-validation/popular.js"></script>
-<script src="/common_assets/assets/vendor/libs/@form-validation/bootstrap5.js"></script>
-<script src="/common_assets/assets/vendor/libs/@form-validation/auto-focus.js"></script>
-
-<!-- Clipboard -->
-<script src="/common_assets/theme/js/plugins/clipboard/clipboard.min.js"></script>
-<!-- User -->
-<script src="/common_assets/admin_js/vue/user/users.js"></script>
-
 
