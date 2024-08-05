@@ -132,9 +132,10 @@ var MenuManage = function(){
                 themes: {
                   name: theme
                 },
+                check_callback: true,
                 data: data
               },
-              plugins: ['types', 'state', 'dnd'],
+              plugins: ['types', 'dnd'],
               types: {
                 default: {
                   icon: 'ti ti-folder'
