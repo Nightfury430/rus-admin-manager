@@ -20,38 +20,36 @@
 
     <!-- Main JS -->
     <script src="/common_assets/assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="/common_assets/assets/js/dashboards-analytics.js"></script>
+    <script src="/common_assets/assets/vendor/libs/toastr/toastr.js"></script>
 
 
-<script src="/common_assets/libs/selectize/selectize.min.js" type="text/javascript"></script>
-<script src="/common_assets/libs/lodash.js" type="text/javascript"></script>
-<script src="/common_assets/admin_js/production/modal.js" type="text/javascript"></script>
-<script src="/common_assets/libs/axios.min.js"></script>
-<script src="/common_assets/admin_js/common_functions.js"></script>
-
+    <script src="/common_assets/libs/selectize/selectize.min.js" type="text/javascript"></script>
+    <script src="/common_assets/libs/lodash.js" type="text/javascript"></script>
+    <script src="/common_assets/admin_js/production/modal.js" type="text/javascript"></script>
+    <script src="/common_assets/libs/axios.min.js"></script>
+    <script src="/common_assets/admin_js/common_functions.js"></script>
+<!-- 
 <style>
     .hidden {
         display: none;
     }
-</style>
+</style> -->
 
 
-<div class="hidden">
-    <div id="delete_confirm_message"><?php echo $lang_arr['delete_confirm_message']?></div>
-    <div id="change_confirm_message"><?php echo $lang_arr['change_confirm_message']?></div>
-    <div id="success_message"><?php echo $lang_arr['success']?></div>
-    <div id="dealer_error_no_model_message"><?php echo $lang_arr['dealer_error_no_model']?></div>
-    <div id="kitchen_models_message"><?php echo $lang_arr['kitchen_models']?></div>
-    <div id="must_be_power_of_two_message"><?php echo $lang_arr['must_be_power_of_two']?></div>
-    <div id="are_u_sure_message"><?php echo $lang_arr['are_u_sure']?></div>
-    <div id="lang_no_message"><?php echo $lang_arr['no']?></div>
-    <div id="lang_yes_message"><?php echo $lang_arr['yes']?></div>
-    <div id="lang_incorrect_chars_in_file_name"><?php echo $lang_arr['incorrect_chars_in_file_name']?></div>
-    <div id="lang_no_name"><?php echo $lang_arr['no_name']?></div>
-    <div id="lang_save_warning"><?php echo $lang_arr['save_warning']?></div>
-</div>
+    <div class="hidden">
+        <div id="delete_confirm_message"><?php echo $lang_arr['delete_confirm_message']?></div>
+        <div id="change_confirm_message"><?php echo $lang_arr['change_confirm_message']?></div>
+        <div id="success_message"><?php echo $lang_arr['success']?></div>
+        <div id="dealer_error_no_model_message"><?php echo $lang_arr['dealer_error_no_model']?></div>
+        <div id="kitchen_models_message"><?php echo $lang_arr['kitchen_models']?></div>
+        <div id="must_be_power_of_two_message"><?php echo $lang_arr['must_be_power_of_two']?></div>
+        <div id="are_u_sure_message"><?php echo $lang_arr['are_u_sure']?></div>
+        <div id="lang_no_message"><?php echo $lang_arr['no']?></div>
+        <div id="lang_yes_message"><?php echo $lang_arr['yes']?></div>
+        <div id="lang_incorrect_chars_in_file_name"><?php echo $lang_arr['incorrect_chars_in_file_name']?></div>
+        <div id="lang_no_name"><?php echo $lang_arr['no_name']?></div>
+        <div id="lang_save_warning"><?php echo $lang_arr['save_warning']?></div>
+    </div>
 
 <input type="hidden" id="ajax_base_url" value="<?php echo site_url()?>">
 <input type="hidden" id="acc_base_url" value="<?php echo$this->config->item('const_path')?>">

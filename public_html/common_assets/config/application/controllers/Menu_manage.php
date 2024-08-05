@@ -64,9 +64,9 @@
         }
 
         function delete_menu(){
-            $menu = $this->input->post();
-            $deleted_menu = $this->Menu_model->delete_menu($menu->id);
-            echo json_encode(array('status'=> 'success', 'menu' => $deleted_menu));
+            $id = $this->input->post();
+            $this->Menu_model->delete_menu($id['id']);
+            echo json_encode(array('status'=> 'success', 'id' => $id['id']));
         }
     }
 

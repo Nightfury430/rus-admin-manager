@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="/common_assets/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
     <link rel="stylesheet" href="/common_assets/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
     <link rel="stylesheet" href="/common_assets/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+    <link rel="stylesheet" href="/common_assets/assets/vendor/libs/toastr/toastr.css" />
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="/common_assets/assets/vendor/css/pages/cards-advance.css" />

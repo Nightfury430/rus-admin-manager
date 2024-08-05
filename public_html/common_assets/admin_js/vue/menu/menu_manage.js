@@ -11,6 +11,11 @@ var MenuManage = function(){
         document.getElementById('form_update').addEventListener('click', function(){
             update_flag = true;
         })
+
+        document.getElementById('form_delete').addEventListener('click', function(e){
+            e.preventDefault();
+            deleteMenu( document.getElementById('node_id').value);
+        })
     }
 
     var handleFormSubmit = (event) => {
@@ -73,6 +78,7 @@ var MenuManage = function(){
             base_url + '/menu_manage/insert_menu', formData, function(xhr){
                 menus.push(JSON.parse(xhr.response).menu);
                 convertDataFormat(menus);
+                showToastr('success', 'Success');
             }
         )
     }
@@ -87,7 +93,29 @@ var MenuManage = function(){
                     menus[index] = updatedMenu;
                     update_flag = false;
                     convertDataFormat(menus);
+                    showToastr('success', 'Success');
                 }
+            }
+        )
+    }
+
+    var deleteMenu = (id) => {
+        const formData = new FormData();
+        formData.append('id', id);
+        send_xhr_post(
+            base_url + '/menu_manage/delete_menu', formData, function(xhr){
+                const id = JSON.parse(xhr.response).id;
+                const index = menus.findIndex(menu => menu.id == id);
+                console.log('index', index)
+                if (index !== -1) {
+                    menus.splice(index, 1)
+                    convertDataFormat(menus);
+                    $('#node_id').val(0);
+                    $('#title').val('');
+                    $('#page_url').val('');
+                    $('#icon_name').val('');
+                    showToastr('success', 'Success');
+                    }
             }
         )
     }
