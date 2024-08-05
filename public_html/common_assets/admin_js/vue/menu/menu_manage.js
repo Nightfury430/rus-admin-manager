@@ -4,7 +4,22 @@ var MenuManage = function(){
     let base_url = null;
 
     var initAttachEvent = () =>{
-        
+        const forms = document.querySelectorAll('.needs-validation');
+        forms.forEach(form => {
+            form.addEventListener('submit', handleFormSubmit);
+        });
+    }
+
+    var handleFormSubmit = (event) => {
+        if (!event.target.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            event.preventDefault();
+            event.stopPropagation();
+            saveMenu(event);
+        }
+        event.target.classList.add('was-validated');
     }
 
     var initCommonValue = () => {
@@ -56,6 +71,9 @@ var MenuManage = function(){
     }
 
     var initTreeView = (data) => {
+        if ($('#jstree').jstree(true)) {
+            $('#jstree').jstree("destroy"); // Destroy the existing instance
+        }
         var theme = $('html').hasClass('light-style') ? 'default' : 'default-dark';
         var ajaxTree = $('#jstree');
         if (ajaxTree.length) {
@@ -91,7 +109,7 @@ var MenuManage = function(){
                 $('#page_url').val(data.node.original.page_url);
                 $('#icon_name').val(data.node.original.icon_name);
             })
-          }
+        }
     }
 
     return {
