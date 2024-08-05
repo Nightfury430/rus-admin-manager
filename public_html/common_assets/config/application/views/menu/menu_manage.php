@@ -56,7 +56,7 @@
                                 <button type="submit" id="form_submit" class="btn rounded-pill btn-primary waves-effect waves-light">Submit</button>
                             </div>
                         </div>
-                        <input type="hidden" id="parent_id" name="parent_id" value="0" />
+                        <input type="hidden" id="node_id" name="node_id" value="0" />
                     </form>
                 </div>
             </div>

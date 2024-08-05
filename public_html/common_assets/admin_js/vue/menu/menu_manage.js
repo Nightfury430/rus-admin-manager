@@ -2,12 +2,15 @@ var MenuManage = function(){
     
     var menus = [];
     let base_url = null;
-
+    let update_flag = false;
     var initAttachEvent = () =>{
         const forms = document.querySelectorAll('.needs-validation');
         forms.forEach(form => {
             form.addEventListener('submit', handleFormSubmit);
         });
+        document.getElementById('form_update').addEventListener('click', function(){
+            update_flag = true;
+        })
     }
 
     var handleFormSubmit = (event) => {
@@ -17,7 +20,11 @@ var MenuManage = function(){
         } else {
             event.preventDefault();
             event.stopPropagation();
-            saveMenu(event);
+            if(update_flag === false){
+                saveMenu(event);
+            }else{
+                updateMenu(event);
+            }
         }
         event.target.classList.add('was-validated');
     }
@@ -70,6 +77,21 @@ var MenuManage = function(){
         )
     }
 
+    var updateMenu = (event) => {
+        const formData = new FormData(event.target);
+        send_xhr_post(
+            base_url + '/menu_manage/update_menu', formData, function(xhr){
+                const updatedMenu = JSON.parse(xhr.response).menu;
+                const index = menus.findIndex(menu => menu.id === updatedMenu.id);
+                if (index !== -1) {
+                    menus[index] = updatedMenu;
+                    update_flag = false;
+                    convertDataFormat(menus);
+                }
+            }
+        )
+    }
+
     var initTreeView = (data) => {
         if ($('#jstree').jstree(true)) {
             $('#jstree').jstree("destroy"); // Destroy the existing instance
@@ -104,7 +126,7 @@ var MenuManage = function(){
               }
             });
             ajaxTree.on('select_node.jstree', function(e, data){
-                $('#parent_id').val(data.node.original.id);
+                $('#node_id').val(data.node.original.id);
                 $('#title').val(data.node.original.text);
                 $('#page_url').val(data.node.original.page_url);
                 $('#icon_name').val(data.node.original.icon_name);
@@ -116,8 +138,7 @@ var MenuManage = function(){
         init : function() {
             initCommonValue();
             initAttachEvent();
-        },
-        saveMenu : saveMenu
+        }
     }
     
 }();

@@ -27,7 +27,8 @@ class Menu_model extends CI_Model {
     public function update_menu($menu_id, $data){
         $this->db->where('id', $menu_id);
         $this->db->update('menus', $data);
-        return $this->db->affected_rows();
+        $this->db->where('id', $menu_id);
+        return $this->db->get('menus')->result();
     }
 
     public function delete_menu($menu_id){

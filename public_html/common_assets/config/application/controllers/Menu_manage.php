@@ -49,14 +49,18 @@
 
         function insert_menu(){
             $menu = $this->input->post();
+            $menu['parent_id'] = $menu['node_id'];
+            unset($menu['node_id']);
             $inserted_menu = $this->Menu_model->insert_menu($menu);
             echo json_encode(array('status'=> 'success', 'menu' => $inserted_menu));
         }
 
         function update_menu(){
             $menu = $this->input->post();
-            $updated_menu = $this->Menu_model->update_menu($menu->id, $menu);
-            echo json_encode(array('status'=> 'success','menu'=> $updated_menu));
+            $node_id = $menu['node_id'];
+            unset($menu['node_id']);
+            $updated_menu = $this->Menu_model->update_menu($node_id, $menu);
+            echo json_encode(array('status'=> 'success','menu'=> $updated_menu[0]));
         }
 
         function delete_menu(){
