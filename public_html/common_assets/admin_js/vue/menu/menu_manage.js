@@ -69,7 +69,10 @@ var MenuManage = function(){
             id: node.id,
             page_url : node.page_url,
             icon_name : node.icon_name,
-            children: makeMenuStructure(flatArray, node.id) // Recursively get children
+            children: makeMenuStructure(flatArray, node.id),
+            state: {
+                opened : document.getElementById('node_id'). value == node.id ? true : false
+            }
         }));
     }
 
@@ -182,14 +185,19 @@ var MenuManage = function(){
               }
             });
             ajaxTree.on('select_node.jstree', function(e, data){
+                console.log('data', data);
                 $('#node_id').val(data.node.original.id);
                 $('#title').val(data.node.original.text);
                 $('#page_url').val(data.node.original.page_url);
                 $('#icon_name').val(data.node.original.icon_name);
+                $('#selected_id').val(data.selected[0]);
             });
             ajaxTree.on('move_node.jstree', function(e, data) {
                 let brothers = menus.filter( menu => ( menu.id == data.parent))
                 orderUpdate(data.node.original.id, data.parent, brothers.length + 1);
+            });
+            ajaxTree.on('ready.jstree', function() {
+                ajaxTree.jstree('select_node', document.getElementById('selected_id').value);
             });
         }
     }

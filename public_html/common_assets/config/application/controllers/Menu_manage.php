@@ -51,6 +51,7 @@
             $menu = $this->input->post();
             $menu['parent_id'] = $menu['node_id'];
             unset($menu['node_id']);
+            unset($menu['selected_id']);
             $inserted_menu = $this->Menu_model->insert_menu($menu);
             echo json_encode(array('status'=> 'success', 'menu' => $inserted_menu));
         }
@@ -59,6 +60,7 @@
             $menu = $this->input->post();
             $node_id = $menu['node_id'];
             unset($menu['node_id']);
+            unset($menu['selected_id']);
             $updated_menu = $this->Menu_model->update_menu($node_id, $menu);
             echo json_encode(array('status'=> 'success','menu'=> $updated_menu[0]));
         }

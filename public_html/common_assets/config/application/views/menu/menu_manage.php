@@ -53,10 +53,11 @@
                             <div class="col-12 flex" style="display: flex; justify-content: space-evenly;" >
                                 <button id="form_delete" class="btn rounded-pill btn-danger waves-effect waves-light">Delete</button>
                                 <button type="submit" id="form_update" class="btn rounded-pill btn-success waves-effect waves-light">Update</button>
-                                <button type="submit" id="form_submit" class="btn rounded-pill btn-primary waves-effect waves-light">Submit</button>
+                                <button type="submit" id="form_submit" class="btn rounded-pill btn-primary waves-effect waves-light">Add</button>
                             </div>
                         </div>
                         <input type="hidden" id="node_id" name="node_id" value="0" />
+                        <input type="hidden" id="selected_id" name="selected_id" value="0" />
                     </form>
                 </div>
             </div>
