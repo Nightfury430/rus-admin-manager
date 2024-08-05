@@ -125,26 +125,3 @@ var MenuManage = function(){
 $(document).ready(function(){
     MenuManage.init()
 });
-
-(function () {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const bsValidationForms = document.querySelectorAll('.needs-validation');
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(bsValidationForms).forEach(function (form) {
-      form.addEventListener(
-        'submit',
-        function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          } else {
-            event.preventDefault();
-            event.stopPropagation();
-            MenuManage.saveMenu(event);
-          }
-          form.classList.add('was-validated');
-        },
-        false
-      );
-    });
-})();
