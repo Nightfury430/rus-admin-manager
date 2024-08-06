@@ -169,6 +169,13 @@
 <!--</div>-->
 <!--</div>-->
 <!--</div>-->
+
+<style>
+    .hidden >:nth-child() {
+        display: none;
+    };
+</style>
+
 <div class="hidden">
     <div id="delete_confirm_message"><?php echo $lang_arr['delete_confirm_message']?></div>
     <div id="change_confirm_message"><?php echo $lang_arr['change_confirm_message']?></div>

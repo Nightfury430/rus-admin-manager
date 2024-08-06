@@ -1038,6 +1038,7 @@ $lang_arr['middle_name'] = 'второе имя';
 $lang_arr['user_name'] = 'идентификатор';
 //menu.php
 $lang_arr['menu_manage'] = 'меню управление';
+$lang_arr['user_menu_access_control'] = 'Управление доступом к меню пользователя';
 
 
 

@@ -4,7 +4,6 @@
             parent::__construct();
             $this->load->helper('url_helper');
             $this->load->library('session');
-            $this->load->model('User_model');
             $this->load->model("Menu_model");
         }
 

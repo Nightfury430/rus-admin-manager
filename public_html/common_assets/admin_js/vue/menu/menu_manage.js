@@ -42,7 +42,7 @@ var MenuManage = function(){
             menus = [...results[0].menus];
             convertDataFormat(results[0].menus);
         }).catch(function () {
-            console.log('Error');
+            // console.log('Error');
         });
     }
 
@@ -117,7 +117,6 @@ var MenuManage = function(){
             base_url + '/menu_manage/delete_menu', formData, function(xhr){
                 const id = JSON.parse(xhr.response).id;
                 const index = menus.findIndex(menu => menu.id == id);
-                console.log('index', index)
                 if (index !== -1) {
                     menus.splice(index, 1)
                     convertDataFormat(menus);
@@ -185,7 +184,6 @@ var MenuManage = function(){
               }
             });
             ajaxTree.on('select_node.jstree', function(e, data){
-                console.log('data', data);
                 $('#node_id').val(data.node.original.id);
                 $('#title').val(data.node.original.text);
                 $('#page_url').val(data.node.original.page_url);

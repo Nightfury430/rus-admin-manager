@@ -13,10 +13,10 @@
         </div>
         <div class="card-body">
             <div class="row row-bordered g-0 p-3">
-                <div class="col-lg-6">
+                <div class="col-md-6 col-lg-6">
                     <div id="jstree"></div>
                 </div>
-                <div class="col-lg-6 p-3 ">
+                <div class="col-md-6 col-lg-6 p-3 ">
                     <form id="menu_insert_form" class="needs-validation" novalidate>
                         <div class="mb-6">
                             <label class="form-label" for="title">Title</label>
