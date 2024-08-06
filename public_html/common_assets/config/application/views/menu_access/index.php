@@ -22,20 +22,20 @@
         </div>
         <div class="card-body">
             <div class="row g-0 p-3">
-                <div class="col-lg-6 mb-6 mb-xl-0">
+                <div class="col-md-5 col-lg-5 p-5">
                     <small class="text-light fw-medium">Users</small>
                     <div class="demo-inline-spacing mt-4">
                         <div class="list-group list-group-flush">
                             <?php 
                                 foreach($users as $key=>$user){
-                                    echo '<a onClick="MenuAccess.selectUser('.$user->id.')" class="list-group-item list-group-item-action visited-user"
+                                    echo '<a href="javascript:void(0);" id="user_'.$user->id.'" onClick="MenuAccess.selectUser('.$user->id.')" class="list-group-item list-group-item-action visited-user selected_user"
                             >'.$user->first_name.' '. $user->middle_name .' '. $user->last_name .'</a>';
                                 }
                             ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6">
+                <div class="col-md-6 col-lg-6 ml-5" style="min-height : 1440px">
                     <div id="jstree"></div>
                 </div>
             </div>

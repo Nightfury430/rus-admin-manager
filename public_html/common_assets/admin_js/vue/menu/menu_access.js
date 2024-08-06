@@ -63,9 +63,6 @@ var MenuAccess = function(){
             page_url : node.page_url,
             icon_name : node.icon_name,
             children: makeMenuStructure(flatArray, node.id),
-            state: {
-                opened : true,
-            }
         }));
     }
 
@@ -111,6 +108,7 @@ var MenuAccess = function(){
                 $('#selected_id').val(data.selected[0]);
             });
             ajaxTree.on('loaded.jstree', function(){
+                // ajaxTree.jstree('open_all');
                 selectedMenus.forEach(function(menus) {
                     $('#jstree').jstree('check_node', menus.menu_id * 1);
                 });
@@ -120,6 +118,18 @@ var MenuAccess = function(){
 
     var selectUser = (userId) => {
         selectedUserId = userId;
+        var usersElement = $('.selected_user');
+        console.log('usersElement', usersElement);
+        usersElement.each((index, element) => {
+            var temp = $(element).attr('id').split('_');
+            if(temp[1] == userId){
+                $(element).css({
+                    color : 'red'
+                })
+            }else {
+                $(element).css({color : 'black'});
+            }
+        })
         send_xhr_post(
             base_url + '/menu_access/get_menu_access', JSON.stringify({
                 user_id : userId,
