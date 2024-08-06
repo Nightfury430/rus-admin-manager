@@ -36,83 +36,55 @@
         <i class="ti ti-x d-block d-xl-none ti-md align-middle"></i>
     </a>
     </div>
-
     <div class="menu-inner-shadow"></div>
 
-    <ul class="menu-inner py-1">
-        <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'clients_orders/index') !== false) echo 'active' ?>">
-            <a href="<?php echo site_url('clients_orders/index') ?>" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-table"></i>
-                <div><?php echo $lang_arr['clients_orders_label'] ?></div>
-            </a>
-        </li>
-        <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'user/index') !== false) echo 'active' ?>">
-            <a href="<?php echo site_url('user/index') ?>" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-table fa fa-address-book"></i>
-                <div><?php echo $lang_arr['user_management'] ?></div>
-            </a>
-        </li>
-        <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'settings') !== false && strpos($this->uri->uri_string(), 'project_settings') === false && strpos($this->uri->uri_string(), 'modules_settings') === false) echo 'active' ?>">
-            <a href="<?php echo site_url('settings/') ?>" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-table fa fa-code"></i>
-                <div><?php echo $lang_arr['kitchen_account_settings_label'] ?></div>
-            </a>
-        </li>
-        <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'constructor') !== false) echo 'active' ?>">
-            <a href="<?php echo site_url('constructor') ?>" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-table fa fa-cogs"></i>
-                <div><?php echo $lang_arr['kitchen_constructor_settings_label'] ?></div>
-            </a>
-        </li>
+    <?php
+        // Function to build the tree structure
+        function buildTreeStructure(array $elements, $parentId = 0) {
+            $branch = [];
+            foreach ($elements as $element) {
+                if ($element->parent_id == $parentId) {
+                    $children = buildTreeStructure($elements, $element->id);
+                    if ($children) {
+                        $element->children = $children;
+                    }
+                    $branch[] = $element;
+                }
+            }
+            return $branch;
+        }
+        // Function to render the menu
+        function renderMenu($tree) {
+            $html = '';
+            foreach ($tree as $branch) {
+                $hasChildren = isset($branch->children);
+                $activeClass = strpos($_SERVER['REQUEST_URI'], $branch->page_url) !== false ? 'active' : '';
+                $html .= '<li class="menu-item ' . $activeClass . '">';
+                $html .= '<a href="' . site_url($branch->page_url) . '" class="menu-link';
+                if($hasChildren) {
+                    $html .= ' menu-toggle">';
+                } else{
+                    $html .= '">';
+                }
+                $html .= '<i class="menu-icon tf-icons ' . $branch->icon_name . '"></i>';
+                $html .= '<div>' . $branch->title . '</div>';
+                $html .= '</a>';
+                if ($hasChildren) {
+                    $html .= '<ul class="menu-sub">';
+                    $html .= renderMenu($branch->children);
+                    $html .= '</ul>';
+                }
+                $html .= '</li>';
+            }
+            return $html;
+        }
 
-        <?php if ($this->config->item('sub_account') == false && !$this->config->item('antar')): ?>
-            <li class="menu-item  <?php if (strpos($this->uri->uri_string(), 'modules/') !== false ||
-                        strpos($this->uri->uri_string(), 'modules_templates/') !== false ||
-                        strpos($this->uri->uri_string(), 'catalog/items/modules') !== false ||
-                        strpos($this->uri->uri_string(), 'catalog/categories/modules') !== false
-            ) echo 'active' ?>">
-                <a href="javascript:void(0);" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons ti ti-toggle-left"></i>
-                    <div><?php echo $lang_arr['kitchen_modules_label'] ?></div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'catalog/categories/modules') !== false) echo 'active' ?>">
-                        <a href="<?php echo site_url('catalog/categories/modules') ?>" class="menu-link">
-                            <div><?php echo $lang_arr['kitchen_modules_categories_label'] ?></div>
-                        </a>
-                    </li>
-                    <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'catalog/items/modules') !== false) echo 'active' ?>">
-                        <a href="<?php echo site_url('catalog/items/modules') ?>" class="menu-link">
-                            <div><?php echo $lang_arr['modules_list'] ?></div>
-                        </a>
-                    </li>
-                    <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'modules/not_active/1') !== false) echo 'active' ?>">
-                        <a href="<?php echo site_url('modules/not_active/1') ?>" class="menu-link">
-                            <div><?php echo $lang_arr['kitchen_inactive_bottom_modules'] ?></div>
-                        </a>
-                    </li>
-                    <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'modules/not_active/2') !== false) echo 'active' ?>">
-                        <a href="<?php echo site_url('modules/not_active/2') ?>" class="menu-link">
-                            <div><?php echo $lang_arr['kitchen_inactive_top_modules'] ?></div>
-                        </a>
-                    </li>
-                    <li class="menu-item <?php if (strpos($this->uri->uri_string(), 'modules/not_active/3') !== false) echo 'active' ?>">
-                        <a href="<?php echo site_url('modules/not_active/3') ?>" class="menu-link">
-                            <div><?php echo $lang_arr['kitchen_inactive_penals_modules'] ?></div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+        $menuTree = buildTreeStructure($menus_list, 56);
 
-
-        <?php endif; ?>
-
-
-
-    </ul>
-    
-    
-   
-    
+        // Render the menu
+        echo '<ul class="menu-inner py-1">';
+        echo renderMenu($menuTree);
+        echo '</ul>';
+    ?>
 </aside>
         <!-- / Menu -->

@@ -108,7 +108,7 @@ var MenuAccess = function(){
                 $('#selected_id').val(data.selected[0]);
             });
             ajaxTree.on('loaded.jstree', function(){
-                // ajaxTree.jstree('open_all');
+                ajaxTree.jstree('open_all');
                 selectedMenus.forEach(function(menus) {
                     $('#jstree').jstree('check_node', menus.menu_id * 1);
                 });

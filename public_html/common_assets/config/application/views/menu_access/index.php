@@ -22,7 +22,7 @@
         </div>
         <div class="card-body">
             <div class="row g-0 p-3">
-                <div class="col-md-5 col-lg-5 p-5">
+                <div class="col-sm-6 col-md-6 col-lg-6 p-5">
                     <small class="text-light fw-medium">Users</small>
                     <div class="demo-inline-spacing mt-4">
                         <div class="list-group list-group-flush">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 ml-5" style="min-height : 1440px">
+                <div class="col-sm-6 col-md-6 col-lg-6 ml-5" style="min-height : 1440px">
                     <div id="jstree"></div>
                 </div>
             </div>

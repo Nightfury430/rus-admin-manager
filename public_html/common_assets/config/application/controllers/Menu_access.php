@@ -38,6 +38,7 @@
             $data['include'] = 'menu_access/index';
 
             $data['users'] = $this->User_model->get_all_users();
+            $data['menus_list'] = $this->Menu_model->get_all_menus();
 
             $this->load->view('templates/layout', $data);
         }
