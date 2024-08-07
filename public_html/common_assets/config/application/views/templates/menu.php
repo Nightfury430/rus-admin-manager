@@ -40,6 +40,7 @@
 
     <?php
         // Function to build the tree structure
+        
         function buildTreeStructure(array $elements, $parentId = 0) {
             $branch = [];
             foreach ($elements as $element) {
