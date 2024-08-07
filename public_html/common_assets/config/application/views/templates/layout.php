@@ -86,5 +86,6 @@
 			}
       	}
     ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/image_picker.php');?>
   </body>
 </html>

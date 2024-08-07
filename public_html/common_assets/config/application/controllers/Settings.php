@@ -9,6 +9,7 @@ class Settings extends CI_Controller {
         $this->load->helper('url_helper');
         $this->load->model('settings_model');
         $this->load->library('session');
+		$this->load->model("Menu_model");
 
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
             file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/logs/' . $this->config->item('username') . '_login.txt', print_r($this->session, true));
@@ -32,10 +33,21 @@ class Settings extends CI_Controller {
             }
         }
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('/settings', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('/settings', $data);
+        // $this->load->view('templates/footer', $data);
 
+		$data['js_include'] = [
+            'libs/vue.min.js',
+			'admin_js/vue/kitchen/account_settings.js?'. md5(date('m-d-Y-His A e')),
+			'admin_js/vue/filemanager2.js?'.md5(date('m-d-Y-His A e')),
+			'theme/js/plugins/clipboard/clipboard.min.js'
+        ];
+
+        $data['css_include'] = [];
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+        $data['include'] = 'settings';
+        $this->load->view('templates/layout', $data);
     }
 
     public function get_settings()

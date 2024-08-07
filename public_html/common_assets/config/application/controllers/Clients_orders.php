@@ -8,7 +8,7 @@ class Clients_orders extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url_helper');
-
+		$this->load->model("Menu_model");
 	}
 
 
@@ -161,9 +161,14 @@ class Clients_orders extends CI_Controller
 			}
 		}
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('clients_orders/index', $data);
-		$this->load->view('templates/footer', $data);
+		$data['js_include'] = [
+			'admin_js/vue/clients_order/index.js',
+		];
+		$data['css_include'] = [
+		];
+		$data['include'] = 'clients_orders/index';
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+		$this->load->view('templates/layout', $data);
 	}
 
 	public function remove($id)

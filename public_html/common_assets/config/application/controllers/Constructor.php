@@ -13,8 +13,6 @@ class Constructor extends CI_Controller {
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
             redirect('login', 'refresh');
         }
-
-
     }
 
     public function index()

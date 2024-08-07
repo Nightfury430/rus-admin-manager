@@ -1,41 +1,13 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['kitchen_constructor_heading']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
-
-
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
-            <div class="ibox ">
-                <div class="ibox-title">
+            <div class="card ">
+                <div class="card-header">
                     <h5><?php echo $lang_arr['basic_params'] ?></h5>
                 </div>
-                <div class="ibox-content">
-
+                <div class="card-body">
                     <form ref="sub_form" id="sub_form" @submit="check_form" data-action="<?php echo site_url('settings/update_settings/')?>">
-
-
                         <div v-if="options_ready">
-
-
-
                         <div class="form-group  row">
                             <label class="col-sm-2 col-form-label">
 	                            <?php echo $lang_arr['order_email'] ?>
@@ -46,8 +18,6 @@
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
-
-
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label"><?php echo $lang_arr['site_url'] ?></label>
                             <div class="col-sm-10">
@@ -56,8 +26,6 @@
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
-
-
                         <div class="form-group  row">
                             <label class="col-sm-2 col-form-label"><?php echo $lang_arr['address_line'] ?></label>
                             <div class="col-sm-10">
@@ -65,9 +33,6 @@
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
-
-
-
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label"><?php echo $lang_arr['logo'] ?></label>
                             <div class="col-sm-10">
@@ -79,17 +44,12 @@
 <!--                                </div>-->
                             </div>
                         </div>
-
-
                         <div v-if="can_logo_top" class="form-group row">
                             <label class="col-sm-2 col-form-label"><?php echo $lang_arr['logo_top'] ?></label>
                             <div class="col-sm-10">
                                 <pp_image :t_width="100" :t_height="25" :p_width="100" :p_height="25" @e_update="settings.logo_top=$event" :src="settings.logo_top"></pp_image>
                             </div>
                         </div>
-
-
-
                         <div class="hr-line-dashed"></div>
 
 <!--                        <div class="form-group  row">-->
@@ -119,8 +79,6 @@
                             </div>
                         </div>
                         <div class="hr-line-dashed"></div>
-
-
                             <div v-if="can_vk">
                                 <div class="form-group  row">
                                     <label class="col-sm-2 col-form-label">Id приложения Вконтакте</label>
@@ -139,11 +97,7 @@
                                 </div>
                                 <div class="hr-line-dashed"></div>
                             </div>
-
-
-
                         </div>
-
                         <div class="form-group row">
                             <div class="col-sm-4 col-sm-offset-2">
                                 <button class="btn btn-primary btn-sm" type="submit"><?php echo $lang_arr['save']?></button>
@@ -174,11 +128,9 @@
     </div>
 </div>
 
-<script src="/common_assets/libs/vue.min.js"></script>
+<!-- <script src="/common_assets/libs/vue.min.js"></script>
 <script src="/common_assets/admin_js/vue/kitchen/account_settings.js?<?php echo md5(date('m-d-Y-His A e'));?>"></script>
-<script src="/common_assets/admin_js/vue/filemanager2.js?<?php echo md5(date('m-d-Y-His A e'));?>"></script>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/image_picker.php');?>
+<script src="/common_assets/admin_js/vue/filemanager2.js?<?php echo md5(date('m-d-Y-His A e'));?>"></script> -->
+
 <!-- Clipboard -->
-<script src="/common_assets/theme/js/plugins/clipboard/clipboard.min.js"></script>
-
-
+<!-- <script src="/common_assets/theme/js/plugins/clipboard/clipboard.min.js"></script> -->

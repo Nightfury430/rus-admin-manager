@@ -31,10 +31,17 @@
     <link rel="stylesheet" href="/common_assets/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
     <link rel="stylesheet" href="/common_assets/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
     <link rel="stylesheet" href="/common_assets/assets/vendor/libs/toastr/toastr.css" />
+    <link rel="stylesheet" href="/common_assets/assets/vendor/libs/animate-css/animate.css" />
+    <link rel="stylesheet" href="/common_assets/assets/vendor/libs/animate-css/animate.css" />
+    <link rel="stylesheet" href="/common_assets/assets/vendor/libs/sweetalert2/sweetalert2.css" />
+    <link rel="stylesheet" href="/common_assets/css/common.css" />
     <link href="/common_assets/theme/css/style.css?<?php echo md5(date('m-d-Y-His A e')); ?>" rel="stylesheet">
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="/common_assets/assets/vendor/css/pages/cards-advance.css" />
+
+    
+    <script src="/common_assets/assets/vendor/libs/jquery/jquery.js"></script>
 
     <!-- Helpers -->
     <script src="/common_assets/assets/vendor/js/helpers.js"></script>
