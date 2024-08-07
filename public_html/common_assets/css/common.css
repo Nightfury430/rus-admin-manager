@@ -1,0 +1,20 @@
+.pp-tree-item{
+    height: 40px !important;
+    align-self: center;
+}
+
+.pp-tree-item > span {
+    align-self: center;
+}
+
+.pp-tree-buttons{
+    align-self: center;
+}
+
+.fa-eye-slash::before{
+    content: '' !important;
+}
+
+.pp-tree-container{
+    min-height: 650px;
+}

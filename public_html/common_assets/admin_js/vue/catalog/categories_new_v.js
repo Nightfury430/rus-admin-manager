@@ -430,33 +430,36 @@
 
                 function show_swal_n(e) {
                     const item = getNodeFromClickEvent(e);
-
                     if (!item || !item.isLeaf) {
                         return;
                     }
 
-                    swal({
+                    Swal.fire({
                         title: lang['are_u_sure'],
                         text: lang['delete_confirm_message'],
-                        type: "warning",
+                        icon: 'warning',
                         showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        cancelButtonText: lang['no'],
                         confirmButtonText: lang['yes'],
-                        closeOnConfirm: true,
-                    }, function () {
-                        const form_data = new FormData();
-                        form_data.append('id', item.id);
+                        customClass: {
+                          confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                          cancelButton: 'btn btn-label-secondary waves-effect waves-light'
+                        },
+                        buttonsStyling: false
+                      }).then(function (result) {
+                        if (result.value) {
+                          const form_data = new FormData();
+                            form_data.append('id', item.id);
+                            send_xhr_post(
+                                base_url.value + '/catalog/' + method_name.delete + '/' + controller_name,
+                                form_data,
+                                function (xhr) {
+                                    tree.value.api.remove(tree.value.api.findIndexById(item.id));
+                                    pp_category_options_changed = true;
+                                }
+                            )
+                        }
+                      });
 
-                        send_xhr_post(
-                            base_url.value + '/catalog/' + method_name.delete + '/' + controller_name,
-                            form_data,
-                            function (xhr) {
-                                tree.value.api.remove(tree.value.api.findIndexById(item.id));
-                                pp_category_options_changed = true;
-                            }
-                        )
-                    });
                 }
 
                 function show_swal_clear(e) {

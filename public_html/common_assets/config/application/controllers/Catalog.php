@@ -10,6 +10,7 @@ class Catalog extends CI_Controller
         $this->load->helper('url_helper');
         $this->load->model('common_model');
         $this->load->library('session');
+        $this->load->model('Menu_model');
 
         if (!$this->session->username || $this->session->username != $this->config->item('username')) {
             redirect('login', 'refresh');
@@ -69,7 +70,6 @@ class Catalog extends CI_Controller
                 }
             }
         }
-
         $this->load->view($this->bp_header, $data);
         $this->load->view('catalog/items_index', $data);
         $this->load->view('templates/footer', $data);
@@ -762,8 +762,6 @@ class Catalog extends CI_Controller
 
     public function categories($name, $set_id = false)
     {
-
-
         $data['controller_name'] = $name;
 
         $data['set_id'] = $set_id;
@@ -779,9 +777,26 @@ class Catalog extends CI_Controller
             }
         }
 
-        $this->load->view($this->bp_header, $data);
-        $this->load->view('catalog/categories_index_new_v', $data);
-        $this->load->view('templates/footer', $data);
+        $data['js_include'] = [
+            'libs/vue3/vue.global.js',
+            'libs/vue3/vueuse.shared.iife.min.js',
+            'libs/vue3/vueuse.core.iife.min.js',
+            'libs/vue3/vue-slicksort.umd.js',
+            'libs/vue3/vue-select.umd.js',
+            'libs/vue3/pp-tree.js',
+            'admin_js/vue/catalog/categories_new_v.js?' . md5(date('m-d-Y-His A e')),
+        ];
+
+        $data['css_include'] = [
+            'fonts/icons/new/style.css?' . md5(date('m-d-Y-His A e')),
+            'libs/vue3/vue-select.css',
+            'libs/vue3/pp-tree.css'
+        ];
+        $data['modules'] = [ 'category_picker_v' ];
+
+        $data['include'] = 'catalog/categories_index_new_v';
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
     }
 
     public function categories_v($name, $set_id = false)

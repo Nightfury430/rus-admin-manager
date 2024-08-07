@@ -47,6 +47,7 @@ class Settings extends CI_Controller {
         $data['css_include'] = [];
 		$data['menus_list'] = $this->Menu_model->get_all_menus();
         $data['include'] = 'settings';
+		$data['modules'] = [ 'image_picker' ];
         $this->load->view('templates/layout', $data);
     }
 

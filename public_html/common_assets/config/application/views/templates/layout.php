@@ -24,7 +24,7 @@
     <?php include 'header.php'; ?>
     <?php
 	
-		if(count($css_include) !== 0){
+		if(count($css_include) != 0){
 			foreach ($css_include as $key => $css) {
 				echo '<link rel="stylesheet" href="/common_assets/'.$css.'" />';
 			}
@@ -79,13 +79,19 @@
     </div>
     <!-- / Layout wrapper -->
     <?php 
-      	if(count($js_include) !== 0){
-			foreach ($js_include as $key => $js) {
-				echo '<script src="/common_assets/'.$js.'"></script>';
-			}
+      	if(count($js_include) != 0){
+          foreach ($js_include as $key => $js) {
+            echo '<script src="/common_assets/'.$js.'"></script>';
+          }
       	}
     ?>
-    <?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/image_picker.php');?>
+    <?php
+      if(count($modules) != 0){
+        foreach ($modules as $key => $module) {
+          include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/'.$module.'.php');
+        }
+      }
+    ?>
     <?php include 'footer.php' ?>
   </body>
 </html>

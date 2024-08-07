@@ -1,35 +1,14 @@
 <div v-cloak id="sub_form">
-
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-            <?php if(isset($common) && $common == 1):?>
-                <h2 style="color: red">{{lang('categories')}} <span v-if="contr_names[controller_name]">{{contr_names[controller_name]}}</span> (ОБЩАЯ БАЗА)</h2>
-            <?php else:?>
-                <h2>{{lang('categories')}}</h2>
-            <?php endif;?>
-
-        </div>
-        <div class="col-lg-2">
-
-        </div>
-    </div>
-
-
     <div class="wrapper wrapper-content  animated fadeInRight">
-
         <div v-if="data_ready" class="row">
             <div class="col-lg-12">
-                <div class="ibox">
-
-                    <div class="ibox-content">
-
-                        <a v-show="controller == 'module_sets'" class="btn btn-outline btn-w-m btn-info" style="position: absolute; right: 35px" href="<?php echo site_url('module_sets/sets_index/') ?>" role="button"><?php echo $lang_arr['back_to_modules_sets']?></a>
-
-                        <button v-show="check_controller()" @click="addHandler" class="mb-3 btn btn-sm btn-w-m btn-primary btn-outline" type="button">{{lang('add')}}</button>
-
+                <div class="card">
+                    <div class="card-body">
+                        <a v-show="controller == 'module_sets'" class="btn btn-success waves-effect waves-light" style="position: absolute; right: 35px" href="<?php echo site_url('module_sets/sets_index/') ?>" role="button"><?php echo $lang_arr['back_to_modules_sets']?></a>
+                        <button v-show="check_controller()" data-bs-toggle="modal" data-bs-target="#categoryModal" @click="addHandler" class="mb-3 btn btn-primary waves-effect waves-light" type="button">{{lang('add')}}</button>
                         <button @click="expandAll" class="mb-3 btn btn-sm btn-w-m btn-default btn-outline">Развернуть все</button>
                         <button @click="collapseAll" class="mb-3 btn btn-sm btn-w-m btn-default btn-outline">Свернуть все</button>
-                        <button v-if="false" @click="removeAll" class="mb-3 btn btn-sm btn-w-m btn-danger btn-outline">Удалить все</button>
+                        <button v-if="false" @click="removeAll" class="mb-3 btn btn-success waves-effect waves-light">Удалить все</button>
 
                         <pp-tree ref="tree"
                             :nodes="nodes"
@@ -48,12 +27,11 @@
                             <template v-slot:item-buttons="{ item }">
                                 <div class="pp-tree-buttons">
                                     <span>(ID:{{ item.id }})</span>
-
-                                    <i @click="addHandler" :disabled="item.preventChildren" class="fa fa-plus btn btn-outline btn-primary"></i>
-                                    <i @click="editHandler" class="fa fa-edit btn btn-outline btn-success"></i>
-                                    <i @click="changeActiveHandler" :class="(item.active == 1) ? ['btn-primary'] : ['fa-eye-slash', 'btn-default']" class="fa fa-eye btn btn-outline"></i>
-                                    <i @click="show_swal_n" :class="item.isLeaf ? ['btn-danger'] : ['btn-default', 'pointer-none', 'opacity-05']" class="fa fa-trash delete btn btn-outline"></i>
-                                    <i v-if="is_common == 1 && controller_name == 'materials'" @click="show_swal_clear" class="fa fa-eraser delete btn btn-danger btn-outline"></i>
+                                    <button class="btn btn-icon btn-label-linkedin waves-effect" data-bs-toggle="modal" data-bs-target="#categoryModal" style="margin-right : 0.5rem" @click="addHandler"><i :disabled="item.preventChildren" class="fa fa-plus "></i></button>
+                                    <button @click="editHandler" class="btn btn-icon btn-label-github waves-effect" data-bs-toggle="modal" data-bs-target="#categoryModal" style="margin-right : 0.5rem"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button :class="(item.active == 1) ? ['btn-primary'] : ['fa-eye-slash', 'btn-default']" class="btn btn-icon" style="margin-right : 0.5rem" @click="changeActiveHandler"><i  class="fa fa-eye "></i></button>
+                                    <button class="btn btn-icon" :class="item.isLeaf ? ['btn-danger'] : ['btn-default', 'pointer-none', 'opacity-05']" style="margin-right : 0.5rem" @click="show_swal_n" ><i class="fa fa-trash delete "></i></button>
+                                    <button v-if="is_common == 1 && controller_name == 'materials'" class="btn btn-icon" @click="show_swal_clear" style="margin-right : 0.5rem"><i class="fa fa-eraser delete "></i></button>
                                 </div>
                             </template>
                         </pp-tree>
@@ -64,51 +42,45 @@
         </div>
     </div>
 
-    <div v-show="modals.edit_category.show" class="bpl_modal_wrapper">
-        <div class="bpl_modal_background" :class="{shown: modals.edit_category.show}"></div>
-        <div class="bpl_modal_content">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button @click="modals.edit_category.show = false" type="button" class="close"><span>&times;</span></button>
+    <div id="categoryModal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>
+                    <div class="text-center mb-6">
                         <h4 class="modal-title">{{ modals.edit_category.isNew ? lang('add_category') : lang('edit_category') }}</h4>
                     </div>
-                    <div class="modal-body">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">{{lang('name')}}</label>
-                            <div class="col-sm-10"><input v-model="modals.edit_category.name" type="text" class="form-control"></div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Родительская категория</label>
-                            <div class="col-sm-10">
-                                <pp_category
-                                    @e_update="modals.edit_category.parent = $event"
-                                    :options="pp_category_options"
-                                    :selected="modals.edit_category.parent"
-                                    :controller="controller_name">
-                                </pp_category>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">{{lang('description')}}</label>
-                            <div class="col-sm-10"><textarea rows="5" v-model="modals.edit_category.description" class="form-control"></textarea></div>
+                    <div class="col-12 col-md-12 mb-3">
+                        <label class="form-label">{{lang('name')}}</label>
+                        <div class="col-sm-12"><input v-model="modals.edit_category.name" type="text" class="form-control"></div>
+                    </div>
+                    <div class="col-12 col-md-12 mb-3">
+                        <label class="form-label">Родительская категория</label>
+                        <div class="col-sm-12">
+                            <pp_category
+                                @e_update="modals.edit_category.parent = $event"
+                                :options="pp_category_options"
+                                :selected="modals.edit_category.parent"
+                                :controller="controller_name">
+                            </pp_category>
                         </div>
                     </div>
-
-                    <div class="modal-footer">
-                        <button @click="modals.edit_category.show = false" type="button" class="btn btn-white">{{lang('cancel')}}</button>
-                        <button v-if="modals.edit_category.isNew" @click="addItem" type="button" class="btn btn-primary">{{ lang('add') }}</button>
-                        <button v-else @click="updateItem" type="button" class="btn btn-primary">{{ lang('save') }}</button>
+                    <div class="col-12 col-md-12 mb-3">
+                        <label class="form-label">{{lang('description')}}</label>
+                        <div class="col-sm-12"><textarea rows="5" v-model="modals.edit_category.description" class="form-control"></textarea></div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="reset" class="btn btn-label-secondary" style="margin-right:2rem;" data-bs-dismiss="modal" @click="clearField" aria-label="Close" >{{lang('cancel')}}</button>
+                        <button v-if="modals.edit_category.isNew" @click="addItem" type="button" class="btn btn-primary me-3">{{ lang('add') }}</button>
+                        <button v-else @click="updateItem" type="button" class="btn btn-primary me-3">{{ lang('save') }}</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal inmodal" id="filemanager" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade" id="filemanager" tabindex="-1" aria-hidden="true" role="dialog">
+        <div class="modal-dialog modal-lg modal-simple modal-edit-user">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only"><?php echo $lang_arr['ok'] ?></span></button>
@@ -135,11 +107,6 @@
 
 <!--    <input class="cat_controller" ref="controller" value="--><?php //echo $controller ?><!--" type="hidden">-->
 </div>
-
-<link rel="stylesheet" href="/common_assets/fonts/icons/new/style.css?<?php echo md5(date('m-d-Y-His A e'));?>">
-
-<link rel="stylesheet" href="/common_assets/libs/vue3/vue-select.css">
-<link href="/common_assets/libs/vue3/pp-tree.css" rel="stylesheet">
 
 <style>
 
@@ -216,14 +183,3 @@
         margin-left: 5px;
     }
 </style>
-
-<script src="/common_assets/libs/vue3/vue.global.js"></script>
-<script src="/common_assets/libs/vue3/vueuse.shared.iife.min.js"></script>
-<script src="/common_assets/libs/vue3/vueuse.core.iife.min.js"></script>
-<script src="/common_assets/libs/vue3/vue-slicksort.umd.js"></script>
-<script src="/common_assets/libs/vue3/vue-select.umd.js"></script>
-<script src="/common_assets/libs/vue3/pp-tree.js"></script>
-
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/category_picker_v.php'); ?>
-
-<script src="/common_assets/admin_js/vue/catalog/categories_new_v.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>

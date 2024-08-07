@@ -44,6 +44,7 @@ class Constructor extends CI_Controller {
 		$data['css_include'] = [
 		];
 		$data['include'] = 'constructor_settings';
+		$data['modules'] = [ 'image_picker' ];
 		$data['menus_list'] = $this->Menu_model->get_all_menus();
 		$this->load->view('templates/layout', $data);
     }

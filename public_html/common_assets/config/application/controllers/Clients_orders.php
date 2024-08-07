@@ -159,8 +159,7 @@ class Clients_orders extends CI_Controller
 		$data['js_include'] = [
 			'admin_js/vue/clients_order/index.js',
 		];
-		$data['css_include'] = [
-		];
+		$data['css_include'] = [];
 		$data['include'] = 'clients_orders/index';
 		$data['menus_list'] = $this->Menu_model->get_all_menus();
 		$this->load->view('templates/layout', $data);
