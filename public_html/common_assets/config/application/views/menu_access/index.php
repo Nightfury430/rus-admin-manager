@@ -9,7 +9,7 @@
     Сначала вам нужно выбрать пользователя.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<div id="menu_access_container">
+<div id="menu_access_container" class="col-md-8" style="margin : 0 auto;">
     <div class="card">
         <div class="card-header header-elements">
             <h5 class="mb-0 me-2"><?php echo $lang_arr['user_menu_access_control'] ?></h5>
@@ -22,7 +22,7 @@
         </div>
         <div class="card-body">
             <div class="row g-0 p-3">
-                <div class="col-sm-6 col-md-6 col-lg-6 p-5">
+                <div class="col-sm-4 col-md-6 col-lg-6 p-5">
                     <small class="text-light fw-medium">Users</small>
                     <div class="demo-inline-spacing mt-4">
                         <div class="list-group list-group-flush">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-6 ml-5" style="min-height : 1440px">
+                <div class="col-sm-8 col-md-6 col-lg-6 ml-5" style="min-height : 1440px">
                     <div id="jstree"></div>
                 </div>
             </div>
