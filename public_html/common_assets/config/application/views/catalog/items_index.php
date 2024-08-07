@@ -4,34 +4,6 @@
 <?php if (!isset($catalog_add)) $catalog_add = 0;?>
 
 <div v-cloak id="sub_form">
-
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-
-            <?php if($common == 0 && $catalog_add == 0):?>
-                <h2>{{heading}}</h2>
-            <?php elseif ($common == 1 && $catalog_add == 1):?>
-                <h2><span v-if="contr_names[controller_name]">{{contr_names[controller_name]}}</span> (<?php echo $lang_arr['add_from_catalog']?>)</h2>
-            <?php else:?>
-                <h2 style="color: red"><span v-if="contr_names[controller_name]">{{contr_names[controller_name]}}</span> (ОБЩАЯ БАЗА)</h2>
-            <?php endif;?>
-            <!--        <ol class="breadcrumb">-->
-            <!--            <li class="breadcrumb-item">-->
-            <!--                <a href="index.html">Home</a>-->
-            <!--            </li>-->
-            <!--            <li class="breadcrumb-item">-->
-            <!--                <a>Tables</a>-->
-            <!--            </li>-->
-            <!--            <li class="breadcrumb-item active">-->
-            <!--                <strong>Code Editor</strong>-->
-            <!--            </li>-->
-            <!--        </ol>-->
-        </div>
-        <div class="col-lg-2">
-
-        </div>
-    </div>
-
     <div class="wrapper wrapper-content animated fadeIn">
         <div class="row">
             <div class="col-lg-12">

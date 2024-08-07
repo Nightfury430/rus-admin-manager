@@ -96,7 +96,6 @@
         </div>
     </div>
 
-
     <?php if(isset($set_id)):?>
         <input id="set_id" ref="set" value="<?php echo $set_id ?>" type="hidden">
     <?php endif;?>

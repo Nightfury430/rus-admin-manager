@@ -1,30 +1,8 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['kitchen_modules_sets_label']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
-
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
-            <div class="ibox ">
-                <div class="ibox-content">
-
+            <div class="card">
+                <div class="card-body">
                     <div class="sk-spinner sk-spinner-wave">
                         <div class="sk-rect1"></div>
                         <div class="sk-rect2"></div>
@@ -32,15 +10,11 @@
                         <div class="sk-rect4"></div>
                         <div class="sk-rect5"></div>
                     </div>
-
                     <div class="row mb-3">
                         <div class="col-sm-12">
                             <a class="btn btn-w-m btn-primary" href="<?php echo site_url('module_sets/sets_add/') ?>" role="button"><?php echo $lang_arr['add_module_set']?></a>
-
-
                         </div>
                     </div>
-
                     <table class="table table-hover table-bordered items_table">
                         <thead>
                         <tr>
@@ -51,7 +25,6 @@
                         </tr>
                         </thead>
                         <tbody>
-
 	                    <?php foreach ($items as $item):?>
                             <tr>
                                 <input class="set_id" type="hidden" value="<?php echo $item['id']?>">
@@ -67,15 +40,23 @@
                                 </td>
                                 <td>
                                     <div class="actions_list">
-                                        <a href="<?php echo site_url('module_sets/sets_edit/') . $item['id']?>"><span class="glyphicon glyphicon-edit"></span></a>
-                                        <a target="_blank" title="<?php echo $lang_arr['export_module_set_csv']?>" href="<?php echo site_url('module_sets/ajax_export/') . $item['id']?>"><span class="glyphicon glyphicon-download"></span></a>
-                                        <a class="csv_import" data-id="<?php echo $item['id']?>" title="<?php echo $lang_arr['import_module_set_csv']?>" href="<?php echo site_url('module_sets/ajax_import/') . $item['id']?>"><span class="glyphicon glyphicon-upload"></span></a>
+                                        <a href="<?php echo site_url('module_sets/sets_edit/') . $item['id']?>" class="btn rounded-pill btn-icon btn-label-primary waves-effect">
+                                            <i class="glyphicon glyphicon-edit"></i>
+                                        </a>
+                                        <a target="_blank" title="<?php echo $lang_arr['export_module_set_csv']?>" class="btn rounded-pill btn-icon btn-label-secondary waves-effect" href="<?php echo site_url('module_sets/ajax_export/') . $item['id']?>">
+                                            <span class="glyphicon glyphicon-download"></span>
+                                        </a>
+                                        <a class="csv_import btn rounded-pill btn-icon btn-label-primary waves-effect" data-id="<?php echo $item['id']?>" title="<?php echo $lang_arr['import_module_set_csv']?>" href="<?php echo site_url('module_sets/ajax_import/') . $item['id']?>">
+                                            <span class="glyphicon glyphicon-upload"></span>
+                                        </a>
 
 					                    <?php if( $item['is_empty'] == 1 ): ?>
-                                            <a class="copy_from_another_set" data-id="<?php echo $item['id']?>" title="<?php echo $lang_arr['copy_from_another_set_modules']?>" href="<?php echo site_url('module_sets/copy_set/')?>"><span class="glyphicon glyphicon-duplicate"></span></a>
+                                            <a class="copy_from_another_set btn btn-icon rounded-pill btn-label-pinterest waves-effect" data-id="<?php echo $item['id']?>" title="<?php echo $lang_arr['copy_from_another_set_modules']?>" href="<?php echo site_url('module_sets/copy_set/')?>">
+                                                <span class="glyphicon glyphicon-duplicate"></span>
+                                            </a>
 					                    <?php endif;?>
 
-                                        <a class="delete_button" href="<?php echo site_url('module_sets/sets_remove/' . $item['id']) ?>"><span class="glyphicon glyphicon-trash"></span></a>
+                                        <a class="delete_button btn rounded-pill btn-icon btn-label-secondary waves-effect" href="<?php echo site_url('module_sets/sets_remove/' . $item['id']) ?>"><span class="glyphicon glyphicon-trash"></span></a>
                                     </div>
                                 </td>
                             </tr>
@@ -83,22 +64,17 @@
 	                    <?php endforeach; ?>
                         </tbody>
                     </table>
-
                     <input style="display: none" id="csv_file" type="file" accept=".csv"/>
-
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
 <div class="modal_wrapper">
     <div class="modal_content">
         <span class="modal_close glyphicon glyphicon-remove"></span>
         <div class="col-xs-12">
-
             <div class="form-group">
                 <label for="selected_material_facade"><?php echo $lang_arr['copy_select_from_set']?></label>
                 <select class="form-control" >
@@ -107,7 +83,6 @@
 
                 <div class="copy_confirm btn btn-success"><?php echo $lang_arr['copy']?></div>
             </div>
-
         </div>
     </div>
 </div>
@@ -115,27 +90,29 @@
 
 
 <script>
-
-
-
-
     $(document).ready(function () {
         $('.delete_button').click(function (e) {
             e.preventDefault();
 
             let scope = $(this);
 
-            swal({
-                title: "<?php echo $lang_arr['are_u_sure']?>",
+            Swal.fire({
+                title: '<?php echo $lang_arr['are_u_sure']?>',
                 text: $('#delete_confirm_message').html(),
-                type: "warning",
+                icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
                 cancelButtonText: "<?php echo $lang_arr['no']?>",
                 confirmButtonText: "<?php echo $lang_arr['yes']?>",
-                closeOnConfirm: false
-            }, function () {
-                window.location.href = scope.attr('href');
+                closeOnConfirm: false,
+                customClass: {
+                    confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                    cancelButton: 'btn btn-label-secondary waves-effect waves-light'
+                },
+                buttonsStyling: false
+                }).then(function (result) {
+                if (result.value) {
+                    window.location.href = scope.attr('href');
+                }
             });
         });
 
@@ -188,9 +165,6 @@
             select.append('<option value="0">--- <?php echo $lang_arr['choose_set']?> ---</option>');
 
             $('.items_table tbody tr').each(function () {
-
-                console.log(123)
-
                 var set_id = $(this).find('.set_id').val();
                 var set_name = $(this).find('.set_name').html();
                 var set_empty = $(this).find('.set_empty').val();
@@ -222,10 +196,7 @@
                     location.reload();
                 });
             }
-
-
         });
-
 
         $('.modal_content .modal_close').click(function () {
             $('.modal_wrapper').fadeOut();
@@ -235,7 +206,6 @@
 </script>
 
 <style>
-
     .modal_wrapper{
         position: fixed;
         top: 0;

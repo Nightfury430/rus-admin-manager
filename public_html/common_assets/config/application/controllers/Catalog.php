@@ -70,9 +70,19 @@ class Catalog extends CI_Controller
                 }
             }
         }
+
+        $data['js_include'] = [
+            
+        ];
+
+        $data['css_include'] = [
+            
+        ];
+        $data['modules'] = [ ];
         $this->load->view($this->bp_header, $data);
-        $this->load->view('catalog/items_index', $data);
-        $this->load->view('templates/footer', $data);
+        $data['include'] = 'catalog/items_index';
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
     }
 
     public function item($name, $id = 0)
@@ -793,7 +803,7 @@ class Catalog extends CI_Controller
             'libs/vue3/pp-tree.css'
         ];
         $data['modules'] = [ 'category_picker_v' ];
-
+        $this->load->view($this->bp_header, $data);
         $data['include'] = 'catalog/categories_index_new_v';
         $data['menus_list'] = $this->Menu_model->get_all_menus();
         $this->load->view('templates/layout', $data);

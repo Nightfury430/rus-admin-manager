@@ -8,6 +8,7 @@ class Module_sets extends CI_Controller {
         parent::__construct();
         $this->load->helper('url_helper');
         $this->load->model('module_sets_model');
+        $this->load->model('Menu_model');
         $this->load->library('session');
 
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
@@ -45,9 +46,19 @@ class Module_sets extends CI_Controller {
 			    }
 		    }
 	    }
-        $this->load->view('templates/header', $data);
-        $this->load->view('module_sets/sets/index', $data);
-        $this->load->view('templates/footer', $data);
+
+        $data['js_include'] = [
+            
+        ];
+
+        $data['css_include'] = [
+            
+        ];
+        $data['modules'] = [];
+
+        $data['include'] = 'module_sets/sets/index';
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
     }
 
     public function sets_add()
@@ -108,9 +119,18 @@ class Module_sets extends CI_Controller {
 			        }
 		        }
 	        }
-            $this->load->view('templates/header', $data);
-            $this->load->view('module_sets/sets/edit', $data);
-            $this->load->view('templates/footer', $data);
+
+            $data['js_include'] = [
+            
+            ];
+    
+            $data['css_include'] = [
+                
+            ];
+            $data['modules'] = [ ];
+            $data['include'] = 'module_sets/sets/edit';
+            $data['menus_list'] = $this->Menu_model->get_all_menus();
+            $this->load->view('templates/layout', $data);
         }
         else
         {
