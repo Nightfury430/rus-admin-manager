@@ -65,6 +65,31 @@
 <?php endif;?>
 
 <script>
+
+
+let event = new Event('Glob_ready');
+    let glob = '';
+
+    $(document).ready(function () {
+
+        $('.help_span').each(function () {
+            tippy($(this)[0], {
+                // content: document.getElementById('content_account_email').innerHTML,
+                content: $('#help_messages').find('[data-target="'+ $(this).attr('data-id') +'"]').html(),
+                theme:'light',
+                placement: 'bottom-start',
+                maxWidth:500,
+                trigger: 'click',
+                interactive: true,
+            })
+        })
+
+        glob = get_base_data();
+
+        document.dispatchEvent(event);
+
+    });
+    
     $(document).ready(function () {
 
         $('#backup_bd_modal').on('show.bs.modal', async function (e) {

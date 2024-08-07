@@ -145,11 +145,6 @@ class Clients_orders extends CI_Controller
 		$data['items'] = $this->clients_orders_model->get_items($start, 20);
 		$data['settings'] = $this->constructor_model->get();
 
-
-
-
-
-
 		$this->load->model('languages_model');
 		$data['lang_arr'] = get_default_lang();
 		if($this->config->item('ini')['language']['language'] !== 'default'){

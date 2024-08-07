@@ -1,43 +1,14 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['constructor_settings_heading']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
-
-<style>
-
-</style>
-
 <div class="wrapper wrapper-content  animated fadeInRight">
     <form ref="sub_form" id="sub_form" @submit="check_form" enctype="multipart/form-data" method="post" accept-charset="UTF-8" action="<?php echo site_url( 'constructor/save_data/' ) ?>">
-
         <div class="row">
             <div class="col-lg-12">
 
-                <div class="ibox ">
-                    <div class="ibox-title">
+                <div class="card mb-5">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['prices_block_label'] ?></h5>
                     </div>
-                    <div v-cloak="1" class="ibox-content">
-
+                    <div v-cloak="1" class="card-body">
 	                    <?php if ($this->config->item('sub_account') == false): ?>
-
-
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label"><?php echo $lang_arr['prices']?></label>
                             <div class="col-sm-8">
@@ -47,12 +18,7 @@
                                 </label>
                             </div>
                         </div>
-
-
 	                    <?php endif;?>
-
-
-
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label"><?php echo $lang_arr['price_modificator']?></label>
                             <div class="col-sm-8">
@@ -113,11 +79,11 @@
                 </div>
 
                 <?php if ($this->config->item('sub_account') == false): ?>
-                <div class="ibox ">
-                    <div class="ibox-title">
+                <div class="card mb-5">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['kitchen_dealer_mode'] ?></h5>
                     </div>
-                    <div v-cloak="1" class="ibox-content">
+                    <div v-cloak="1" class="card-body">
 
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label"><?php echo $lang_arr['kitchen_dealer_mode']?></label>
@@ -175,11 +141,11 @@
 
 	            <?php if ($this->config->item('sub_account') == false): ?>
 
-<!--                <div class="ibox ">-->
-<!--                    <div class="ibox-title">-->
+<!--                <div class="card mb-5 ">-->
+<!--                    <div class="card-header">-->
 <!--                        <h5>--><?php //echo $lang_arr['facade_systems'] ?><!--</h5>-->
 <!--                    </div>-->
-<!--                    <div class="ibox-content">-->
+<!--                    <div class="card-body">-->
 <!---->
 <!--                        <div  class="form-group row ">-->
 <!--                            <label class="col-sm-4 col-form-label">Фасадные системы "МакБерри"</label>-->
@@ -206,11 +172,11 @@
 <!--                    </div>-->
 <!--                </div>-->
 
-                <div class="ibox ">
-                    <div class="ibox-title">
+                <div class="card mb-5 ">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['decorations'] ?></h5>
                     </div>
-                    <div class="ibox-content">
+                    <div class="card-body">
 
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label"><?php echo $lang_arr['decorations_enabled']?></label>
@@ -225,11 +191,11 @@
                     </div>
                 </div>
 
-                <div class="ibox ">
-                    <div class="ibox-title">
+                <div class="card mb-5 ">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['tabs'] ?></h5>
                     </div>
-                    <div class="ibox-content">
+                    <div class="card-body">
 
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label"><?php echo $lang_arr['show_kitchen_params']?></label>
@@ -258,11 +224,11 @@
 	            <?php endif;?>
 
 
-                <div class="ibox ">
-                    <div class="ibox-title">
+                <div class="card mb-5 ">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['pdf_use_password'] ?></h5>
                     </div>
-                    <div class="ibox-content">
+                    <div class="card-body">
 
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label"><?php echo $lang_arr['pdf_use_password']?></label>
@@ -287,11 +253,11 @@
                     </div>
                 </div>
 
-                <div class="ibox ">
-                    <div class="ibox-title">
+                <div class="card mb-5 ">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['functionality'] ?></h5>
                     </div>
-                    <div class="ibox-content">
+                    <div class="card-body">
 
 	                    <?php if ($this->config->item('sub_account') == false): ?>
 
@@ -459,11 +425,11 @@
 
 
 
-                <div class="ibox ">
-                    <div class="ibox-title">
+                <div class="card mb-5 ">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['view_label'] ?></h5>
                     </div>
-                    <div class="ibox-content">
+                    <div class="card-body">
 
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label"><?php echo $lang_arr['icons'] ?></label>
@@ -531,11 +497,11 @@
                 </div>
 
 
-                <div v-if="settings.sizes_limit" class="ibox ">
-                    <div class="ibox-title">
+                <div v-if="settings.sizes_limit" class="card mb-5 ">
+                    <div class="card-header">
                         <h5><?php echo $lang_arr['size_limit'] ?></h5>
                     </div>
-                    <div class="ibox-content">
+                    <div class="card-body">
 
                         <div class="form-group row">
                             <label class="col-sm-3 col-form-label"><?php echo $lang_arr['size_limit_min_width'] ?></label>
@@ -572,14 +538,9 @@
 
                     </div>
                 </div>
-
-
-
-                <div class="ibox ">
-                    <div class="ibox-content">
-
+                <div class="card mb-5 ">
+                    <div class="card-body">
                         <div class="hr-line-dashed"></div>
-
                         <div class="form-group row">
                             <div class="col-sm-4 col-sm-offset-2">
                                 <button class="btn btn-primary btn-sm" type="submit"><?php echo $lang_arr['save']?></button>
@@ -587,21 +548,8 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
 
     </form>
 </div>
-
-
-
-
-
-<script src="/common_assets/libs/vue.min.js"></script>
-<script src="/common_assets/admin_js/vue/filemanager2.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>
-<script src="/common_assets/admin_js/vue/kitchen/constructor_settings.js?<?php echo md5(date('m-d-Y-His A e'));?>"></script>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/image_picker.php');?>
-

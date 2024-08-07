@@ -78,7 +78,6 @@
       <div class="drag-target"></div>
     </div>
     <!-- / Layout wrapper -->
-    <?php include 'footer.php' ?>
     <?php 
       	if(count($js_include) !== 0){
 			foreach ($js_include as $key => $js) {
@@ -87,5 +86,6 @@
       	}
     ?>
     <?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/image_picker.php');?>
+    <?php include 'footer.php' ?>
   </body>
 </html>

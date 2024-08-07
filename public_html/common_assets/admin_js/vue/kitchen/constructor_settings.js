@@ -3,7 +3,6 @@ let settings_data;
 let kitchen_models;
 document.addEventListener('Glob_ready', async function () {
     settings_data = await promise_request_post(glob.base_url + '/constructor/get_settings_ajax')
-    console.log(settings_data)
     if (settings_data.settings.settings) {
         settings_data.settings = JSON.parse(settings_data.settings.settings)
     }
