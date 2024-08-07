@@ -80,8 +80,6 @@ let pp_keyboard = {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-
-
     base_url = document.getElementById('ajax_base_url').value;
     acc_url = document.getElementById('acc_base_url').value;
     set_id = document.getElementById('cat_set_id').value;
@@ -120,10 +118,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         local_storage_available = 0;
         console.log(e)
     }
-
-
-
-
     // controller_name = 'coupe_accessories';
 
     let categories_url = base_url + '/catalog/'+ categories_method_name +'/' + controller_name
@@ -259,13 +253,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         'params_blocks': 'params_blocks',
         'cornice': 'cornice',
     }
-
-
-
     init_vue();
-
-
-
 })
 
 let last_selected = null;
@@ -283,8 +271,6 @@ document.addEventListener("keyup", function (e) {
 })
 
 function init_vue() {
-
-
     app = new Vue({
         el: '#sub_form',
         components: {
@@ -378,15 +364,9 @@ function init_vue() {
                         if(items_data[i].params.map) items_data[i].map = items_data[i].params.map
                         if(items_data[i].params.color) items_data[i].color = items_data[i].params.color
                     }
-
-
                 }
             }
             console.log(items_data)
-
-
-
-
             Vue.set(this,'items', items_data)
         },
         computed:{
@@ -417,12 +397,9 @@ function init_vue() {
             }
         },
         mounted: function () {
-
             this.$options.is_common = is_common;
-
             let scope = this;
             this.$emit('change_page_sync', parseInt(this.filter.start) / parseInt(this.filter.per_page) + 1);
-
             $('#bm_mass_depth').click(function (e) {
                 e.preventDefault();
                 let data = {};
@@ -430,6 +407,8 @@ function init_vue() {
                 if($('#bm_depth').val() > 0 && $('#bm_depth_to').val() > 0){
                     data.depth = $('#bm_depth').val();
                     data.depth_to = $('#bm_depth_to').val();
+                    $("#mass_change_modal").hide();
+                    $('.modal-backdrop')[0].remove();
                 }
                 send_mass(scope.attr('data-action'), data)
 
@@ -439,7 +418,11 @@ function init_vue() {
                 e.preventDefault();
                 let data = {};
                 let scope = $(this);
-                if($('#bm_fo').val() > 0) data.front_offset = $('#bm_fo').val();
+                if($('#bm_fo').val() > 0) {
+                    data.front_offset = $('#bm_fo').val();
+                    $("#mass_change_modal").hide();
+                    $('.modal-backdrop')[0].remove();
+                }
                 send_mass(scope.attr('data-action'), data)
             });
 
@@ -447,7 +430,11 @@ function init_vue() {
                 e.preventDefault();
                 let data = {};
                 let scope = $(this);
-                if($('#bm_bo').val() > 0) data.back_offset = $('#bm_bo').val();
+                if($('#bm_bo').val() > 0) {
+                    data.back_offset = $('#bm_bo').val();
+                    $("#mass_change_modal").hide(); 
+                    $('.modal-backdrop')[0].remove();
+                };
                 send_mass(scope.attr('data-action'), data)
             });
 
@@ -458,6 +445,8 @@ function init_vue() {
                 if($('#bm_height').val() > 0 && $('#bm_height_to').val() > 0){
                     data.height = $('#bm_height').val();
                     data.height_to = $('#bm_height_to').val();
+                    $("#mass_change_modal").hide();
+                    $('.modal-backdrop')[0].remove();
                 }
                 send_mass(scope.attr('data-action'), data)
 
@@ -470,6 +459,8 @@ function init_vue() {
                 if($('#tm_depth').val() > 0 && $('#tm_depth_to').val() > 0){
                     data.depth = $('#tm_depth').val();
                     data.depth_to = $('#tm_depth_to').val();
+                    $("#mass_change_modal_top").hide();
+                    $('.modal-backdrop')[0].remove();
                 }
                 send_mass(scope.attr('data-action'), data)
 
@@ -482,17 +473,16 @@ function init_vue() {
                 if($('#tm_height').val() > 0 && $('#tm_height_to').val() > 0){
                     data.height = $('#tm_height').val();
                     data.height_to = $('#tm_height_to').val();
+                    $("#mass_change_modal_top").hide();
+                    $('.modal-backdrop')[0].remove();
                 }
                 send_mass(scope.attr('data-action'), data)
             });
 
             function send_mass(url, data) {
-
                 if(Object.keys(data).length > 0){
-
                     data.data = 1;
-
-                    swal({
+                    Swal.fire({
                         title: scope.lang('are_u_sure'),
                         text: $('#change_confirm_message').html(),
                         type: "warning",
@@ -500,8 +490,12 @@ function init_vue() {
                         confirmButtonColor: "#DD6B55",
                         cancelButtonText: scope.lang('no'),
                         confirmButtonText: scope.lang('yes'),
-                        closeOnConfirm: true
-                    }, function () {
+                        closeOnConfirm: true,
+                        customClass: {
+                            confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                            cancelButton: 'btn btn-label-danger waves-effect waves-light'
+                          }
+                    }).then(() =>{ 
                         $.ajax({
                             url: url,
                             type: 'post',
@@ -609,7 +603,6 @@ function init_vue() {
                 toastr.success(lang['success'])
 
             },
-
             mass_category: function(){
                 $('#modal_mass_category').modal('show')
             },
@@ -691,7 +684,7 @@ function init_vue() {
 
                 let scope = this;
 
-                swal({
+                Swal.fire({
                     title: scope.lang('are_u_sure'),
                     text: $('#delete_confirm_message').html(),
                     type: "warning",
@@ -699,15 +692,16 @@ function init_vue() {
                     confirmButtonColor: "#DD6B55",
                     cancelButtonText: scope.lang('no'),
                     confirmButtonText: scope.lang('yes'),
-                    closeOnConfirm: true
-                }, async function () {
-
+                    closeOnConfirm: true,
+                    customClass: {
+                        confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                        cancelButton: 'btn btn-label-danger waves-effect waves-light'
+                      }
+                }).then(async () => {
                     let url = glob.base_url + '/catalog/mass_items_remove/' + controller_name
-                    let result = await promise_request_post(url, fdata);
-
-                    scope.make_request();
-                    toastr.success(lang['success'])
-
+                        let result = await promise_request_post(url, fdata);
+                        scope.make_request();
+                        toastr.success(lang['success'])
                 });
 
             },
@@ -801,7 +795,6 @@ function init_vue() {
                 scope.make_request(true)
 
             },
-
             make_request: async function(reset){
                 let scope = this;
                 let search = scope.filter.search
@@ -949,8 +942,6 @@ function init_vue() {
 
 
             },
-
-
             add_item: function(){
                 if(single_page_names[controller_name]){
                     this.$emit('add_item', 1);
@@ -1021,7 +1012,7 @@ function init_vue() {
                 //     }
                 // }
 
-                swal({
+                Swal.fire({
                     title: lang['are_u_sure'],
                     text: lang['delete_confirm_message'],
                     type: "warning",
@@ -1029,9 +1020,12 @@ function init_vue() {
                     confirmButtonColor: "#DD6B55",
                     cancelButtonText: lang['no'],
                     confirmButtonText: lang['yes'],
-                    closeOnConfirm: true
-                }, function () {
-
+                    closeOnConfirm: true,
+                    customClass: {
+                        confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                        cancelButton: 'btn btn-label-danger waves-effect waves-light'
+                      }
+                }).then(() => {
                     let form_data = new FormData();
                     form_data.append('id', item.id)
 
@@ -1098,8 +1092,6 @@ function init_vue() {
                 $('#catalog_modal').modal('hide')
                 toastr.success(lang['add_model_success'])
             },
-
-
             copy_item: async function(item){
                 console.log(item)
                 console.log(controller_name)
@@ -1107,7 +1099,6 @@ function init_vue() {
                 toastr.success('Копирование успешно')
                 this.make_request();
             },
-
             add_from_catalog: async function(){
                 if(controller_name === 'materials'){
                     $('#catalog_modal_materials').modal('show')
@@ -1123,11 +1114,10 @@ function init_vue() {
                 }
                 location.href = base_url + '/catalog/items_catalog/' + controller_name
             },
-
             show_swal_catalog: function (item) {
                 let scope = this;
 
-                swal({
+                Swal.fire({
                     title: lang['are_u_sure'],
                     text: lang['add_from_catalog_confirm_message'],
                     type: "info",
@@ -1135,10 +1125,12 @@ function init_vue() {
                     confirmButtonColor: "#DD6B55",
                     cancelButtonText: lang['no'],
                     confirmButtonText: lang['yes'],
-                    closeOnConfirm: true
-                }, function () {
-
-
+                    closeOnConfirm: true,
+                    customClass: {
+                        confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                        cancelButton: 'btn btn-label-danger waves-effect waves-light'
+                      }
+                }).then(() => {
                     let form_data = new FormData();
                     form_data.append('id', item.id)
 
@@ -1155,15 +1147,12 @@ function init_vue() {
                         })
                 });
             },
-
             add_multiple: function(){
                 location.href = base_url + '/' + controller_name + '/items_add_multiple'
             },
-
             get_eye_class: function (item) {
                 return item.active == 1 ? ['fa-eye', 'btn-primary'] :['fa-eye-slash', 'btn-default']
             },
-
             save_fs_data: async function(){
 
 
@@ -1240,9 +1229,6 @@ function init_vue() {
 
 }
 
-
-
-
 function create_tree(dataset) {
     let hashTable = Object.create(null)
     dataset.forEach(function (aData) {
@@ -1256,8 +1242,6 @@ function create_tree(dataset) {
     })
     return dataTree
 }
-
-
 
 function get_hash(data) {
     return data.reduce(function(map, obj) {
@@ -1327,18 +1311,9 @@ function save_file( blob, filename ) {
 async function get_tree_async(url, no_item) {
     let result = {};
     let data = await promise_request(url)
-
-
     if(no_item){
-        // ni = {
-        //     id:"0",
-        //     name: lang_data['lang_no'],
-        //     parent: "0"
-        // }
         data.unshift(no_item)
-
     }
-
     result.tree = create_tree(copy_object(data));
     result.ordered = flatten(copy_object(result.tree))
     result.hash = get_hash(copy_object(data))
@@ -1356,7 +1331,7 @@ function show_warning_yes_no(callback, close, cancel) {
     if(!close) close = true;
     if(!cancel) cancel = true;
 
-    swal({
+    Swal.fire({
         title: glob.lang['are_u_sure'],
         text: glob.lang['delete_confirm_message'],
         type: "warning",
@@ -1364,8 +1339,12 @@ function show_warning_yes_no(callback, close, cancel) {
         confirmButtonColor: "#DD6B55",
         cancelButtonText: glob.lang['no'],
         confirmButtonText: glob.lang['yes'],
-        closeOnConfirm: close
-    }, function () {
+        closeOnConfirm: close,
+        customClass: {
+            confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+            cancelButton: 'btn btn-label-danger waves-effect waves-light'
+          }
+    }).then(() => {
         if(typeof callback === 'function') callback();
     });
 }
@@ -1373,6 +1352,3 @@ function show_warning_yes_no(callback, close, cancel) {
 function clean_string(string) {
     return string.toString().replace(/\s{2,}/g, ' ').replace(/\t/g, ' ').trim();
 }
-
-
-

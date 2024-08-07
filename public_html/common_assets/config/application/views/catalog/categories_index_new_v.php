@@ -42,8 +42,8 @@
         </div>
     </div>
 
-    <div id="categoryModal" class="modal fade" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+    <div id="categoryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-simple">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>

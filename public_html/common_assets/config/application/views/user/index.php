@@ -20,44 +20,44 @@
         <div class="card-body">
             <div class="table-responsive text-nowrap">
                 <table class="table">
-                <thead>
-                    <tr>
-                    <th>Id</th>
-                    <th><?php echo $lang_arr['name']?></th>
-                    <th><?php echo $lang_arr['user_name']?></th>
-                    <th><?php echo $lang_arr['email']?></th>
-                    <th><?php echo $lang_arr['phone_number']?></th>
-                    <th><?php echo $lang_arr['role']?></th>
-                    <th><?php echo $lang_arr['actions']?></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <template v-for="( user, index ) in allUsers">
+                    <thead>
                         <tr>
-                            <td>{{ index + 1 }}</td>
-                            <td>{{user.first_name}} {{user.middle_name }} {{user.last_name}}</td>
-                            <td>{{user.user_name}}</td>
-                            <td>{{user.email}}</td>
-                            <td>{{user.phone_number}}</td>
-                            <td>{{ user.role == 0 ?  'ADMIN' : 'USER' }}</td>
-                            <td>
-                                <div class="dropdown">
-                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                    <i class="ti ti-dots-vertical"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#UserModal" :title="lang('edit')" @click="editUser(user)"
-                                        ><i class="ti ti-pencil me-1"></i> Edit</a
-                                    >
-                                    <a class="dropdown-item" :title="lang('delete')" @click="delUser(user)"
-                                        ><i class="ti ti-trash me-1"></i> Delete</a
-                                    >
-                                    </div>
-                                </div>
-                            </td>
+                        <th>Id</th>
+                        <th><?php echo $lang_arr['name']?></th>
+                        <th><?php echo $lang_arr['user_name']?></th>
+                        <th><?php echo $lang_arr['email']?></th>
+                        <th><?php echo $lang_arr['phone_number']?></th>
+                        <th><?php echo $lang_arr['role']?></th>
+                        <th><?php echo $lang_arr['actions']?></th>
                         </tr>
-                    </template>
-                </tbody>
+                    </thead>
+                    <tbody>
+                        <template v-for="( user, index ) in allUsers">
+                            <tr>
+                                <td>{{ index + 1 }}</td>
+                                <td>{{user.first_name}} {{user.middle_name }} {{user.last_name}}</td>
+                                <td>{{user.user_name}}</td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.phone_number}}</td>
+                                <td>{{ user.role == 0 ?  'ADMIN' : 'USER' }}</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="ti ti-dots-vertical"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#UserModal" :title="lang('edit')" @click="editUser(user)"
+                                            ><i class="ti ti-pencil me-1"></i> Edit</a
+                                        >
+                                        <a class="dropdown-item" :title="lang('delete')" @click="delUser(user)"
+                                            ><i class="ti ti-trash me-1"></i> Delete</a
+                                        >
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
                 </table>
             </div>
         </div>

@@ -72,13 +72,16 @@ class Catalog extends CI_Controller
         }
 
         $data['js_include'] = [
-            
+            'libs/vue.min.js',
+            'libs/vue/vue_select/vue-select.js',
+            'admin_js/vue/catalog/items.js?'.md5(date('m-d-Y-His A e')),
+            'admin_js/vue/pagination.js'
         ];
 
         $data['css_include'] = [
-            
+            'libs/vue/vue_select/vue-select.css'
         ];
-        $data['modules'] = [ ];
+        $data['modules'] = ['mass_materials_form', 'category_picker'];
         $this->load->view($this->bp_header, $data);
         $data['include'] = 'catalog/items_index';
         $data['menus_list'] = $this->Menu_model->get_all_menus();
