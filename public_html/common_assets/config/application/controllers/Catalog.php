@@ -814,8 +814,6 @@ class Catalog extends CI_Controller
 
     public function categories_v($name, $set_id = false)
     {
-
-
         $data['controller_name'] = $name;
 
         $data['set_id'] = $set_id;

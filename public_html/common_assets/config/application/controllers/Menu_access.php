@@ -37,6 +37,8 @@
 
             $data['include'] = 'menu_access/index';
 
+            $data['modules'] = [];
+
             $data['users'] = $this->User_model->get_all_users();
             $data['menus_list'] = $this->Menu_model->get_all_menus();
 

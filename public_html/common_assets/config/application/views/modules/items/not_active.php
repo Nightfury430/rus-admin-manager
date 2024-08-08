@@ -1,89 +1,55 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['not_active_modules_heading']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
 <div class="wrapper wrapper-content  animated fadeInRight">
-
-
     <div class="row">
         <div class="col-lg-12">
-            <div class="ibox ">
-                <div class="ibox-title">
+            <div class="card">
+                <div class="card-header">
                     <h5><?php echo $lang_arr['not_active_modules_heading'] ?></h5>
                 </div>
-                <div class="ibox-content">
-
-                    <table class="table table-hover table-bordered">
+                <div class="card-body table-responsive text-nowrap">
+                    <table class="table">
                         <thead>
-                        <tr>
-                            <th class="col-xs-2"><?php echo $lang_arr['icon']?></th>
-                            <th><?php echo $lang_arr['name']?></th>
-                            <th class="col-xs-2"><?php echo $lang_arr['category']?></th>
-                            <th class="col-xs-2"><?php echo $lang_arr['actions']?></th>
-                        </tr>
+                            <tr>
+                                <th class="col-xs-2"><?php echo $lang_arr['icon']?></th>
+                                <th><?php echo $lang_arr['name']?></th>
+                                <th class="col-xs-2"><?php echo $lang_arr['category']?></th>
+                                <th class="col-xs-2"><?php echo $lang_arr['actions']?></th>
+                            </tr>
                         </thead>
                         <tbody>
+                            <?php foreach ($templates as $item): ?>
+                                <tr>
+                                    <td>
+                                        <div class="item_image">
+                                            <?php if ($item['icon'] != null): ?>
+                                                <img class="img-fluid" src="<?php echo $item['icon'] ?>" alt="">
+                                            <?php endif; ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <?php echo $item['name'] ?>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control category_select" data-id="<?php echo $item['id']?>">
+                                                <option value="<?php echo $top_category?>"><?php echo $lang_arr['no']?></option>
+                                                <?php foreach ($categories as $category): ?>
+                                                    <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                        </div>
 
-
-	                    <?php foreach ($templates as $item): ?>
-                            <tr>
-
-                                <td>
-                                    <div class="item_image">
-					                    <?php if ($item['icon'] != null): ?>
-                                            <img class="img-fluid" src="<?php echo $item['icon'] ?>" alt="">
-					                    <?php endif; ?>
-                                    </div>
-                                </td>
-                                <td>
-				                    <?php echo $item['name'] ?>
-                                </td>
-                                <td>
-                                    <div class="form-group">
-                                        <label for="category"><?php echo $lang_arr['choose_category']?></label>
-                                        <select class="form-control category_select" data-id="<?php echo $item['id']?>">
-                                            <option value="<?php echo $top_category?>"><?php echo $lang_arr['no']?></option>
-						                    <?php foreach ($categories as $category): ?>
-                                                <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
-						                    <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                </td>
-                                <td>
-                                    <div class="actions_list">
-                                        <a class="add_button" data-cat="<?php echo $top_category?>" data-url="<?php echo site_url('modules/not_active_add/') ?>" data-id="<?php echo $item['id']?>" href="<?php echo site_url('modules/not_active_add/' . $item['id'] .'/'. $top_category .'/' . $top_category) ?>">
-						                    <?php echo $lang_arr['add']?>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-
-	                    <?php endforeach; ?>
-
-
-
+                                    </td>
+                                    <td>
+                                        <div class="actions_list">
+                                            <a class="add_button" data-cat="<?php echo $top_category?>" data-url="<?php echo site_url('modules/not_active_add/') ?>" data-id="<?php echo $item['id']?>" href="<?php echo site_url('modules/not_active_add/' . $item['id'] .'/'. $top_category .'/' . $top_category) ?>">
+                                                <?php echo $lang_arr['add']?>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
-
-
-
                 </div>
             </div>
         </div>

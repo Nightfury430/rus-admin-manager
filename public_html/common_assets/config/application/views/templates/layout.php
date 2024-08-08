@@ -2,7 +2,7 @@
 
 <html
 lang="en"
-class="light-style layout-navbar-fixed layout-compact layout-menu-fixed layout-menu-collapsed"
+class="light-style layout-navbar-fixed layout-wide layout-menu-fixed layout-menu-collapsed"
 dir="ltr"
 data-theme="theme-default"
 data-assets-path="/common_assets/assets/"

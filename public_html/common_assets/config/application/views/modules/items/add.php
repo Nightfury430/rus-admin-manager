@@ -1,31 +1,5 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['add_module'] ?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
-
-
 <div id="app">
-
     <div  id="sub_form" action="<?php echo site_url('modules/items_add_ajax/') ?><?php if (isset($id)) echo $id ?>">
-
-
-
         <input id="form_success_url" value="<?php echo site_url('catalog/items/modules') ?>" type="hidden">
         <input id="controller_name" value="modules" type="hidden">
         <input id="set_id" value="" type="hidden">
@@ -33,9 +7,7 @@
         <?php if (isset($id)): ?>
             <input id="item_id" value="<?php echo $id ?>" type="hidden">
         <?php endif; ?>
-
         <div v-cloak class="wrapper wrapper-content  animated fadeInRight">
-
             <div v-if="errors.length" class="row">
                 <div class="col-lg-12">
                     <div class="alert alert-danger error_msg">
@@ -45,7 +17,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tabs-container">
@@ -135,10 +106,7 @@
 
                                             </div>
                                         </div>
-
-
                                     </fieldset>
-
                                 </div>
                             </div>
                             <div id="tab_params" class="tab-pane">
@@ -1921,25 +1889,18 @@
                                         </div>
                                         </div>
                                     </div>
-
-
                                     <div class="row">
                                         <div class="col-8"></div>
                                         <div class="col-4">
                                             <button @click="apply_variables()" type="button" class="btn btn-w-m btn-primary btn-block btn-outline"><?php echo $lang_arr['apply'] ?></button>
                                         </div>
-
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox ">
@@ -1961,10 +1922,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
-
     </div>
 
     <div class="modal inmodal" id="acc_modal" tabindex="-1" role="dialog">
@@ -2439,21 +2397,6 @@
 
 
 </style>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/3d_preview.php'; ?>
 <script>
-    console.log(view_mode)
-    console.log(viewport)
     view_mode = true;
-    //view_path = "<?php //echo $this->config->item('const_path')?>//"
 </script>
-<script src="/common_assets/libs/vue.min.js"></script>
-<script src="/common_assets/libs/vue/vue_select/vue-select.js"></script>
-<script src="/common_assets/admin_js/vue/pagination.js"></script>
-<script src="/common_assets/libs/vue/draggable/sortable.min.js"></script>
-<script src="/common_assets/libs/vue/draggable/vuedraggable.min.js"></script>
-<link rel="stylesheet" href="/common_assets/libs/vue/vue_select/vue-select.css">
-<script src="/common_assets/admin_js/vue/filemanager2.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>
-
-<script src="/common_assets/admin_js/vue/kitchen/modules.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/items_picker.php');?>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/categories_picker.php');?>

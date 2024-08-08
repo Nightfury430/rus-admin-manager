@@ -15,6 +15,8 @@ class Modules extends CI_Controller {
             redirect('login', 'refresh');
         }
 
+		$this->load->model('Menu_model');
+
         if(!$this->config->item('sub_account')) $this->config->set_item('sub_account', false);
         if($this->config->item('sub_account') == true) redirect('settings', 'refresh');
     }
@@ -436,9 +438,24 @@ class Modules extends CI_Controller {
 			    }
 		    }
 	    }
-	    $this->load->view('templates/header', $data);
-	    $this->load->view('modules/items/add', $data);
-	    $this->load->view('templates/footer', $data);
+
+		$data['js_include'] = [
+			'libs/vue.min.js',
+			'libs/vue/vue_select/vue-select.js',
+			'admin_js/vue/pagination.js',
+			'libs/vue/draggable/sortable.min.js',
+			'libs/vue/draggable/vuedraggable.min.js',
+			'admin_js/vue/filemanager2.js?' . md5(date('m-d-Y-His A e')),
+			'admin_js/vue/kitchen/modules.js?' . md5(date('m-d-Y-His A e')),
+        ];
+
+        $data['css_include'] = [
+			'libs/vue/vue_select/vue-select.css'
+        ];
+        $data['modules'] = [ '3d_preview' ];
+        $data['include'] = 'modules/items/add';
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
     }
 
 	public function items_add_ajax($id = false) {
@@ -730,9 +747,21 @@ class Modules extends CI_Controller {
 			    }
 		    }
 	    }
-        $this->load->view('templates/header', $data);
-        $this->load->view('modules/items/not_active', $data);
-        $this->load->view('templates/footer', $data);
+
+
+
+		$data['js_include'] = [
+
+		];
+
+		$data['css_include'] = [
+
+		];
+
+		$data['include'] = 'modules/items/not_active';
+		$data['modules'] = [];
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+		$this->load->view('templates/layout', $data);
     }
 
     public function not_active_add($id, $cateogry_id, $top_category)
