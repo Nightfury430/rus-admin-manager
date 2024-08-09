@@ -1,28 +1,4 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-	<div class="col-lg-10">
-		<h2><?php echo $lang_arr['report']?></h2>
-		<!--        <ol class="breadcrumb">-->
-		<!--            <li class="breadcrumb-item">-->
-		<!--                <a href="index.html">Home</a>-->
-		<!--            </li>-->
-		<!--            <li class="breadcrumb-item">-->
-		<!--                <a>Tables</a>-->
-		<!--            </li>-->
-		<!--            <li class="breadcrumb-item active">-->
-		<!--                <strong>Code Editor</strong>-->
-		<!--            </li>-->
-		<!--        </ol>-->
-	</div>
-	<div class="col-lg-2">
-
-	</div>
-</div>
-
-
-
-
 <?php
-
     if(empty($settings['report_custom_settings'])){
 	    $report_custom_settings = array();
 	    $report_custom_settings['report_page_orientation'] = "L";
@@ -41,30 +17,34 @@
 	    $report_custom_settings['custom_report_show_logo'] = 1;
     } else {
 	    $report_custom_settings = json_decode($settings['report_custom_settings'], true);
-
 	    if(!isset($report_custom_settings['custom_report_common_view'])) $report_custom_settings['custom_report_common_view'] = 1;
 	    if(!isset($report_custom_settings['custom_report_edges_view'])) $report_custom_settings['custom_report_edges_view'] = 1;
 	    if(!isset($report_custom_settings['custom_report_comms_only_view'])) $report_custom_settings['custom_report_comms_only_view'] = 1;
 	    if(!isset($report_custom_settings['custom_report_top_view'])) $report_custom_settings['custom_report_top_view'] = 1;
 	    if(!isset($report_custom_settings['custom_report_walls_view'])) $report_custom_settings['custom_report_walls_view'] = 1;
 	    if(!isset($report_custom_settings['custom_report_show_logo'])) $report_custom_settings['custom_report_show_logo'] = 1;
-
     }
 
 ?>
-
 <div class="wrapper wrapper-content  animated fadeInRight">
-
 	<form id="sub_form" enctype="multipart/form-data" method="post" accept-charset="UTF-8" action="<?php echo site_url( 'report/update_report_settings/' ) ?>">
-
-
         <div class="row">
             <div class="col-lg-12">
-                <div class="tabs-container">
-                    <ul class="nav nav-tabs">
+                <div class="nav-align-top nav-tabs-shadow mb-6">
+                    <ul class="nav nav-tabs" role="tablist">
 <!--                        <li><a class="nav-link active" data-toggle="tab" href="#tab-1">Свой шаблон</a></li>-->
-                        <li><a class="nav-link active" data-toggle="tab" href="#tab-2">Стандартный шаблон</a></li>
-
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link active"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-2"
+                            aria-controls="tab-2"
+                            aria-selected="true">
+                                Стандартный шаблон
+                            </button>    
+                        </li>
                     </ul>
                     <div class="tab-content">
 
@@ -257,16 +237,12 @@
 <!--                            </div>-->
 <!--                        </div>-->
 
-                        <div id="tab-2" class="tab-pane common_checkboxes active">
+                        <div id="tab-2" class="tab-pane fade show active common_checkboxes" role="tabpanel">
                             <div class="panel-body">
-
-                                <div class="ibox-content">
-
+                                <div class="card-body">
                                     <div class="form-group row">
                                         <label class="col-sm-12 col-form-label"><?php echo $lang_arr['report_images']?></label>
                                     </div>
-
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_common_view']?></label>
                                         <div class="col-sm-8">
@@ -276,7 +252,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_edges_view']?></label>
                                         <div class="col-sm-8">
@@ -286,7 +261,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_comms_only_view']?></label>
                                         <div class="col-sm-8">
@@ -296,7 +270,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_top_view']?></label>
                                         <div class="col-sm-8">
@@ -306,7 +279,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_walls_view']?></label>
                                         <div class="col-sm-8">
@@ -316,14 +288,10 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="hr-line-dashed"></div>
-
-
                                     <div class="form-group row">
                                         <label class="col-sm-12 col-form-label"><?php echo $lang_arr['report_materials']?></label>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_facades_material']?></label>
                                         <div class="col-sm-8">
@@ -333,7 +301,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_glass_material']?></label>
                                         <div class="col-sm-8">
@@ -343,7 +310,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_corpus_material']?></label>
                                         <div class="col-sm-8">
@@ -353,7 +319,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_cokol_material']?></label>
                                         <div class="col-sm-8">
@@ -363,7 +328,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_tabletop_material']?></label>
                                         <div class="col-sm-8">
@@ -373,7 +337,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_wallpanel_material']?></label>
                                         <div class="col-sm-8">
@@ -383,7 +346,6 @@
                                             </label>
                                         </div>
                                     </div>
-
                                     <div class="hr-line-dashed"></div>
 
                                     <div class="form-group row">
@@ -465,43 +427,28 @@
                                             </label>
                                         </div>
                                     </div>
-
-
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label"><?php echo $lang_arr['report_additional_text']?></label>
                                         <div class="col-sm-8">
                                             <textarea rows="10" class="form-control" name="report_additional_text" ><?php echo $settings['report_additional_text']?></textarea>
                                         </div>
                                     </div>
-
-
-
                                     <div class="hr-line-dashed"></div>
-
                                     <div class="form-group row">
                                         <div class="col-sm-4 col-sm-offset-2">
                                             <button class="btn btn-primary btn-sm" type="submit"><?php echo $lang_arr['save']?></button>
                                         </div>
                                     </div>
-
                                 </div>
-
-
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
             </div>
         </div>
-
-
         <div class="">
             <div id="presave"></div>
         </div>
-
 	</form>
 
     <div class="hidden">
@@ -519,8 +466,3 @@
 <script src="/common_assets/libs/tinymce/jquery.tinymce.min.js"></script>
 <script src="/common_assets/libs/vue.min.js"></script>
 <script src="/common_assets/admin_js/vue/kitchen/report.js"></script>
-
-
-
-
-

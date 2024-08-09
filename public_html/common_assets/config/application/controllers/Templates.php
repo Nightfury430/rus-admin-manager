@@ -172,11 +172,15 @@ class Templates extends CI_Controller {
 			    }
 		    }
 	    }
-        $this->load->view('templates/header', $data);
-        $this->load->view('kitchen_templates/edit', $data);
-        $this->load->view('templates/footer', $data);
 
-
+		$data['js_include'] = [
+		];
+		$data['css_include'] = [
+		];
+		$data['include'] = 'kitchen_templates/edit';
+		$data['modules'] = [];
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+		$this->load->view('templates/layout', $data);
     }
 
     public function edit_ajax($id)

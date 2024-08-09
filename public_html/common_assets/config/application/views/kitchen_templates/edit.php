@@ -1,23 +1,3 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['edit_project']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
 <form id="sub_form" @submit.prevent="check_form" enctype="multipart/form-data" method="post" accept-charset="UTF-8" action="<?php echo site_url('templates/edit_ajax/'.$item['id']) ?>">
 
 <div class="wrapper wrapper-content  animated fadeInRight">

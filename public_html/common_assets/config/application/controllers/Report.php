@@ -9,8 +9,7 @@ class Report extends CI_Controller {
 		$this->load->helper('url_helper');
 		$this->load->model('common_model');
 		$this->load->library('session');
-
-
+		$this->load->model('Menu_model');
 	}
 
 	public function index()
@@ -38,9 +37,15 @@ class Report extends CI_Controller {
 			}
 		}
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('report', $data);
-		$this->load->view('templates/footer', $data);
+
+		$data['js_include'] = [
+		];
+		$data['css_include'] = [
+		];
+		$data['include'] = 'report';
+		$data['modules'] = [];
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+		$this->load->view('templates/layout', $data);
 	}
 
 	public function update_report_settings() {
