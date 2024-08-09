@@ -483,16 +483,16 @@
 
 
 
-<!-- 
+
 <link rel="stylesheet" href="/common_assets/libs/vue/vue_select/vue-select.css">
 <script src="/common_assets/libs/vue.min.js"></script>
-<script src="/common_assets/libs/vue/vue_select/vue-select.js"></script> -->
+<script src="/common_assets/libs/vue/vue_select/vue-select.js"></script>
 
-<!--<script src="/common_assets/libs/vue/draggable/sortable.min.js"></script>-->
-<!--<script src="/common_assets/libs/vue/draggable/vuedraggable.min.js"></script>-->
+<script src="/common_assets/libs/vue/draggable/sortable.min.js"></script>
+<script src="/common_assets/libs/vue/draggable/vuedraggable.min.js"></script>
 
-<!-- <script src="/common_assets/admin_js/vue/catalog/items.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>
-<script src="/common_assets/admin_js/vue/pagination.js"></script> -->
+<script src="/common_assets/admin_js/vue/catalog/items.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>
+<script src="/common_assets/admin_js/vue/pagination.js"></script>
 
 <style>
     label{

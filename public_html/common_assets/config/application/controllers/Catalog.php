@@ -1276,7 +1276,6 @@ class Catalog extends CI_Controller
 
         $data['set_id'] = $set_id;
 
-
         $this->load->model('languages_model');
         $data['lang_arr'] = get_default_lang();
         if ($this->config->item('ini')['language']['language'] !== 'default') {
@@ -1288,9 +1287,18 @@ class Catalog extends CI_Controller
             }
         }
 
+        $data['js_include'] = [
+
+        ];
+
+        $data['css_include'] = [
+        ];
+
+        $data['include'] = 'catalog/items_index';
+        $data['modules'] = [];
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
         $this->load->view($this->bp_header, $data);
-        $this->load->view('catalog/items_index', $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/layout', $data);
     }
 
     public function items_catalog($name, $set_id = false)
@@ -1357,10 +1365,19 @@ class Catalog extends CI_Controller
         }
 
 
-        $this->load->view($this->bp_header, $data);
-        $this->load->view('catalog/' . $name . '_item', $data);
-        $this->load->view('templates/footer', $data);
 
+        $data['js_include'] = [
+
+        ];
+
+        $data['css_include'] = [
+        ];
+
+        $data['include'] = 'catalog/' . $name . '_item';
+        $data['modules'] = [];
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view($this->bp_header, $data);
+        $this->load->view('templates/layout', $data);
     }
 
     public function remove_item_common($name)
