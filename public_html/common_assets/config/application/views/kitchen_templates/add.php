@@ -1,34 +1,13 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['add_project']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
 <form id="sub_form" @submit="check_form" enctype="multipart/form-data" method="post" accept-charset="UTF-8" action="<?php echo site_url('templates/add_ajax/') ?>">
-
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
-            <div class="ibox ">
-                <div class="ibox-title">
+            <div class="card ">
+                <div class="card-header">
                     <h5><?php echo $lang_arr['basic_params']?></h5>
                 </div>
-                <div class="ibox-content">
-                    <div class="alert alert-info" role="alert">
+                <div class="card-body">
+                    <div class="alert alert-info mb-3" role="alert">
                         <p>Требования к иконке</p>
                         <p>Рекомендуемая ширина иконки 280px</p>
                         <ul>
@@ -38,7 +17,7 @@
                         </ul>
                     </div>
 
-                    <div v-if="errors.length" v-cloak id="errors" class="alert alert-danger error_msg"  >
+                    <div v-if="errors.length" v-cloak id="errors" class="alert alert-danger error_msg mb-3"  >
                         <ul>
                             <li v-for="error in errors">
                                 {{ error }}
@@ -46,51 +25,43 @@
                         </ul>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="name"><?php echo $lang_arr['name']?>*</label>
                         <input v-model="name" type="text" class="form-control" name="name" placeholder="<?php echo $lang_arr['name']?>">
                     </div>
 
-                    <div class="form-group">
-                        <label for="icon"><?php echo $lang_arr['icon']?>*</label>
-                        <input v-model="icon" ref="icon" type="file" name="icon" id="icon" accept="image/jpeg,image/png,image/gif">
+                    <div class="form-group mb-3">
+                        <label for="icon" class="form-label"><?php echo $lang_arr['icon']?>*</label>
+                        <input v-model="icon" ref="icon" class="form-control" type="file" name="icon" id="icon" accept="image/jpeg,image/png,image/gif" id="formFile" />
                     </div>
 
-                    <div class="form-group">
-                        <label for="icon"><?php echo $lang_arr['project_file']?>*</label>
-                        <input v-model="project" ref="project" type="file" name="project" id="project" accept=".dbs, .json">
+                    <div class="form-group mb-3">
+                        <label for="icon" class="form-label"><?php echo $lang_arr['project_file']?>*</label>
+                        <input v-model="project" ref="project" class="form-control" type="file" name="project" id="project" accept=".dbs, .json">
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="active"><?php echo $lang_arr['active']?></label>
                         <select v-model="active" class="form-control" name="active" id="active">
                             <option selected value="1"><?php echo $lang_arr['yes']?></option>
                             <option value="0"><?php echo $lang_arr['no']?></option>
                         </select>
                     </div>
-
                     <div class="hr-line-dashed"></div>
-
-                    <div class="form-group row">
+                    <div class="form-group mb-3 row">
                         <div class="col-sm-4 col-sm-offset-2">
                             <a class="btn btn-white btn-sm" href="<?php echo site_url('templates/index/') ?>"><?php echo $lang_arr['cancel']?></a>
                             <button class="btn btn-primary btn-sm" type="submit"><?php echo $lang_arr['add']?></button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 </form>
-
-
-
 <script src="/common_assets/libs/vue.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-
 <script>
     $('#document').ready(function () {
 

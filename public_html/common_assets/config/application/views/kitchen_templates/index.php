@@ -67,9 +67,7 @@
     $(document).ready(function () {
         $('.delete_button').click(function (e) {
             e.preventDefault();
-
             let scope = $(this);
-
             Swal.fire({
                 title: "<?php echo $lang_arr['are_u_sure']?>",
                 text: $('#delete_confirm_message').html(),
@@ -89,14 +87,9 @@
                 }
             });
         });
-
-
         $('.is_visible').click(function (e) {
             e.preventDefault();
-
             let val = 0;
-
-
             if($(this).hasClass('disabled')){
                 $(this).removeClass('disabled')
                 val = 1;
@@ -104,16 +97,13 @@
                 val = 0;
                 $(this).addClass('disabled')
             }
-
             $.ajax({
                 url: "<?php echo base_url('index.php/templates/set_active_ajax/')?>" + $(this).attr('data-id') + '/' + val,
                 type: 'get'
             }).done(function(msg) {
                 console.log(132)
             });
-
         })
-
     })
 </script>
 
