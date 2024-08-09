@@ -468,8 +468,7 @@
                     if (!item) {
                         return;
                     }
-
-                    swal({
+                    Swal.fire({
                         title: lang['are_u_sure'],
                         text: lang['delete_confirm_message'],
                         type: "warning",
@@ -477,12 +476,24 @@
                         confirmButtonColor: "#DD6B55",
                         cancelButtonText: lang['no'],
                         confirmButtonText: lang['yes'],
-                        closeOnConfirm: false
-                    }, function () {
+                        closeOnConfirm: false,
+                        customClass: {
+                            confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                            cancelButton: 'btn btn-label-secondary waves-effect waves-light'
+                          },
+                    }).then(() => {
                         send_xhr_get(
                             base_url.value + '/materials/remove_items_by_cat_common/' + item.id + '/drop_true',
                             function (xhr) {
-                                swal("Очищена!", "Категория очищена", "success");
+                                Swal.fire({
+                                    title: 'Очищена!',
+                                    text: 'Категория очищена',
+                                    customClass: {
+                                      confirmButton: 'btn btn-primary waves-effect waves-light'
+                                    },
+                                    buttonsStyling: false,
+                                    icon : 'success'
+                                  });
                             })
                     });
                 }

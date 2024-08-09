@@ -1,53 +1,60 @@
 <div v-cloak id="sub_form">
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-10">
-            <?php if(isset($common) && $common == 1):?>
-                <h2 style="color: red">{{lang('categories')}} <span v-if="contr_names[controller_name]">{{contr_names[controller_name]}}</span> (ОБЩАЯ БАЗА)</h2>
-            <?php else:?>
-                <h2>{{lang('categories')}}</h2>
-            <?php endif;?>
-        </div>
-        <div class="col-lg-2">
-        </div>
-    </div>
     <div class="wrapper wrapper-content  animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
-                <div class="ibox">
-                    <div class="ibox-content">
-                        <a v-show="controller == 'module_sets'" class="btn btn-outline btn-w-m btn-info" style="position: absolute; right: 35px" href="<?php echo site_url('module_sets/sets_index/') ?>" role="button"><?php echo $lang_arr['back_to_modules_sets']?></a>
-                        <button v-show="check_controller()" @click="show_add_modal(true)" class="mb-3 btn btn-w-m btn-primary btn-outline" type="button">{{lang('add')}}</button>
+                <div class="card">
+                    <div class="card-body">
+                        <a v-show="controller == 'module_sets'" class="btn  btn-w-m btn-info" style="position: absolute; right: 35px" href="<?php echo site_url('module_sets/sets_index/') ?>" role="button"><?php echo $lang_arr['back_to_modules_sets']?></a>
+                        <button v-show="check_controller()" @click="show_add_modal(true)" data-bs-toggle="modal" data-bs-target="#add_category_modal" class="mb-3 btn btn-w-m btn-primary" type="button">{{lang('add')}}</button>
                         <draggable :swap-threshold="0.1" :disabled="!check_controller()" :animation="250" v-model="items" :ghostClass="'ghost'" :group="get_group()" :empty-insert-threshold="100" handle=".handle" @start="drag = true" @end="end_drag()">
                             <div class="draggable_parent " v-for="(element,index) in items">
                                 <div class="dd-handle d-flex flex-row align-items-center">
                                     <div v-on:mousedown="check_md($event, element)" v-on:mouseup="check_mu(element)" v-show="check_controller()">
                                         <i class="fa fa-align-justify handle"></i>
                                     </div>
-                                    <div class="pl-3 col-5">
+                                    <div class="pl-3 col-9">
                                         <span>{{element.name}} (ID {{element.id}})</span>
                                     </div>
                                     <div class="ml-auto">
-                                        <i @click="show_add_modal(false, index)" class="fa fa-plus btn btn-outline btn-primary"></i>
-                                        <i @click="show_edit_modal(element)" class="fa fa-edit btn btn-outline btn-success"></i>
-                                        <i @click="change_active(element)" :class="get_eye_class(element)" class="fa fa-eye btn btn-outline"></i>
-                                        <i @click="show_swal(element, index)" :class="get_delete_class(element)" class="fa fa-trash delete btn btn-outline"></i>
-                                        <i v-if="is_common == 1 && controller_name == 'materials'" @click="show_swal_clear(element, index)"  class="fa fa-eraser delete btn btn-danger btn-outline"></i>
+                                        <button @click="show_add_modal(false, index)" data-bs-toggle="modal" data-bs-target="#add_category_modal" class="btn  btn-primary">
+                                            <i  class="fa fa-plus"></i>
+                                        </button>
+                                        <button @click="show_edit_modal(element)" data-bs-toggle="modal" data-bs-target="#edit_category_modal" class="btn btn-success">
+                                            <i  class="fa fa-edit "></i>
+                                        </button>
+                                        <button @click="change_active(element)" class="btn btn-primary">
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button :class="get_delete_class(element)" @click="show_swal(element, index)" class="btn">
+                                            <i   class="fa fa-trash delete  "></i>
+                                        </button>
+                                        <button @click="show_swal_clear(element, index)" v-if="is_common == 1 && controller_name == 'materials'" class="btn btn-danger">
+                                            <i class="fa fa-eraser delete"></i>
+                                        </button>
                                     </div>
                                 </div>
-                                <draggable  :animation="250" :ghostClass="'ghost'" class="ml-5" :class="{drop_zone: md == true, drop_zone_hidden: md == false, hide_dz: hide_dz}" v-model="element.children" :group="get_group()" :empty-insert-threshold="100" handle=".handle" @start="drag = true" @end="end_drag()">
+                                <draggable :animation="250" :ghostClass="'ghost'" class="ml-5" :class="{drop_zone: md == true, drop_zone_hidden: md == false, hide_dz: hide_dz}" v-model="element.children" :group="get_group()" :empty-insert-threshold="100" handle=".handle" @start="drag = true" @end="end_drag()">
                                     <div class="draggable_child " v-for="(item, item_index) in element.children">
                                         <div  class="dd-handle d-flex flex-row align-items-center">
                                             <div v-on:mousedown="md = true" v-on:mouseup="md = false">
                                                 <i class="fa fa-align-justify handle"></i>
                                             </div>
-                                            <div class="pl-3 col-5">
+                                            <div class="pl-3 col-9">
                                                 <div>{{item.name}} (ID {{item.id}})</div>
                                             </div>
                                             <div class="ml-auto ">
-                                                <i @click="show_edit_modal(item)" class="fa fa-edit btn btn-outline btn-success"></i>
-                                                <i @click="change_active(item)" :class="get_eye_class(item, element)" class="fa fa-eye btn btn-outline"></i>
-                                                <i @click="show_swal(item, index, true, item_index)" :class="get_delete_class(item)" class="fa fa-trash delete btn btn-outline"></i>
-                                                <i v-if="is_common == 1" @click="show_swal_clear(item, index)"  class="fa fa-eraser delete btn btn-danger btn-outline"></i>
+                                                <button @click="show_edit_modal(item)" data-bs-toggle="modal" data-bs-target="#edit_category_modal" class="btn btn-success">
+                                                    <i class="fa fa-edit "></i>
+                                                </button>
+                                                <button @click="change_active(item)" class="btn">
+                                                    <i class="fa fa-eye"></i>
+                                                </button>
+                                                <button @click="show_swal(item, index, true, item_index)" :class="get_delete_class(item)" class="btn">
+                                                    <i class="fa fa-trash delete"></i>
+                                                </button>
+                                                <button v-if="is_common == 1" @click="show_swal_clear(item, index)" class="btn btn-danger">
+                                                    <i class="fa fa-eraser delete"></i>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -55,91 +62,78 @@
                                 <div v-show="hide_dz" class="dz"></div>
                             </div>
                         </draggable>
-
-                        <button v-show="check_controller()" @click="show_add_modal(true)" class="mt-3 btn btn-w-m btn-primary btn-outline" type="button">{{lang('add')}}</button>
-
+                        <button v-show="check_controller()" @click="show_add_modal(true)" data-bs-toggle="modal" data-bs-target="#add_category_modal" class="mt-3 btn btn-w-m btn-primary" type="button">{{lang('add')}}</button>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
-    <div v-show="modals.add_category.show" class="bpl_modal_wrapper">
-        <div class="bpl_modal_background" :class="{shown: modals.add_category.show}"></div>
-        <div class="bpl_modal_content">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button @click="modals.add_category.show = false" type="button" class="close"><span>&times;</span></button>
+    <div id="add_category_modal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-simple modal-edit-user">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+                    <div class="text-center mb-6">
                         <h4 class="modal-title">{{lang('add_category')}}</h4>
                     </div>
-                    <div class="modal-body">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">{{lang('name')}}</label>
-                            <div class="col-sm-10"><input v-model="modals.add_category.name" type="text" class="form-control"></div>
-                        </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">{{lang('name')}}</label>
+                        <div class="col-sm-10"><input v-model="modals.add_category.name" type="text" class="form-control"></div>
                     </div>
-                    <div class="modal-footer">
-                        <button @click="modals.add_category.show = false" type="button" class="btn btn-white">{{lang('cancel')}}</button>
-                        <button @click="add_item()" type="button" class="btn btn-primary">{{lang('add')}}</button>
-                    </div>
+                </div>
+                <div class="cpl-md-12 text-center">
+                    <button type="button" class="btn btn-white" data-bs-dismiss="modal" aria-label="Close">{{lang('cancel')}}</button>
+                    <button @click="add_item()" type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">{{lang('add')}}</button>
                 </div>
             </div>
         </div>
     </div>
-    <div v-show="modals.edit_category.show" class="bpl_modal_wrapper">
-        <div class="bpl_modal_background" :class="{shown: modals.edit_category.show}"></div>
-        <div class="bpl_modal_content">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button @click="modals.edit_category.show = false" type="button" class="close"><span>&times;</span></button>
+    <div id="edit_category_modal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-simple">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"><span>&times;</span></button>
+                    <div class="text-center mb-6">
                         <h4 class="modal-title">{{lang('edit_category')}}</h4>
                     </div>
-                    <div class="modal-body">
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">{{lang('name')}}</label>
-                            <div class="col-sm-10"><input v-model="modals.edit_category.name" type="text" class="form-control"></div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">{{lang('description')}}</label>
-                            <div class="col-sm-10"><textarea rows="5" v-model="modals.edit_category.description"  class="form-control"></textarea></div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">{{lang('image')}}</label>
-                            <div class="col-sm-10">
-                                <div class="icon_block">
-                                    <img @click="$refs.fileman.data_mode = 'images'" data-toggle="modal" data-target="#filemanager" style="max-width: 125px" :src="correct_url(modals.edit_category.image)" alt="">
-                                    <i @click="$refs.fileman.data_mode = 'images'" data-toggle="modal" data-target="#filemanager" class="fa fa-folder-open open_file" aria-hidden="true"></i>
-                                    <i v-if="modals.edit_category.image != ''" @click="modals.edit_category.image = ''" class="fa fa-trash delete_file" aria-hidden="true"></i>
-                                </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">{{lang('name')}}</label>
+                        <div class="col-sm-10"><input v-model="modals.edit_category.name" type="text" class="form-control"></div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">{{lang('description')}}</label>
+                        <div class="col-sm-10"><textarea rows="5" v-model="modals.edit_category.description"  class="form-control"></textarea></div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">{{lang('image')}}</label>
+                        <div class="col-sm-10">
+                            <div class="icon_block">
+                                <img @click="$refs.fileman.data_mode = 'images'" data-bs-toggle="modal" data-bs-target="#filemanager" style="max-width: 125px" :src="correct_url(modals.edit_category.image)" alt="">
+                                <i @click="$refs.fileman.data_mode = 'images'" data-bs-toggle="modal" data-bs-target="#filemanager" class="fa fa-folder-open open_file" aria-hidden="true"></i>
+                                <i v-if="modals.edit_category.image != ''" @click="modals.edit_category.image = ''" class="fa fa-trash delete_file" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button @click="modals.edit_category.show = false" type="button" class="btn btn-white">{{lang('cancel')}}</button>
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-white" data-bs-dismiss="modal" aria-label="Close">{{lang('cancel')}}</button>
                         <button @click="update_item()" type="button" class="btn btn-primary">{{lang('save')}}</button>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
-    <div class="modal inmodal" id="filemanager" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade" id="filemanager" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg modal-simple">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only"><?php echo $lang_arr['ok'] ?></span></button>
-                    <h5 class="modal-title">Выбрать файл</h5>
-                </div>
                 <div class="modal-body">
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" class="btn-close"><span>&times;</span></button>
+                    <div class="text-center mb-6">
+                        <h5 class="modal-title">Выбрать файл</h5>
+                    </div>
                     <filemanager ref="fileman" @select_file="sel_file($event)"></filemanager>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-white" data-dismiss="modal"><?php echo $lang_arr['ok'] ?></button>
+                <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo $lang_arr['ok'] ?></button>
                 </div>
             </div>
         </div>

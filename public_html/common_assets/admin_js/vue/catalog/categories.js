@@ -266,7 +266,7 @@ function init_vue() {
             show_swal: function (item, index, child, child_index) {
                 let scope = this;
 
-                swal({
+                Swal.fire({
                     title: lang['are_u_sure'],
                     text: lang['delete_confirm_message'],
                     type: "warning",
@@ -274,9 +274,12 @@ function init_vue() {
                     confirmButtonColor: "#DD6B55",
                     cancelButtonText: lang['no'],
                     confirmButtonText: lang['yes'],
-                    closeOnConfirm: true
-                }, function () {
-
+                    closeOnConfirm: true,
+                    customClass: {
+                        confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                        cancelButton: 'btn btn-label-secondary waves-effect waves-light'
+                      },
+                }).then(() =>{
                     let form_data = new FormData();
                     form_data.append('id', item.id)
 
@@ -296,7 +299,7 @@ function init_vue() {
             show_swal_clear: function (item, index) {
                 let scope = this;
 
-                swal({
+                Swal.fire({
                     title: lang['are_u_sure'],
                     text: lang['delete_confirm_message'],
                     type: "warning",
@@ -304,14 +307,26 @@ function init_vue() {
                     confirmButtonColor: "#DD6B55",
                     cancelButtonText: lang['no'],
                     confirmButtonText: lang['yes'],
-                    closeOnConfirm: false
-                }, function () {
-
+                    closeOnConfirm: false,
+                    customClass: {
+                        confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                        cancelButton: 'btn btn-label-secondary waves-effect waves-light'
+                      },
+                }).then(() => {
+                    
                     console.log(item.id)
                     send_xhr_get(
                         base_url + '/materials/remove_items_by_cat_common/' + item.id + '/drop_true',
                         function (xhr) {
-                            swal("Очищена!", "Категория очищена", "success");
+                            Swal.fire({
+                                title: 'Очищена!',
+                                text: 'Категория очищена',
+                                customClass: {
+                                  confirmButton: 'btn btn-primary waves-effect waves-light'
+                                },
+                                buttonsStyling: false,
+                                icon : 'success'
+                              });
                         })
                 });
             },
