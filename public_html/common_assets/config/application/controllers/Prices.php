@@ -14,6 +14,7 @@ class Prices extends CI_Controller {
         $this->load->model('handles_model');
         $this->load->model('prices_model');
         $this->load->library('session');
+        $this->load->model('Menu_model');
 
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
             redirect('login', 'refresh');
@@ -133,10 +134,18 @@ class Prices extends CI_Controller {
 			    }
 		    }
 	    }
-	    $this->load->view('templates/header', $data);
-        $this->load->view('prices/index', $data);
-        $this->load->view('templates/footer');
 
+        $data['js_include'] = [
+
+        ];
+
+        $data['css_include'] = [
+        ];
+
+        $data['include'] = 'prices/index';
+        $data['modules'] = [];
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
     }
 
     public function get_data()
