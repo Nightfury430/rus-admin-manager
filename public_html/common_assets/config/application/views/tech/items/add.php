@@ -8,187 +8,185 @@
         if(isset($id)) $submit_url = $submit_url . $id;
         $return_url = site_url('/catalog/items/'.$controller_name);
     }
-
 ?>
-
 <form  id="sub_form">
-<div class="row wrapper border-bottom white-bg page-heading">
-
-
-
-    <div class="col-lg-10">
-        <?php if(isset($common) && $common == 1):?>
-            <?php if(isset($id)):?>
-                <h2 style="color: red"><?php echo $lang_arr[$controller_name . '_item_edit']?> <span> (ОБЩАЯ БАЗА)</span> <span v-cloak>{{item.name}}</span></h2>
-            <?php else:?>
-                <h2 style="color: red"><?php echo $lang_arr[$controller_name . '_add_item'] ?> (ОБЩАЯ БАЗА)</h2>
-            <?php endif;?>
-        <?php else:?>
-            <?php if (isset($id)):?>
-                <h2><?php echo $lang_arr[$controller_name . '_item_edit']?> <span v-cloak>{{item.name}}</span></h2>
-            <?php else:?>
-                <h2><?php echo $lang_arr[$controller_name . '_add_item'] ?></h2>
-            <?php endif;?>
-        <?php endif;?>
-
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
-
     <input id="form_submit_url" value="<?php echo $submit_url ?>" type="hidden">
     <input id="form_success_url" value="<?php echo $return_url ?>" type="hidden">
     <input id="controller_name" value="<?php echo $controller_name ?>" type="hidden">
     <?php if (isset($id)): ?>
         <input id="item_id" value="<?php echo $id ?>" type="hidden">
     <?php endif; ?>
-
     <div v-cloak class="wrapper wrapper-content  animated fadeInRight">
-
         <div class="row">
             <div class="col-lg-12">
-                <div class="tabs-container">
-                    <ul class="nav nav-tabs">
-                        <li><a class="nav-link active" data-toggle="tab" href="#basic_params_tab"><?php echo $lang_arr['basic_params'] ?></a></li>
-                        <li><a @click="resize_viewport" class="nav-link" data-toggle="tab" href="#model_params_tab"><?php echo $lang_arr['model_params'] ?></a></li>
-                        <li><a class="nav-link" data-toggle="tab" href="#variants_tab"><?php echo $lang_arr['sizes'] ?></a></li>
-                        <li><a class="nav-link" data-toggle="tab" href="#materials_tab"><?php echo $lang_arr['additional_materials'] ?></a></li>
-                        <li><a class="nav-link" data-toggle="tab" href="#custom_data_tab"><?php echo $lang_arr['custom_data'] ?></a></li>
+                <div class="nav-align-top nav-tabs-shadow mb-6">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link active"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#basic_params_tab"
+                            aria-controls="basic_params_tab"
+                            aria-selected="true">
+                                <?php echo $lang_arr['basic_params'] ?>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#model_params_tab"
+                            aria-controls="model_params_tab"
+                            aria-selected="true">
+                                <?php echo $lang_arr['model_params'] ?>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#variants_tab"
+                            aria-controls="variants_tab"
+                            aria-selected="true">
+                                <?php echo $lang_arr['sizes'] ?>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#materials_tab"
+                            aria-controls="materials_tab"
+                            aria-selected="true">
+                                <?php echo $lang_arr['additional_materials'] ?>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#custom_data_tab"
+                            aria-controls="custom_data_tab"
+                            aria-selected="true">
+                                <?php echo $lang_arr['custom_data'] ?>
+                            </button>
+                        </li>
                     </ul>
                     <div class="tab-content">
-                        <div id="basic_params_tab" class="tab-pane active">
-                            <div class="panel-body">
-
-                                <fieldset>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['name'] ?></label>
-                                        <div class="col-sm-10">
-                                            <input v-model="item.name" type="text" class="form-control" id="name" name="name">
-                                        </div>
+                        <div id="basic_params_tab" class="tab-pane fade show active" role="tabpanel">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['name'] ?></label>
+                                <div class="col-sm-10">
+                                    <input v-model="item.name" type="text" class="form-control" id="name" name="name">
+                                </div>
+                            </div>
+                            <?php if ($this->config->item('username') === 'shop@avtobardak.net'): ?>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Ссылка</label>
+                                    <div class="col-sm-10">
+                                        <input v-model="item.link" type="text" class="form-control">
                                     </div>
-
-                                    <?php if ($this->config->item('username') === 'shop@avtobardak.net'): ?>
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label">Ссылка</label>
-                                            <div class="col-sm-10">
-                                                <input v-model="item.link" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    <?php endif; ?>
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['category'] ?></label>
-                                        <div class="col-sm-10">
-                                            <v-select
-                                                    :clearable="false"
-                                                    :value="item.category"
-                                                    label="name"
-                                                    :options="$options.cat_ordered"
-                                                    :reduce="category => category.id"
-                                                    v-model="item.category"
-                                                    :key="item.category"
-                                            >
-                                                <template v-slot:selected-option="option">
-                                                    <span v-if="option.parent != 0">{{m_categories_hash[option.parent].name}} / &nbsp;</span>{{ option.name }}
-                                                </template>
-                                                <template v-slot:option="option">
-                                                        <span :class="{'pl-3': option.parent != 0, 'font-weight-bold': option.parent == 0}">
-                                                            <span v-if="option.parent != 0">{{m_categories_hash[option.parent].name}} / </span>{{ option.name }}
-                                                        </span>
-                                                </template>
-                                            </v-select>
-                                        </div>
+                                </div>
+                            <?php endif; ?>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['category'] ?></label>
+                                <div class="col-sm-10">
+                                    <v-select
+                                            :clearable="false"
+                                            :value="item.category"
+                                            label="name"
+                                            :options="$options.cat_ordered"
+                                            :reduce="category => category.id"
+                                            v-model="item.category"
+                                            :key="item.category"
+                                    >
+                                        <template v-slot:selected-option="option">
+                                            <span v-if="option.parent != 0">{{m_categories_hash[option.parent].name}} / &nbsp;</span>{{ option.name }}
+                                        </template>
+                                        <template v-slot:option="option">
+                                                <span :class="{'pl-3': option.parent != 0, 'font-weight-bold': option.parent == 0}">
+                                                    <span v-if="option.parent != 0">{{m_categories_hash[option.parent].name}} / </span>{{ option.name }}
+                                                </span>
+                                        </template>
+                                    </v-select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['active'] ?></label>
+                                <div class="col-sm-10">
+                                    <label class="switch">
+                                        <input v-bind:true-value="1" v-bind:false-value="0" v-model="item.active" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['order'] ?></label>
+                                <div class="col-sm-10">
+                                    <input type="number" v-model="item.order" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['drag_type'] ?></label>
+                                <div class="col-sm-10">
+                                    <select @change="params_change()" v-model="item.cabinet_group" class="form-control">
+                                        <option value="top"><?php echo $lang_arr['drag_as_top'] ?></option>
+                                        <option value="bottom"><?php echo $lang_arr['drag_as_bottom'] ?></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['snap_type'] ?></label>
+                                <div class="col-sm-10">
+                                    <select @change="params_change()" v-model="item.drag_mode" class="form-control">
+                                        <option selected value="common"><?php echo $lang_arr['snap_walls'] ?></option>
+                                        <option value="surface"><?php echo $lang_arr['snap_all'] ?></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['show_in_report'] ?></label>
+                                <div class="col-sm-10">
+                                    <label class="switch">
+                                        <input v-bind:true-value="1" v-bind:false-value="0" v-model="item.show_in_report" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['show_sizes'] ?></label>
+                                <div class="col-sm-10">
+                                    <label class="switch">
+                                        <input @change="params_change()" v-bind:true-value="1" v-bind:false-value="0" v-model="item.sizes_available" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><?php echo $lang_arr['icon'] ?></label>
+                                <div class="col-sm-5">
+                                    <div class="icon_block">
+                                        <img @click="file_target = 'icon'; $refs.fileman.data_mode = 'images';" data-toggle="modal" data-target="#filemanager" style="max-width: 78px" :src="correct_url(item.icon)" alt="">
+                                        <i @click="file_target = 'icon'; $refs.fileman.data_mode = 'images';" data-toggle="modal" data-target="#filemanager" class="fa fa-folder-open open_file" aria-hidden="true"></i>
+                                        <i v-if="item.icon != ''" @click="item.icon = ''" class="fa fa-trash delete_file" aria-hidden="true"></i>
                                     </div>
-
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['active'] ?></label>
-                                        <div class="col-sm-10">
-                                            <label class="switch">
-                                                <input v-bind:true-value="1" v-bind:false-value="0" v-model="item.active" type="checkbox">
-                                                <span class="slider round"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['order'] ?></label>
-                                        <div class="col-sm-10">
-                                            <input type="number" v-model="item.order" class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['drag_type'] ?></label>
-                                        <div class="col-sm-10">
-                                            <select @change="params_change()" v-model="item.cabinet_group" class="form-control">
-                                                <option value="top"><?php echo $lang_arr['drag_as_top'] ?></option>
-                                                <option value="bottom"><?php echo $lang_arr['drag_as_bottom'] ?></option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['snap_type'] ?></label>
-                                        <div class="col-sm-10">
-                                            <select @change="params_change()" v-model="item.drag_mode" class="form-control">
-                                                <option selected value="common"><?php echo $lang_arr['snap_walls'] ?></option>
-                                                <option value="surface"><?php echo $lang_arr['snap_all'] ?></option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['show_in_report'] ?></label>
-                                        <div class="col-sm-10">
-                                            <label class="switch">
-                                                <input v-bind:true-value="1" v-bind:false-value="0" v-model="item.show_in_report" type="checkbox">
-                                                <span class="slider round"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['show_sizes'] ?></label>
-                                        <div class="col-sm-10">
-                                            <label class="switch">
-                                                <input @change="params_change()" v-bind:true-value="1" v-bind:false-value="0" v-model="item.sizes_available" type="checkbox">
-                                                <span class="slider round"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label"><?php echo $lang_arr['icon'] ?></label>
-                                        <div class="col-sm-5">
-
-
-                                            <div class="icon_block">
-                                                <img @click="file_target = 'icon'; $refs.fileman.data_mode = 'images';" data-toggle="modal" data-target="#filemanager" style="max-width: 78px" :src="correct_url(item.icon)" alt="">
-                                                <i @click="file_target = 'icon'; $refs.fileman.data_mode = 'images';" data-toggle="modal" data-target="#filemanager" class="fa fa-folder-open open_file" aria-hidden="true"></i>
-                                                <i v-if="item.icon != ''" @click="item.icon = ''" class="fa fa-trash delete_file" aria-hidden="true"></i>
-                                            </div>
-
-
-
-                                        </div>
-                                        <div class="col-sm-5">
-
-                                        </div>
-                                    </div>
-
-                                </fieldset>
-
+                                </div>
+                                <div class="col-sm-5">
+                                </div>
                             </div>
                         </div>
-                        <div id="model_params_tab" class="tab-pane">
-                            <div class="panel-body">
-                                <div class="row form-group">
+                        <div id="model_params_tab" class="tab-pane fade" role="tabpanel">
+                        <div class="row form-group">
                                     <div class="col-4">
                                         <div class="row ">
                                             <div class="col-12 form-group">
@@ -232,12 +230,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
-                        <div id="variants_tab" class="tab-pane">
-                            <div class="panel-body models_list">
-
-                                <div class="form-group row">
+                        <div id="variants_tab" class="tab-pane fade" role="tabpanel">
+                        <div class="form-group row">
                                     <label class="col-sm-2 col-form-label"><?php echo $lang_arr['params_blocks'] ?></label>
                                     <div class="col-sm-10">
                                         <v-select
@@ -336,28 +331,19 @@
                                         <button @click="add_variant()" type="button" class="btn btn-w-m btn-primary btn-outline"><?php echo $lang_arr['add'] ?></button>
                                     </div>
                                 </div>
-
-                            </div>
                         </div>
-                        <div id="materials_tab" class="tab-pane">
-                            <div class="panel-body models_list">
-
-                                <div class=" row">
-                                    <div class="col-12"><h3><?php echo $lang_arr['additional_materials'] ?></h3></div>
-                                </div>
-
-                                <div class="tabs-container">
-
-                                    <div class="tabs-left">
-
-                                        <ul class="nav nav-tabs tabs-inner">
-                                            <li @click="active_material_tab = name" v-for="(item, name) in item.self_additional_materials">
-                                                <a v-bind:class="{ active: active_material_tab == name }" class="nav-link">{{item.name}}</a>
-                                            </li>
-                                            <li>
-                                                <button @click="add_material()" type="button" class="btn btn-w-m btn-primary btn-outline btn-block"><?php echo $lang_arr['add'] ?></button>
-                                            </li>
-                                        </ul>
+                        <div id="materials_tab" class="tab-pane fade" role="tabpanel">
+                        <div class=" row">
+                                <div class="col-12"><h3><?php echo $lang_arr['additional_materials'] ?></h3></div>
+                                <div class="nav-align-top nav-tabs-shadow mb-6">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li @click="active_material_tab = name" v-for="(item, name) in item.self_additional_materials">
+                                            <a v-bind:class="{ active: active_material_tab == name }" class="nav-link">{{item.name}}</a>
+                                        </li>
+                                        <li>
+                                            <button @click="add_material()" type="button" class="btn btn-w-m btn-primary btn-outline btn-block"><?php echo $lang_arr['add'] ?></button>
+                                        </li>
+                                    </ul>
 
                                         <div class="tab-content">
 
@@ -430,9 +416,7 @@
                                                                 </div>
                                                                 <div class="form-group row">
                                                                     <label class="col-sm-4 col-form-label"><?php echo $lang_arr['default_material'] ?></label>
-
                                                                     <div class="col-8">
-
                                                                         <v-select
                                                                                 :clearable="false"
                                                                                 :value="item.selected"
@@ -442,12 +426,10 @@
                                                                                 v-model="item.selected"
                                                                                 :key="name.id"
                                                                         >
-
                                                                             <template #selected-option="option">
                                                                                 <div style="cursor:pointer; pointer-events:none; width: 50px; height: 50px;margin-right: 5px; display: inline-block" :style="{ 'background':  get_map(option)  }"></div>
                                                                                 <div style="cursor:pointer; pointer-events:none; display: inline-block; vertical-align: middle">{{option.name}}</div>
                                                                             </template>
-
                                                                             <template v-slot:option="option">
                                                                                 <div style="width: 50px; height: 25px;margin-right: 5px; display: inline-block;vertical-align: middle" :style="{ 'background':  get_map(option)  }"></div>
                                                                                 <div style="display: inline-block; vertical-align: middle">{{option.name}}</div>
@@ -485,17 +467,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-
-                            </div>
                         </div>
-                        <div id="custom_data_tab" class="tab-pane">
-                            <div class="panel-body models_list">
-
-
-
-                                <div v-for="(item,key) in item.custom_data" class="d-flex flex-row flex-wrap form-group draggable_panel pr-5">
+                        <div id="custom_data_tab" class="tab-pane fade" role="tabpanel">
+                            <div v-for="(item,key) in item.custom_data" class="d-flex flex-row flex-wrap form-group draggable_panel pr-5">
                                     <div class="col-4 py-2">
                                         <label><?php echo $lang_arr['name'] ?></label>
                                         <input class="form-control" v-model="item.name" type="text">
@@ -520,19 +494,15 @@
                                         <button data-toggle="modal" data-target="#custom_data_modal" type="button" class="btn btn-w-m btn-primary btn-outline"><?php echo $lang_arr['add'] ?></button>
                                     </div>
                                 </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <div class="row">
             <div class="col-lg-12">
                 <div class="ibox ">
-                    <div class="ibox-content">
+                    <div class="card-body">
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <a class="btn btn-white btn-sm" href="<?php echo $return_url ?>"><?php echo $lang_arr['cancel'] ?></a>
@@ -552,10 +522,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-
     <div class="modal inmodal" id="filemanager" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -570,8 +537,6 @@
                     <?php else:?>
                         <filemanager  ref="fileman" @select_file="sel_file($event)"></filemanager>
                     <?php endif;?>
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-white" data-dismiss="modal"><?php echo $lang_arr['ok'] ?></button>
@@ -582,15 +547,8 @@
 
 </form>
 <div style="display: none; height:100%" id="main_app">
-    <div id="viewport">
-
-    </div>
+    <div id="viewport"></div>
 </div>
-
-<link rel="stylesheet" href="/common_assets/libs/vue/vue_select/vue-select.css">
-<link rel="stylesheet" href="/common_assets/libs/spectrum/spectrum.css">
-
-
 <style>
 
     #viewport {
@@ -627,10 +585,6 @@
     .panel-body .tabs-container {
         padding-bottom: 25px;
     }
-
-
-</style>
-<style>
 
     .icon_block {
         display: inline-block;
@@ -687,23 +641,6 @@
     }
 
 </style>
-
-
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/3d_preview.php'; ?>
 <script>
     view_mode = true;
 </script>
-<link rel="stylesheet" href="/common_assets/fonts/icons/new/style.css?<?php echo md5(date('m-d-Y-His A e'));?>">
-<script src="/common_assets/libs/spectrum/spectrum.js" type="text/javascript"></script>
-<script src="/common_assets/libs/vue.min.js"></script>
-<script src="/common_assets/libs/vue/vue_select/vue-select.js"></script>
-<script src="/common_assets/admin_js/vue/filemanager2.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>
-<script src="/common_assets/libs/vue/draggable/sortable.min.js"></script>
-<script src="/common_assets/libs/vue/draggable/vuedraggable.min.js"></script>
-<script src="/common_assets/libs/jszip.min.js"></script>
-<script src="/common_assets/libs/jszip.utils.min.js"></script>
-
-
-<script src="/common_assets/admin_js/vue/kitchen/3d_model.js"></script>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/common_assets/config/components/material_picker.php');?>
-

@@ -26,7 +26,7 @@
                 <div class="tabs-container">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                        <button
+                            <button
                             type="button"
                             class="nav-link active"
                             role="tab"
@@ -134,7 +134,7 @@
                             </button>
                         </li>
                         <li class="nav-item">
-                        <button
+                            <button
                             type="button"
                             class="nav-link"
                             role="tab"
@@ -148,37 +148,35 @@
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show active" role="tabpanel">
-                                <div class="panel-body">
-                                    <div class=" card-body">
-                                        <p>{{lang('price_for')}} {{lang('square_units')}}</p>
-                                        <table class="table   table-hover ">
-                                            <thead>
-                                            <tr>
-                                                <th style="width: 20%"></th>
-                                                <th v-for="(thickness, key) in corpus">{{key}} {{lang('units')}}</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr v-for="(category, index) in corpus[16]">
-                                                <td v-bind:class="[category.parent == 0 ? 'font-bold' : ['font-normal', 'pl-4']]">{{category.name}}</td>
-                                                <td v-for="(thickness, key) in corpus">
-                                                    <input min="0" step="0.01" @input="change_corpus_children_price(key, index)" class="form-control" v-model="corpus[key][index].price" type="number">
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-
-                                    </div>
-
-                                    <div class=" card-body">
-                                        <div class="form-group row">
-                                            <div class="col-sm-4 col-sm-offset-2">
-                                                <button class="btn btn-primary btn-sm" type="submit"><?php echo $lang_arr['save'] ?></button>
-                                            </div>
+                            <div class="panel-body">
+                                <div class="card-body">
+                                    <p>{{lang('price_for')}} {{lang('square_units')}}</p>
+                                    <table class="table   table-hover ">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 20%"></th>
+                                            <th v-for="(thickness, key) in corpus">{{key}} {{lang('units')}}</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr v-for="(category, index) in corpus[16]">
+                                            <td v-bind:class="[category.parent == 0 ? 'font-bold' : ['font-normal', 'pl-4']]">{{category.name}}</td>
+                                            <td v-for="(thickness, key) in corpus">
+                                                <input min="0" step="0.01" @input="change_corpus_children_price(key, index)" class="form-control" v-model="corpus[key][index].price" type="number">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class=" card-body">
+                                    <div class="form-group row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button class="btn btn-primary btn-sm" type="submit"><?php echo $lang_arr['save'] ?></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         <div id="tab-10" class="tab-pane fade" role="tabpanel">
                             <div class="panel-body">
                                 <div class=" card-body">
@@ -193,7 +191,6 @@
                                         </tr>
                                         </tbody>
                                     </table>
-
                                 </div>
                                 <div class=" card-body">
                                     <div class="form-group row">

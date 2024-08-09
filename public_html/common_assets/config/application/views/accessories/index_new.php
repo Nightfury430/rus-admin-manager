@@ -1,38 +1,37 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['accessories'] ?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2 pt-4">
-
-    </div>
-</div>
-
 <div id="app">
     <div v-cloak class="wrapper wrapper-content animated fadeInRight">
-
         <div class="row">
             <div class="col-lg-12">
-                <div class="tabs-container">
-                    <ul class="nav nav-tabs">
-                        <li><a class="nav-link active" data-toggle="tab" href="#acc_list"><?php echo $lang_arr['accessories_list'] ?></a></li>
-                        <li><a class="nav-link" data-toggle="tab" href="#acc_types"><?php echo $lang_arr['accessories_auto_add'] ?></a></li>
+                <div class="nav-align-top nav-tabs-shadow mb-6">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link active"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#acc_list"
+                            aria-controls="acc_list"
+                            aria-selected="true">
+                                <?php echo $lang_arr['accessories_list'] ?>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                            type="button"
+                            class="nav-link"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#acc_types"
+                            aria-controls="acc_types"
+                            aria-selected="true">
+                                <?php echo $lang_arr['accessories_list'] ?>
+                            </button>
+                        </li>
                     </ul>
                     <div class="tab-content">
-                        <div id="acc_list" class="tab-pane active">
-                            <div class="panel-body">
-
-                                <div class="row align-items-center">
+                        <div id="acc_list" class="tab-pane fade show active" role="tabpanel">
+                        <div class="row align-items-center">
                                     <div class="col-sm-6 d-flex align-items-center">
                                         <button @click="clear_item" type="button" data-toggle="modal" data-target="#acc_modal" class="mr-1 btn-sm btn btn-w-m btn-primary btn-outline"><?php echo $lang_arr['add'] ?></button>
                                         <div class="btn-group btn-group-sm mr-1">
@@ -67,11 +66,6 @@
                                         <button style="display:none;" @click="export_csv" class="mr-1 btn btn-primary btn-xs" type="button"><?php echo $lang_arr['export_csv']?></button>
                                         <button style="display:none;" id="import_csv" data-toggle="modal" data-target="#csv_modal" class="mr-1 btn btn-primary btn-sm" type="button"><?php echo $lang_arr['import_csv']?></button>
                                         <button id="clear_db" class="mr-1 btn btn-danger btn-sm " type="button"><?php echo $lang_arr['clear_db']?></button>
-
-
-
-
-
                                         <input class="hidden"  @change="import_xls()" ref="imp" type="file" accept=".xlsx">
                                     </div>
                                     <div class="col-sm-6 d-flex align-items-center justify-content-end">
@@ -79,7 +73,6 @@
                                     </div>
                                 </div>
                                 <div class="row pt-3">
-
                                     <div class="col-sm-4">
                                         <form v-on:submit.prevent="do_search()">
                                             <div class="form-group">
@@ -96,7 +89,6 @@
                                         </form>
                                     </div>
                                     <div class="col-sm-5">
-
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
@@ -112,9 +104,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
                                 <table class="table table-hover table-bordered">
                                     <thead>
                                     <tr>
@@ -155,15 +144,9 @@
                                         <pagination_component v-on:change-page="change_page($event)" :pages="pages_count"></pagination_component>
                                     </div>
                                 </div>
-                            </div>
                         </div>
-                        <div id="acc_types" class="tab-pane">
-                            <div class="panel-body">
-
-
-
-                                <button @click="clear_type" type="button" data-toggle="modal" data-target="#acc_type_modal" class="form-group btn btn-w-m btn-primary btn-outline"><?php echo $lang_arr['add'] ?></button>
-
+                        <div id="acc_types" class="tab-pane fade" role="tabpanel">
+                            <button @click="clear_type" type="button" data-toggle="modal" data-target="#acc_type_modal" class="form-group btn btn-w-m btn-primary btn-outline"><?php echo $lang_arr['add'] ?></button>
                                 <table class="table table-hover table-bordered">
                                     <thead>
                                     <tr>
@@ -202,11 +185,8 @@
                                     </tr>
                                     </tbody>
                                 </table>
-
                                 <button @click="clear_type" type="button" data-toggle="modal" data-target="#acc_type_modal" class="form-group btn btn-w-m btn-primary btn-outline"><?php echo $lang_arr['add'] ?></button>
-                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -223,8 +203,6 @@
         </div>
 
     </div>
-
-
     <div class="modal inmodal" id="acc_modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -315,7 +293,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal inmodal" id="default_acc" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">

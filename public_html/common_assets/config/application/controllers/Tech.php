@@ -11,7 +11,7 @@ class Tech extends CI_Controller {
         $this->load->helper('url_helper');
         $this->load->model('tech_model');
         $this->load->library('session');
-
+        $this->load->model('Menu_model');
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
             redirect('login', 'refresh');
         }
@@ -263,10 +263,28 @@ class Tech extends CI_Controller {
         $data['controller_name'] = 'tech';
 		if($id) $data['id'] = $id;
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('tech/items/add', $data);
-		$this->load->view('templates/footer', $data);
+        $data['js_include'] = [
+            'libs/spectrum/spectrum.js',
+            'libs/vue.min.js',
+            'libs/vue/vue_select/vue-select.js',
+            'admin_js/vue/filemanager2.js?'.md5(date('m-d-Y-His A e')),
+            'libs/vue/draggable/sortable.min.js',
+            'libs/vue/draggable/vuedraggable.min.js',
+            'libs/jszip.min.js',
+            'libs/jszip.utils.min.js',
+            'admin_js/vue/kitchen/3d_model.js',
+        ];
 
+        $data['css_include'] = [
+            'fonts/icons/new/style.css?'.md5(date('m-d-Y-His A e')),
+            'libs/vue/vue_select/vue-select.css',
+            'libs/spectrum/spectrum.css'
+        ];
+
+        $data['include'] = 'tech/items/add';
+        $data['modules'] = ['3d_preview', 'material_picker'];
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
 	}
     public function items_add_ajax($id = false) {
         if(isset($_POST)){

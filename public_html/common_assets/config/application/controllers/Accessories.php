@@ -8,12 +8,11 @@ class Accessories extends CI_Controller {
         parent::__construct();
         $this->load->helper('url_helper');
         $this->load->library('session');
+        $this->load->model('Menu_model');
 
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
             redirect('login', 'refresh');
         }
-
-
     }
 
     public function index_old()
@@ -50,10 +49,16 @@ class Accessories extends CI_Controller {
                 }
             }
         }
+        $data['js_include'] = [
+        ];
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('/accessories/index_new', $data);
-        $this->load->view('templates/footer', $data);
+        $data['css_include'] = [
+        ];
+
+        $data['include'] = 'accessories/index_new';
+        $data['modules'] = [];
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
 
     }
 
