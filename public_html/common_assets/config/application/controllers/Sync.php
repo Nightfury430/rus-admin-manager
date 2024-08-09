@@ -8,8 +8,7 @@ class Sync extends CI_Controller {
         parent::__construct();
         $this->load->helper('url_helper');
         $this->load->library('session');
-
-
+        $this->load->model('Menu_model');
     }
 
     public function index()
@@ -32,9 +31,15 @@ class Sync extends CI_Controller {
 			    }
 		    }
 	    }
-        $this->load->view('templates/header', $data);
-        $this->load->view('sync/index', $data);
-        $this->load->view('templates/footer', $data);
+
+        $data['js_include'] = [
+		];
+		$data['css_include'] = [
+		];
+		$data['include'] = 'sync/index';
+		$data['modules'] = [];
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+		$this->load->view('templates/layout', $data);
     }
 
     public function prices_input()

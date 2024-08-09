@@ -1,86 +1,79 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['api'] ?></h2>
-        
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
 <div class="wrapper wrapper-content  animated fadeInRight">
-
 	<?php if ( ! $this->config->item( 'sub_account' ) ) {
 		$this->config->set_item( 'sub_account', false );
 	} ?>
-
-
     <div class="row">
         <div class="col-lg-12">
-            <div class="tabs-container">
-                <ul class="nav nav-tabs">
-
+            <div class="nav-align-top nav-tabs-shadow mb-6" >
+                <ul class="nav nav-tabs" role="tablist">
                     <?php if ( $this->config->item( 'sub_account' ) == false ): ?>
-                        <li><a class="nav-link active" data-toggle="tab" href="#tab-1">API</a></li>
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link active"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-1"
+                            aria-controls="tab-1"
+                            aria-selected="true">
+                            API
+                            </button>
+                        </li>
                     <?php endif; ?>
 
                     <?php if ( $this->config->item( 'sub_account' ) == false ): ?>
-                        <li><a class="nav-link " data-toggle="tab" href="#tab-3">API Синхронизация цен</a></li>
+                        <li class="nav-item">
+                            <button
+                            type="button"
+                            class="nav-link"
+                            role="tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#tab-3"
+                            aria-controls="tab-3"
+                            aria-selected="true">
+                            API Синхронизация цен
+                            </button>
+                      </li>
                     <?php endif; ?>
-
-                    <li><a class="nav-link <?php if ( $this->config->item( 'sub_account' ) == true ) echo 'active'?>" data-toggle="tab"  href="#tab-2">API Отправка данных о проекте</a></li>
+                    <li class="nav-item">
+                        <button
+                          type="button"
+                          class="nav-link <?php if ( $this->config->item( 'sub_account' ) == true ) echo 'active'?>"
+                          role="tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#tab-2"
+                          aria-controls="tab-2"
+                          aria-selected="true">
+                          API Отправка данных о проекте
+                        </button>
+                      </li>
                 </ul>
                 <div class="tab-content">
-
                     <?php if ( $this->config->item( 'sub_account' ) == false ): ?>
-                        <div id="tab-1" class="tab-pane active">
+                        <div id="tab-1" class="tab-pane fade show active" role="tabpanel">
                             <div class="panel-body">
                                 <div class="ibox-content">
-
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <a target="_blank" href="/docs/index.php">Документация</a>
-
                                     </div>
-
-
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label>Основной URL: </label>
                                         <input class="form-control" readonly type="text"
                                                value="<?php echo $this->config->item( 'const_path' ) ?>config/index.php">
                                     </div>
-
-
-
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label for="sync_key">Ключ для автоматической синхронизации: </label>
                                         <input class="form-control" readonly type="text" id="sync_key"
                                                value="<?php echo crypt( $this->config->item('username'), 'RTKtGEh%d$f4`r6w1*zCsdg53sq234qs56' ) ?>">
                                     </div>
-
-
-
-
                                 </div>
-
                             </div>
                         </div>
                     <?php endif; ?>
-
                     <?php if ( $this->config->item( 'sub_account' ) == false ): ?>
-                        <div id="tab-3" class="tab-pane ">
+                        <div id="tab-3" class="tab-pane fade" role="tabpanel">
                             <div class="panel-body">
-                                <div class="ibox-content">
+                                <div class="card-body">
                                         <div class="alert alert-info" role="alert">
                                             <p>Автоматическая синхронизация цен работает только в режиме дилера.</p>
                                             <p>Для того, чтобы автоматически обновить цены на модули, необходимо загрузить данные, в формате
@@ -113,57 +106,34 @@
 
 
                                             <p>Пример реализации запроса 1С: <a target="_blank" href="https://broskokitchenplanner.com/1c_example.html">Открыть</a> </p>
-
-
-
-
-
-
                                         </div>
-
-
-                                        <div class="form-group">
+                                        <div class="form-group mb-3">
                                             <label for="json_data">Введите данные: </label>
-                                            <textarea class="form-control" rows="5" id="json_data"></textarea>
+                                            <textarea class="form-control mb-3" rows="5" id="json_data"></textarea>
                                             <button type="button" id="parse_data" class="btn btn-success btn-sm">Обработать</button>
                                         </div>
-
-
-                                        <div class="form-group" style="margin-bottom: 30px;">
+                                        <div class="form-group mb-3" style="margin-bottom: 30px;">
                                             <label style="font-weight: bold" for="xlsx_data"> Импорт из Excel (только xlsx) </label>
                                             <p>Пример файла xlsx: <a download="" href="/xlsx_example.xlsx">Скачать</a></p>
-                                            <input class="form-control" type="file" id="xlsx_data" accept=".xlsx">
+                                            <input class="form-control mb-3" type="file" id="xlsx_data" accept=".xlsx">
                                             <button type="button" id="parse_xlsx_data" class="btn btn-success btn-sm">Обработать</button>
                                         </div>
-
-
-
-                                        <div class="form-group">
+                                        <div class="form-group mb-3">
                                             <label for="url_auto">Url для автоматической синхронизации: </label>
                                             <input class="form-control" readonly type="text" id="url_auto"
                                                    value="<?php echo $this->config->item( 'const_path' ) ?>config/index.php/sync/prices_input">
                                         </div>
-
-
-
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label for="sync_key">Ключ для автоматической синхронизации: </label>
                                         <input class="form-control" readonly type="text" id="sync_key"
                                                value="<?php echo crypt( $this->config->item('username'), 'RTKtGEh%d$f4`r6w1*zCsdg53sq234qs56' ) ?>">
                                     </div>
-
-
-
-
                                 </div>
-
                             </div>
                         </div>
                     <?php endif; ?>
-
-                    <div id="tab-2" class="tab-pane <?php if ( $this->config->item( 'sub_account' ) == true ) echo 'active'?>" >
+                    <div id="tab-2" class="tab-pane fade <?php if ( $this->config->item( 'sub_account' ) == true ) echo 'show active'?>" role="tabpanel">
                         <div class="panel-body">
-
                                     <div class="alert alert-info" role="alert">
                                         <h4>Метод отправки данных:</h4>
                                         <p>Данные отправляются методом POST и в данный момент содержат следующее:</p>
@@ -267,13 +237,13 @@
                                     </div>
 
 
-                                    <div class="form-group">
+                                    <div class="form-group mb-3">
                                         <label for="custom_order_url">Свой контроллер для приема заявок</label>
-                                        <input value="<?php echo $settings['custom_order_url'] ?>" type="text" class="form-control"
+                                        <input value="<?php echo $settings['custom_order_url'] ?>" type="text" class="form-control mb-3"
                                                id="custom_order_url" placeholder="https://example.ru/controller.php">
                                         <div id="send_test_order" class="btn btn-success btn-sm">Отправить тестовый запрос</div>
                                     </div>
-                                    <button type="button" id="save_custom_order_url"
+                                    <button type="button" id="save_custom_order_url mt-3"
                                             class="btn btn-primary btn-sm"><?php echo $lang_arr['save'] ?></button>
 
                             <?php if ( $this->config->item( 'sub_account' ) == true ): ?>
