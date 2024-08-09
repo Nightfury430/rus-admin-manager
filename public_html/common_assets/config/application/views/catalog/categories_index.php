@@ -80,7 +80,6 @@
                             <div class="col-sm-10"><input v-model="modals.add_category.name" type="text" class="form-control"></div>
                         </div>
                     </div>
-
                     <div class="modal-footer">
                         <button @click="modals.add_category.show = false" type="button" class="btn btn-white">{{lang('cancel')}}</button>
                         <button @click="add_item()" type="button" class="btn btn-primary">{{lang('add')}}</button>
