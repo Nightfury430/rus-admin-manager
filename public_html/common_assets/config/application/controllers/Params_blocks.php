@@ -9,6 +9,7 @@ class Params_blocks extends CI_Controller {
         $this->load->helper('url_helper');
         $this->load->model('common_model');
         $this->load->library('session');
+        $this->load->model('Menu_model');
 
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
             redirect('login', 'refresh');
@@ -35,9 +36,16 @@ class Params_blocks extends CI_Controller {
         if($id) $data['id'] = $id;
         $data['controller_name'] = 'params_blocks';
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('params_blocks/item', $data);
-        $this->load->view('templates/footer', $data);
+        $data['js_include'] = [
+        ];
+
+        $data['css_include'] = [
+        ];
+
+        $data['include'] = 'params_blocks/item';
+        $data['modules'] = [];
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
+        $this->load->view('templates/layout', $data);
     }
 
     public function item_add($id = false)

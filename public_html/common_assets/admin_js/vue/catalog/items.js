@@ -1344,8 +1344,10 @@ function show_warning_yes_no(callback, close, cancel) {
             confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
             cancelButton: 'btn btn-label-danger waves-effect waves-light'
           }
-    }).then(() => {
-        if(typeof callback === 'function') callback();
+    }).then((result) => {
+        if(result.value){
+            if(typeof callback === 'function') callback();
+        }
     });
 }
 
