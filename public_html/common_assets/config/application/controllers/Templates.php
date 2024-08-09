@@ -9,6 +9,7 @@ class Templates extends CI_Controller {
         $this->load->helper('url_helper');
         $this->load->model('templates_model');
         $this->load->library('session');
+		$this->load->model('Menu_model');
 
         if(!$this->session->username || $this->session->username != $this->config->item('username')){
             redirect('login', 'refresh');
@@ -20,9 +21,7 @@ class Templates extends CI_Controller {
 
     public function index()
     {
-
         $data['templates'] = $this->templates_model->get_all();
-
 	    $this->load->model('languages_model');
 	    $data['lang_arr'] = get_default_lang();
 	    if($this->config->item('ini')['language']['language'] !== 'default'){
@@ -33,10 +32,16 @@ class Templates extends CI_Controller {
 			    }
 		    }
 	    }
-        $this->load->view('templates/header', $data);
-        $this->load->view('kitchen_templates/index', $data);
-        $this->load->view('templates/footer', $data);
-    }
+
+		$data['js_include'] = [
+		];
+		$data['css_include'] = [
+		];
+		$data['include'] = 'kitchen_templates/index';
+		$data['modules'] = [];
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+		$this->load->view('templates/layout', $data);
+	}
 
     public function add()
     {

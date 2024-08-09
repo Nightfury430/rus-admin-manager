@@ -1,40 +1,16 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['projects_list']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
-            <div class="ibox ">
-                <div class="ibox-title">
+            <div class="card">
+                <div class="card-header">
                     <h5><?php echo $lang_arr['projects_list'] ?></h5>
                 </div>
-                <div class="ibox-content">
-
-
-
+                <div class="card-body">
                     <div class="form-group row">
                         <div class="col-12">
-                            <a class="btn btn-w-m btn-primary" href="<?php echo site_url('templates/add/') ?>" role="button"><?php echo $lang_arr['add_project']?></a>
+                            <a class="btn btn-w-m btn-primary mb-3" href="<?php echo site_url('templates/add/') ?>" role="button"><?php echo $lang_arr['add_project']?></a>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12">
                             <table class="table table-hover table-bordered">
@@ -47,7 +23,6 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-
 		                        <?php foreach ($templates as $item):?>
                                     <tr>
                                         <td>
@@ -83,21 +58,11 @@
                             </table>
                         </div>
                     </div>
-
-
-
-
-
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
 <script>
     $(document).ready(function () {
         $('.delete_button').click(function (e) {
@@ -105,7 +70,7 @@
 
             let scope = $(this);
 
-            swal({
+            Swal.fire({
                 title: "<?php echo $lang_arr['are_u_sure']?>",
                 text: $('#delete_confirm_message').html(),
                 type: "warning",
@@ -113,9 +78,15 @@
                 confirmButtonColor: "#DD6B55",
                 cancelButtonText: "<?php echo $lang_arr['no']?>",
                 confirmButtonText: "<?php echo $lang_arr['yes']?>",
-                closeOnConfirm: false
-            }, function () {
-                window.location.href = scope.attr('href');
+                closeOnConfirm: false,
+                customClass: {
+                    confirmButton: 'btn btn-primary me-3 waves-effect waves-light',
+                    cancelButton: 'btn btn-label-secondary waves-effect waves-light'
+                },
+            }).then((result) => {
+                if(result.value){
+                    window.location.href = scope.attr('href');
+                }
             });
         });
 
