@@ -297,7 +297,7 @@ if (isset($common) && $common == 1) {
 
                                                 <td class="col-6">
 
-                                                    <table class="table table-bordered table-sm mb-0">
+                                                    <table class="table   table-sm mb-0">
                                                         <thead>
                                                         <tr>
                                                             <th>{{lang('type')}}</th>

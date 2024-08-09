@@ -570,16 +570,16 @@ function init_vue() {
                         if (item.active == 1) {
                             return ['fa-eye', 'btn-primary']
                         } else {
-                            return ['fa-eye-slash', 'btn-default']
+                            return ['fa-solid fa-eye-low-vision', 'btn-default']
                         }
                     } else {
-                        return ['fa-eye-slash', 'btn-default', 'pointer-none', 'opacity-05']
+                        return ['fa-solid fa-eye-low-vision', 'btn-default', 'pointer-none', 'opacity-05']
                     }
                 } else {
                     if (item.active == 1) {
                         return ['fa-eye', 'btn-primary']
                     } else {
-                        return ['fa-eye-slash', 'btn-default']
+                        return ['fa-solid fa-eye-low-vision', 'btn-default']
                     }
                 }
 
@@ -590,7 +590,7 @@ function init_vue() {
                 if (node.data.active == 1) {
                     return ['fa-eye', 'btn-primary']
                 } else {
-                    return ['fa-eye-slash', 'btn-default']
+                    return ['fa-solid fa-eye-low-vision', 'btn-default']
                 }
 
                 // if(node.path.length > 1){
@@ -607,16 +607,16 @@ function init_vue() {
                 //         if (item.active == 1) {
                 //             return ['fa-eye', 'btn-primary']
                 //         } else {
-                //             return ['fa-eye-slash', 'btn-default']
+                //             return ['fa-solid fa-eye-low-vision', 'btn-default']
                 //         }
                 //     } else {
-                //         return ['fa-eye-slash', 'btn-default', 'pointer-none', 'opacity-05']
+                //         return ['fa-solid fa-eye-low-vision', 'btn-default', 'pointer-none', 'opacity-05']
                 //     }
                 // } else {
                 //     if (item.active == 1) {
                 //         return ['fa-eye', 'btn-primary']
                 //     } else {
-                //         return ['fa-eye-slash', 'btn-default']
+                //         return ['fa-solid fa-eye-low-vision', 'btn-default']
                 //     }
                 // }
 

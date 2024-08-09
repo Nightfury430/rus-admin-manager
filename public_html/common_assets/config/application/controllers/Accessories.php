@@ -50,9 +50,15 @@ class Accessories extends CI_Controller {
             }
         }
         $data['js_include'] = [
+            'libs/vue.min.js',
+            'libs/exceljs.min.js',
+            'admin_js/vue/pagination.js',
+            'libs/vue/vue_select/vue-select.js',
+            'admin_js/vue/kitchen/accessories_new.js?'.md5(date('m-d-Y-His A e'))
         ];
 
         $data['css_include'] = [
+            'libs/vue/vue_select/vue-select.css'
         ];
 
         $data['include'] = 'accessories/index_new';

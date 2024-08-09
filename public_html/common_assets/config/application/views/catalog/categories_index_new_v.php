@@ -29,7 +29,7 @@
                                     <span>(ID:{{ item.id }})</span>
                                     <button class="btn btn-icon btn-label-linkedin waves-effect" data-bs-toggle="modal" data-bs-target="#categoryModal" style="margin-right : 0.5rem" @click="addHandler"><i :disabled="item.preventChildren" class="fa fa-plus "></i></button>
                                     <button @click="editHandler" class="btn btn-icon btn-label-github waves-effect" data-bs-toggle="modal" data-bs-target="#categoryModal" style="margin-right : 0.5rem"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button :class="(item.active == 1) ? ['btn-primary'] : ['fa-eye-slash', 'btn-default']" class="btn btn-icon" style="margin-right : 0.5rem" @click="changeActiveHandler"><i  class="fa fa-eye "></i></button>
+                                    <button :class="(item.active == 1) ? ['btn-primary'] : ['fa-solid fa-eye-low-vision', 'btn-default']" class="btn btn-icon" style="margin-right : 0.5rem" @click="changeActiveHandler"><i  class="fa fa-eye "></i></button>
                                     <button class="btn btn-icon" :class="item.isLeaf ? ['btn-danger'] : ['btn-default', 'pointer-none', 'opacity-05']" style="margin-right : 0.5rem" @click="show_swal_n" ><i class="fa fa-trash delete "></i></button>
                                     <button v-if="is_common == 1 && controller_name == 'materials'" class="btn btn-icon" @click="show_swal_clear" style="margin-right : 0.5rem"><i class="fa fa-eraser delete "></i></button>
                                 </div>

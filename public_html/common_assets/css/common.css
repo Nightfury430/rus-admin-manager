@@ -11,7 +11,7 @@
     align-self: center;
 }
 
-.fa-eye-slash::before{
+.fa-solid fa-eye-low-vision::before{
     content: '' !important;
 }
 

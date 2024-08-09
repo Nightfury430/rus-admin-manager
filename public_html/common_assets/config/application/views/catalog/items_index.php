@@ -175,7 +175,7 @@
                                     </td>
                                     <td v-else style="width: 100px">
                                         <button class="btn btn-icon btn-label-linkedin waves-effect">
-                                            <i @click="change_active(item)" class="fa fa-eye-slash "></i>
+                                            <i @click="change_active(item)" class="fa fa-solid fa-eye-low-vision "></i>
                                         </button>
                                     </td>
                                     <td v-if="controller_name == 'modules_sets'">
@@ -393,7 +393,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <table class="table table-hover table-bordered">
+                    <table class="table table-hover  ">
                         <thead>
                         <tr>
                             <th ><?php echo $lang_arr['name']?></th>

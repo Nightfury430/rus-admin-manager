@@ -187,7 +187,7 @@ function init_vue() {
 
 
             get_eye_class: function (item) {
-                return item.active ? ['fa-eye', 'btn-primary'] : ['fa-eye-slash', 'btn-default']
+                return item.active ? ['fa-eye', 'btn-primary'] : ['fa-solid fa-eye-low-vision', 'btn-default']
             }
 
         }

@@ -317,7 +317,7 @@
                 return item.color;
             },
             get_eye_class: function (item) {
-                return item.active != 0 ? ['fa-eye', 'btn-primary'] : ['fa-eye-slash', 'btn-default']
+                return item.active != 0 ? ['fa-eye', 'btn-primary'] : ['fa-solid fa-eye-low-vision', 'btn-default']
             },
             replace_search(input) {
                 // let search = input.replaceAll('(', '^pp_lb^')

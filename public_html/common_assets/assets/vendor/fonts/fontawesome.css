@@ -2657,7 +2657,7 @@ readers do not read off random characters that represent icons */
   content: "\f238";
 }
 
-.fa-eye-low-vision::before {
+.fa-solid fa-eye-low-vision::before {
   content: "\f2a8";
 }
 
