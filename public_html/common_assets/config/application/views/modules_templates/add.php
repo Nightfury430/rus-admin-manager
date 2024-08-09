@@ -1,49 +1,26 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['add_module_template']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
 <form id="sub_form" enctype="multipart/form-data" method="post" accept-charset="UTF-8" action="<?php echo site_url('modules_templates/add/') ?>">
 
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div class="row">
         <div class="col-lg-12">
-            <div class="ibox ">
-                <div class="ibox-title">
+            <div class="card ">
+                <div class="card-header">
                     <h5><?php echo $lang_arr['basic_params']?></h5>
                 </div>
-                <div class="ibox-content">
-
+                <div class="card-body">
 	                <?php echo validation_errors(); ?>
-
-
-                    <div class="form-group">
-                        <label for="name"><?php echo $lang_arr['name']?></label>
+                    <div class="mb-4">
+                        <label for="name" class="form-label" ><?php echo $lang_arr['name']?></label>
                         <input type="text" class="form-control" name="name" placeholder="<?php echo $lang_arr['name']?>">
                     </div>
 
-                    <div class="form-group">
+                    <div class="mb-4">
                         <label for="order"><?php echo $lang_arr['order']?></label>
                         <input type="text" class="form-control" name="order">
                     </div>
 
 
-                    <div class="form-group">
+                    <div class="mb-4">
                         <label for="category"><?php echo $lang_arr['category']?></label>
                         <select class="form-control" name="category" id="category">
                             <option value=""><?php echo $lang_arr['choose_category']?></option>
@@ -53,16 +30,16 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
+                    <div class="mb-4">
                         <a href="#" id="run_configurator" class="btn btn-success"><?php echo $lang_arr['run_configurator']?></a>
                     </div>
 
-                    <div class="form-group">
+                    <div class="mb-4">
                         <img id="module_icon" src="" alt="">
                         <input id="module_icon_input" name="module_icon_input" type="hidden" value="">
                     </div>
 
-                    <div class="form-group">
+                    <div class="mb-4">
                         <label for="template"><?php echo $lang_arr['module_template']?></label>
                         <div>
                             <textarea name="template" id="template"></textarea>
@@ -96,114 +73,8 @@
         </div>
     </div>
 </div>
-
-
-
-<!--<script src="/common_assets/libs/three_old.js"></script>-->
-<script src="/common_assets/libs/three106.js"></script>
-<script src="/common_assets/libs/FBXLoader.js"></script>
-<script src="/common_assets/libs/jquery_3_3_1.min.js"></script>
-<script src="/common_assets/libs/inflate.min.js"></script>
-<!--<script src="/common_assets/libs/libs.min.js"></script>-->
-<!--<script src="/common_assets/libs/obj_export.js"></script>-->
-<script src="/common_assets/libs/OrbitControls.js"></script>
-
-
-
-
-<!--<script src="/common_assets/js/v4/0_BPObject.js"></script>-->
-<!--<script src="/common_assets/js/v4/Cabinet_new.js"></script>-->
-<!--<script src="/common_assets/js/v4/Cabinet_new_common.js"></script>-->
-<!--<script src="/common_assets/js/v4/Cabinet_new_corner.js"></script>-->
-<!--<script src="/common_assets/js/v4/Cabinet_new_end.js"></script>-->
-<!--<script src="/common_assets/js/v4/Washer.js"></script>-->
-<!---->
-<!--<script src="/common_assets/js/v4/Cornice.js"></script>-->
-<!--<script src="/common_assets/js/v4/Door_new.js"></script>-->
-<!--<script src="/common_assets/js/v4/Facade_new.js"></script>-->
-<!--<script src="/common_assets/js/v4/functions.js"></script>-->
-<!--<script src="/common_assets/js/v4/Handle.js"></script>-->
-<!--<script src="/common_assets/js/v4/cart.js"></script>-->
-<!--<script src="/common_assets/js/v4/interface.js"></script>-->
-<!--<script src="/common_assets/js/v4/Locker_new.js"></script>-->
-<!--<script src="/common_assets/js/v4/materials.js"></script>-->
-<!--<script src="/common_assets/js/v4/Model_cache.js"></script>-->
-<!--<script src="/common_assets/js/v4/Mouse_new.js"></script>-->
-<!--<script src="/common_assets/js/v4/Parts.js"></script>-->
-<!--<script src="/common_assets/js/v4/Room_new.js"></script>-->
-<!--<script src="/common_assets/js/v4/Sizes_obj.js"></script>-->
-<!--<script src="/common_assets/js/v4/Decoration.js"></script>-->
-<!--<script src="/common_assets/js/v4/info_panel.js"></script>-->
-<!--<script src="/common_assets/js/v4/Model_new.js"></script>-->
-<!--<script src="/common_assets/js/v4/scene_controller.js"></script>-->
-<!---->
-<!---->
-<!--<script src="/common_assets/admin_js/configurator_add.js"></script>-->
-<!--<script src="/common_assets/admin_js/configurator_admin.js"></script>-->
-
-
-<!--<script src="/common_assets/admin_js/production/modules_templates.js"></script>-->
-<script src="/common_assets/admin_js/production/configurator/modules_templates.js?<?php echo md5(date('m-d-Y-His A e'));?>"></script>
-
-
-
-
-
 <script>
-    // var textarea = document.getElementById('template');
-    // var myCodeMirror = CodeMirror.fromTextArea(textarea);
-
-    $(document).ready(function () {
-        flag = 0
-
-        let modal = $('.three_modal_wrapper');
-
-        $('.close_three_modal').click(function () {
-            modal.fadeOut();
-        });
-
-        $('#run_configurator').click(function (e) {
-            e.preventDefault();
-            modal.fadeIn();
-
-            if(flag === 0){
-                init_three_test('three_viewport' );
-                flag = 1;
-            }
-
-
-        });
-
-
-        $('#sub_form').submit(function (e) {
-
-            var json = $('#template').val();
-
-            if(json.charAt(0) !== '{'){
-                json = '{' + json + '}';
-            }
-
-            try{
-                var data = JSON.parse(json);
-
-                if(data.params === undefined){
-                    data = {params:data}
-                }
-
-                // if(data.params.variants !== undefined){
-                //     delete data.params.variants;
-                // }
-
-
-                $('#template').val(JSON.stringify(data));
-                return true;
-            } catch (e) {
-                alert('<?php echo $lang_arr['json_syntax_error']?>')
-            }
-
-        })
-
-    });
+    
 
 
 </script>

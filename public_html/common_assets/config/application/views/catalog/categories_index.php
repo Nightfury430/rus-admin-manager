@@ -1,5 +1,4 @@
 <div v-cloak id="sub_form">
-
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
             <?php if(isset($common) && $common == 1):?>
@@ -7,26 +6,17 @@
             <?php else:?>
                 <h2>{{lang('categories')}}</h2>
             <?php endif;?>
-
         </div>
         <div class="col-lg-2">
-
         </div>
     </div>
-
-
     <div class="wrapper wrapper-content  animated fadeInRight">
-
         <div class="row">
             <div class="col-lg-12">
                 <div class="ibox">
-
                     <div class="ibox-content">
-
                         <a v-show="controller == 'module_sets'" class="btn btn-outline btn-w-m btn-info" style="position: absolute; right: 35px" href="<?php echo site_url('module_sets/sets_index/') ?>" role="button"><?php echo $lang_arr['back_to_modules_sets']?></a>
-
                         <button v-show="check_controller()" @click="show_add_modal(true)" class="mb-3 btn btn-w-m btn-primary btn-outline" type="button">{{lang('add')}}</button>
-
                         <draggable :swap-threshold="0.1" :disabled="!check_controller()" :animation="250" v-model="items" :ghostClass="'ghost'" :group="get_group()" :empty-insert-threshold="100" handle=".handle" @start="drag = true" @end="end_drag()">
                             <div class="draggable_parent " v-for="(element,index) in items">
                                 <div class="dd-handle d-flex flex-row align-items-center">
@@ -44,9 +34,6 @@
                                         <i v-if="is_common == 1 && controller_name == 'materials'" @click="show_swal_clear(element, index)"  class="fa fa-eraser delete btn btn-danger btn-outline"></i>
                                     </div>
                                 </div>
-
-
-
                                 <draggable  :animation="250" :ghostClass="'ghost'" class="ml-5" :class="{drop_zone: md == true, drop_zone_hidden: md == false, hide_dz: hide_dz}" v-model="element.children" :group="get_group()" :empty-insert-threshold="100" handle=".handle" @start="drag = true" @end="end_drag()">
                                     <div class="draggable_child " v-for="(item, item_index) in element.children">
                                         <div  class="dd-handle d-flex flex-row align-items-center">
@@ -103,7 +90,6 @@
 
         </div>
     </div>
-
     <div v-show="modals.edit_category.show" class="bpl_modal_wrapper">
         <div class="bpl_modal_background" :class="{shown: modals.edit_category.show}"></div>
         <div class="bpl_modal_content">
@@ -133,12 +119,7 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
-
-
                     <div class="modal-footer">
                         <button @click="modals.edit_category.show = false" type="button" class="btn btn-white">{{lang('cancel')}}</button>
                         <button @click="update_item()" type="button" class="btn btn-primary">{{lang('save')}}</button>
@@ -165,7 +146,6 @@
             </div>
         </div>
     </div>
-
 
     <?php if(isset($set_id)):?>
         <input id="set_id" ref="set" value="<?php echo $set_id ?>" type="hidden">
@@ -211,13 +191,3 @@
     }
 
 </style>
-
-<link rel="stylesheet" href="/common_assets/libs/vue/vue_select/vue-select.css">
-<script src="/common_assets/libs/vue.min.js"></script>
-<script src="/common_assets/libs/vue/vue_select/vue-select.js"></script>
-<script src="/common_assets/libs/vue/draggable/sortable.min.js"></script>
-<script src="/common_assets/libs/vue/draggable/vuedraggable.min.js"></script>
-
-<script src="/common_assets/admin_js/vue/filemanager2.js?<?php echo md5(date('m-d-Y-His A e'));?>"></script>
-
-<script src="/common_assets/admin_js/vue/catalog/categories.js?<?php echo md5(date('m-d-Y-His A e')); ?>"></script>

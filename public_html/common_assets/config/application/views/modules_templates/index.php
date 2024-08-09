@@ -1,45 +1,23 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2><?php echo $lang_arr['modules_templates_heading']?></h2>
-        <!--        <ol class="breadcrumb">-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a href="index.html">Home</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item">-->
-        <!--                <a>Tables</a>-->
-        <!--            </li>-->
-        <!--            <li class="breadcrumb-item active">-->
-        <!--                <strong>Code Editor</strong>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-    </div>
-    <div class="col-lg-2">
-
-    </div>
-</div>
-
 <div class="wrapper wrapper-content  animated fadeInRight">
-
-
     <div class="row">
         <div class="col-lg-12">
-            <div class="ibox ">
-                <div class="ibox-title">
+            <div class="card">
+                <div class="card-header">
                     <h5><?php echo $lang_arr['modules_templates_heading'] ?></h5>
                 </div>
-                <div class="ibox-content">
+                <div class="card-body">
                     <div class="row">
                         <div class="col-sm-12">
                             <a class="btn btn-w-m btn-primary" href="<?php echo site_url('modules_templates/add/') ?>" role="button"><?php echo $lang_arr['add_module_template']?></a>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-5">
                         <div class="col-sm-6 d-flex align-items-center">
 							<?php echo $pagination?>
                         </div>
                         <div class="col-sm-6">
                             <form id="filter_form" method="post" accept-charset="UTF-8" action="<?php echo site_url('modules_templates/index/') ?>">
-                            <input type="hidden" name="filter" value="1">
+                                <input type="hidden" name="filter" value="1">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group" >
@@ -67,8 +45,7 @@
                             </form>
                         </div>
                     </div>
-
-                    <table class="table table-hover table-bordered">
+                    <table class="table">
                         <thead>
                         <tr>
                             <th class="col-xs-2"><?php echo $lang_arr['icon']?></th>
@@ -79,9 +56,6 @@
                         </tr>
                         </thead>
                         <tbody>
-
-
-
 	                    <?php foreach ($items as $item):?>
                             <tr>
 

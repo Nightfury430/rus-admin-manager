@@ -1162,10 +1162,7 @@ class Catalog extends CI_Controller
 
     public function categories_common($name, $set_id = false)
     {
-
-
         $data['controller_name'] = $name;
-
         $data['set_id'] = $set_id;
         $data['common'] = 1;
         $this->load->model('languages_model');
@@ -1179,9 +1176,25 @@ class Catalog extends CI_Controller
             }
         }
 
+
+        $data['js_include'] = [
+            'libs/vue.min.js',
+            'libs/vue/vue_select/vue-select.js',
+            'libs/vue/draggable/sortable.min.js',
+            'libs/vue/draggable/vuedraggable.min.js',
+            'admin_js/vue/filemanager2.js?' . md5(date('m-d-Y-His A e')),
+            'admin_js/vue/catalog/categories.js?' . md5(date('m-d-Y-His A e')),
+        ];
+
+        $data['css_include'] = [
+            'libs/vue/vue_select/vue-select.css',
+        ];
+
+        $data['include'] = 'catalog/categories_index';
+        $data['modules'] = [];
+        $data['menus_list'] = $this->Menu_model->get_all_menus();
         $this->load->view($this->bp_header, $data);
-        $this->load->view('catalog/categories_index', $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/layout', $data);
     }
 
     public function categories_order_update_common($name)

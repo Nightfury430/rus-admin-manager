@@ -9,6 +9,7 @@ class Modules_templates extends CI_Controller {
         $this->load->helper('url_helper');
         $this->load->model('modules_templates_model');
         $this->load->library('session');
+        $this->load->model('Menu_model');
 
 
 
@@ -23,9 +24,6 @@ class Modules_templates extends CI_Controller {
 
     public function index($category = false, $per_page = false, $start = false)
     {
-
-
-
         if($per_page == null){
 
             $category = 0;
@@ -84,17 +82,24 @@ class Modules_templates extends CI_Controller {
 			    }
 		    }
 	    }
-        $this->load->view('templates/header', $data);
-        $this->load->view('modules_templates/index', $data);
-        $this->load->view('templates/footer', $data);
+
+
+        $data['js_include'] = [
+
+		];
+
+		$data['css_include'] = [
+
+		];
+
+		$data['include'] = 'modules_templates/index';
+		$data['modules'] = [];
+		$data['menus_list'] = $this->Menu_model->get_all_menus();
+		$this->load->view('templates/layout', $data);
     }
 
     public function add()
     {
-
-
-
-
 	    $this->load->helper('form');
         $this->load->library('form_validation');
 
@@ -120,9 +125,25 @@ class Modules_templates extends CI_Controller {
 		        }
 	        }
 
-            $this->load->view('templates/header', $data);
-            $this->load->view('modules_templates/add', $data);
-            $this->load->view('templates/footer', $data);
+
+            $data['js_include'] = [
+                'libs/three106.js',
+                'libs/FBXLoader.js',
+                'libs/jquery_3_3_1.min.js',
+                'libs/inflate.min.js',
+                'libs/OrbitControls.js',
+                'admin_js/module_templates.js',
+                'admin_js/production/configurator/modules_templates.js?'. md5(date('m-d-Y-His A e'))
+            ];
+    
+            $data['css_include'] = [
+    
+            ];
+    
+            $data['include'] = 'modules_templates/add';
+            $data['modules'] = [];
+            $data['menus_list'] = $this->Menu_model->get_all_menus();
+            $this->load->view('templates/layout', $data);
         }
         else
         {
