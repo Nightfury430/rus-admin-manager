@@ -86,7 +86,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <div v-show="modals.edit_category.show" class="bpl_modal_wrapper">
